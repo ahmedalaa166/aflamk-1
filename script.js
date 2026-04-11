@@ -572,7 +572,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const closeSidebar = document.getElementById('close-sidebar');
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+    if (closeSidebar) closeSidebar.addEventListener('click', toggleMenu);
     if (overlay) overlay.addEventListener('click', toggleMenu);
 
     // 2. Render Initial Grids

@@ -27,11 +27,7 @@
             <ul class="nav-menu">
 
 
-                <!-- Mobile Only Search -->
-                <li class="mobile-search-container">
-                    <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
-                    <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
-                </li>
+                <!-- Desktop nav items will follow -->
 
                 <li><a href="javascript:void(0)" class="active" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a></li>
                 <li><a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a></li>
@@ -62,7 +58,19 @@
 
             <!-- New Full-Screen Grid Menu for Mobile -->
             <div id="mobileSectionsMenu" class="mobile-sections-menu">
-                <h2 class="mobile-sections-title">اقسام الموقع</h2>
+                <div class="mobile-sidebar-header">
+                    <h2 class="mobile-sections-title">أقسام الموقع</h2>
+                    <div class="close-sidebar" id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+
+                <!-- Mobile Only Search -->
+                <div class="mobile-search-container">
+                    <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+                    <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
+                </div>
+
                 <div class="mobile-sections-grid">
                     <a href="javascript:void(0)" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a>
                     <a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a>
