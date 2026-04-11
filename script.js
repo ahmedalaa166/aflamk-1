@@ -552,7 +552,8 @@ const latestData = [...allData].sort((a, b) => {
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Setup UI Toggle for Mobile Menu
     const menuToggle = document.getElementById('mobile-menu');
-    const navMenu = document.querySelector('.nav-menu');
+    const navMenuDesktop = document.querySelector('.nav-menu');
+    const navMenuMobile = document.getElementById('mobileSectionsMenu');
     
     // Create overlay element
     const overlay = document.createElement('div');
@@ -560,9 +561,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.appendChild(overlay);
 
     const toggleMenu = () => {
-        navMenu.classList.toggle('active');
-        overlay.classList.toggle('active');
-        document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        if(window.innerWidth <= 950) {
+            navMenuMobile.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenuMobile.classList.contains('active') ? 'hidden' : '';
+        } else {
+            navMenuDesktop.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = navMenuDesktop.classList.contains('active') ? 'hidden' : '';
+        }
     };
 
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
@@ -658,9 +665,11 @@ function navigate(pageId, fromPopstate = false) {
     });
 
     // 4. Close mobile menu if open
-    const navMenu = document.querySelector('.nav-menu');
+    const navMenuMobile = document.getElementById('mobileSectionsMenu');
+    const navMenuDesktop = document.querySelector('.nav-menu');
     const overlay = document.querySelector('.menu-overlay');
-    if (navMenu) navMenu.classList.remove('active');
+    if (navMenuMobile) navMenuMobile.classList.remove('active');
+    if (navMenuDesktop) navMenuDesktop.classList.remove('active');
     if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
 }
