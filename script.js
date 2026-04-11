@@ -555,20 +555,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const navMenuDesktop = document.querySelector('.nav-menu');
     const navMenuMobile = document.getElementById('mobileSectionsMenu');
     
-    // Create overlay element
-    const overlay = document.createElement('div');
-    overlay.className = 'menu-overlay';
-    document.body.appendChild(overlay);
-
+    const overlay = document.getElementById('sidebarOverlay');
+    
     const toggleMenu = () => {
         if(window.innerWidth <= 950) {
-            navMenuMobile.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navMenuMobile.classList.contains('active') ? 'hidden' : '';
+            const isActive = navMenuMobile.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+            document.body.style.overflow = isActive ? 'hidden' : '';
         } else {
             navMenuDesktop.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = navMenuDesktop.classList.contains('active') ? 'hidden' : '';
         }
     };
 

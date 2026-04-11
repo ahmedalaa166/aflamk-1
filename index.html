@@ -56,39 +56,42 @@
                 <li><a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a></li>
             </ul>
 
-            <!-- New Full-Screen Grid Menu for Mobile -->
-            <div id="mobileSectionsMenu" class="mobile-sections-menu">
-                <div class="mobile-sidebar-header">
-                    <h2 class="mobile-sections-title">أقسام الموقع</h2>
-                    <div class="close-sidebar" id="close-sidebar">
-                        <i class="fas fa-times"></i>
-                    </div>
-                </div>
-
-                <!-- Mobile Only Search -->
-                <div class="mobile-search-container">
-                    <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
-                    <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
-                </div>
-
-                <div class="mobile-sections-grid">
-                    <a href="javascript:void(0)" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a>
-                    <a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a>
-                    <a href="javascript:void(0)" onclick="navigate('movies')"><i class="fas fa-film"></i> أفلام عربي</a>
-                    <a href="javascript:void(0)" onclick="navigate('foreign-movies')"><i class="fas fa-film"></i> أفلام أجنبي</a>
-                    <a href="javascript:void(0)" onclick="navigate('cartoon-movies')"><i class="fas fa-child"></i> أفلام كرتون</a>
-                    <a href="javascript:void(0)" onclick="navigate('series')"><i class="fas fa-tv"></i> مسلسلات عربي</a>
-                    <a href="javascript:void(0)" onclick="navigate('foreign-series')"><i class="fas fa-tv"></i> مسلسلات أجنبي</a>
-                    <a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a>
-                </div>
-            </div>
-
             <div class="search-box">
                 <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل...">
                 <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Sidebar Menu (Moved outside for better stability) -->
+    <div id="mobileSectionsMenu" class="mobile-sections-menu">
+        <div class="mobile-sidebar-header">
+            <h2 class="mobile-sections-title">أقسام الموقع</h2>
+            <div class="close-sidebar" id="close-sidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <!-- Mobile Only Search -->
+        <div class="mobile-search-container">
+            <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+            <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="mobile-sections-grid">
+            <a href="javascript:void(0)" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a>
+            <a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a>
+            <a href="javascript:void(0)" onclick="navigate('movies')"><i class="fas fa-film"></i> أفلام عربي</a>
+            <a href="javascript:void(0)" onclick="navigate('foreign-movies')"><i class="fas fa-film"></i> أفلام أجنبي</a>
+            <a href="javascript:void(0)" onclick="navigate('cartoon-movies')"><i class="fas fa-child"></i> أفلام كرتون</a>
+            <a href="javascript:void(0)" onclick="navigate('series')"><i class="fas fa-tv"></i> مسلسلات عربي</a>
+            <a href="javascript:void(0)" onclick="navigate('foreign-series')"><i class="fas fa-tv"></i> مسلسلات أجنبي</a>
+            <a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a>
+        </div>
+    </div>
+
+    <!-- Overlay moved outside as well -->
+    <div id="sidebarOverlay" class="menu-overlay"></div>
 
     <!-- Main Content Application -->
     <main id="main-content">
