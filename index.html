@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>افلامك | مشاهدة احدث الأفلام والمسلسلات</title>
+    <!-- Google Fonts: Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css?v=2">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="javascript:void(0)" class="logo" onclick="navigate('home')">افلامك <span
+                    class="logo-accent">|</span></a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-menu">
+
+
+                <!-- Mobile Only Search -->
+                <li class="mobile-search-container">
+                    <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+                    <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
+                </li>
+
+                <li><a href="javascript:void(0)" class="active" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a></li>
+                
+                <!-- Dropdown: Movies -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)"><i class="fas fa-film"></i> الأفلام <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-right: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)" onclick="navigate('movies')">أفلام عربي</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigate('foreign-movies')">أفلام أجنبي</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigate('cartoon-movies')">أفلام كرتون</a></li>
+                    </ul>
+                </li>
+
+                <!-- Dropdown: Series -->
+                <li class="dropdown">
+                    <a href="javascript:void(0)"><i class="fas fa-tv"></i> المسلسلات <i class="fas fa-chevron-down"
+                            style="font-size: 0.8rem; margin-right: 0.3rem;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="javascript:void(0)" onclick="navigate('series')">مسلسلات عربي</a></li>
+                        <li><a href="javascript:void(0)" onclick="navigate('foreign-series')">مسلسلات أجنبي</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a></li>
+            </ul>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+                <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Application -->
+    <main id="main-content">
+
+        <!-- Home Page (الرئيسية) -->
+        <section id="home" class="page-section active">
+            <header class="hero">
+                <div class="hero-content">
+                    <h1>مرحباً بك في منصة <span>افلامك</span></h1>
+                    <p>أفضل موقع لمشاهدة أحدث الأفلام والمسلسلات الحصرية بجودة عالية وبدون فواصل.</p>
+                </div>
+            </header>
+            <div class="container">
+
+                <!-- أحدث 4 إضافات -->
+                <div class="section-header" id="home-latest-header">
+                    <h2 class="section-title">أحدث الإضافات</h2>
+                </div>
+                <div class="grid" id="home-latest-grid"></div>
+
+                <!-- أفلام عربية -->
+                <div class="section-header" id="home-movies-header">
+                    <h2 class="section-title">أفلام عربية</h2>
+                    <button class="more-btn" onclick="navigate('movies')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-movies-preview"></div>
+
+                <!-- أفلام أجنبية -->
+                <div class="section-header" id="home-foreign-movies-header">
+                    <h2 class="section-title">أفلام أجنبية</h2>
+                    <button class="more-btn" onclick="navigate('foreign-movies')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-foreign-movies-preview"></div>
+
+                <!-- أفلام كرتون -->
+                <div class="section-header" id="home-cartoon-movies-header">
+                    <h2 class="section-title">أفلام كرتون</h2>
+                    <button class="more-btn" onclick="navigate('cartoon-movies')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-cartoon-movies-preview"></div>
+
+                <!-- مسلسلات عربية -->
+                <div class="section-header" id="home-series-header">
+                    <h2 class="section-title">مسلسلات عربية</h2>
+                    <button class="more-btn" onclick="navigate('series')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-series-preview"></div>
+
+                <!-- مسلسلات أجنبية -->
+                <div class="section-header" id="home-foreign-series-header">
+                    <h2 class="section-title">مسلسلات أجنبية</h2>
+                    <button class="more-btn" onclick="navigate('foreign-series')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-foreign-series-preview"></div>
+
+            </div>
+        </section>
+
+
+        <!-- Latest Additions Page (احدث الإضافات) -->
+        <section id="latest" class="page-section">
+            <div class="container">
+                <h2 class="section-title">احدث الإضافات</h2>
+                <div class="grid" id="latest-list">
+                    <!-- List items will be populated here via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Arabic Movies Page (افلام عربي) -->
+        <section id="movies" class="page-section">
+            <div class="container">
+                <h2 class="section-title">جميع الأفلام العربية</h2>
+                <div class="grid" id="movies-grid">
+                    <!-- Movie cards are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Foreign Movies Page (افلام اجنبي) -->
+        <section id="foreign-movies" class="page-section">
+            <div class="container">
+                <h2 class="section-title">جميع الأفلام الأجنبية</h2>
+                <div class="grid" id="foreign-movies-grid">
+                    <!-- Foreign Movie cards are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Cartoon Movies Page (افلام كرتون) -->
+        <section id="cartoon-movies" class="page-section">
+            <div class="container">
+                <h2 class="section-title">جميع أفلام الكرتون</h2>
+                <div class="grid" id="cartoon-movies-grid">
+                    <!-- Cartoon Movie cards are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Arabic Series Page (مسلسلات عربي) -->
+        <section id="series" class="page-section">
+            <div class="container">
+                <h2 class="section-title">جميع المسلسلات العربية</h2>
+                <div class="grid" id="series-grid">
+                    <!-- Series cards are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Foreign Series Page (مسلسلات اجنبي) -->
+        <section id="foreign-series" class="page-section">
+            <div class="container">
+                <h2 class="section-title">جميع المسلسلات الأجنبية</h2>
+                <div class="grid" id="foreign-series-grid">
+                    <!-- Foreign Series cards are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Page (بث مباشر) -->
+        <section id="live" class="page-section">
+            <div class="container">
+                <h2 class="section-title">البث المباشر</h2>
+                <div class="grid" id="live-grid">
+                    <!-- Live broadcasts are rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Watch Page -->
+        <section id="watch" class="page-section">
+            <div class="container watch-container">
+                <button class="back-btn" onclick="navigateBack()"><i class="fas fa-arrow-right"></i> عودة للصفحة
+                    السابقة</button>
+                <div class="video-wrapper">
+                    <!-- Iframe Video Player -->
+                    <iframe id="video-player" src="" frameborder="0" allowfullscreen
+                        style="width: 100%; aspect-ratio: 16/9; display: block;"></iframe>
+                </div>
+                <div class="watch-info" id="watch-info">
+                    <!-- Video Info rendered here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Results Page -->
+        <section id="search-results" class="page-section">
+            <div class="container">
+                <h2 class="section-title">نتائج البحث</h2>
+                <div class="grid" id="search-grid">
+                    <!-- Search Results rendered here -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2024 لـ موقع <span>افلامك |</span></p>
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js?v=2"></script>
+</body>
+
+</html>
