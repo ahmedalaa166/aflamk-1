@@ -1,6 +1,56 @@
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 'm-ahmed-wa-ahmed',
+        title: 'أحمد وأحمد',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/ahmed_wa_ahmed.jpg',
+        year: '2 يوليو 2025',
+        quality: 'FHD',
+        desc: 'يقرر (أحمد) العودة إلى مصر وطلب يد (ضحى) للزواج، ولكن سريعًا تتعطل خططه حينما يُصاب خاله (أحمد) في حادث غامض ويفقد الذاكرة، ويكتشف سر خاله الصادم بزعامته لإمبراطورية إجرامية خطيرة.',
+        videoUrl: 'https://vfaststream.co/e/LC1U9OY2PzGb',
+        downloads: {
+            medium: 'https://vidspeed.org/d/1tqdn5xx7x0q.html',
+            high: 'https://vik1ngfile.site/f/gOHebq711p'
+        }
+    },
+    {
+        id: 's-alleba',
+        title: 'اللعبة 5: الكلاسيكو',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/al_leba_s5.jpg',
+        year: '12 ابريل 2026',
+        quality: 'FHD',
+        desc: 'تستمر في الموسم الخامس مغامرات وسيم ومازو، حيث يعاني وسيم من ضائقة مالية ويحاول الجميع مساعدته، وعلى جانب آخر يعيش مازو في رفاهية بعد الاستحواذ على الأموال، إلى أن تفرض عليهم اللعبة تحديات جديدة تعتمد على الذكاء الاصطناعي، وتتوالى الأحداث.',
+        seasons: [
+            {
+                seasonNumber: 5,
+                episodes: [
+                    {
+                        id: 's5-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
+                        downloads: {
+                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
+                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
+                        }
+                    },
+                    {
+                        id: 's5-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vfaststream.co/e/2vb4N4lcTVXBU',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vcjrqa2kkwr4.html',
+                            high: 'https://vik1ngfile.site/f/ljTStYhpSE'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 's-ein-sehreya',
         title: 'مسلسل عين سحرية',
         type: 'series',
@@ -309,32 +359,7 @@ const allContent = [
         videoUrl: 'https://play.tlfaz.com/player/#https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8',
         subCategory: 'variety'
     },
-    {
-        id: 's-alleba',
-        title: 'اللعبة 5: الكلاسيكو',
-        type: 'series',
-        category: 'arabic-series',
-        poster: 'صور/al_leba_s5.jpg',
-        year: '11 أبريل 2026',
-        quality: 'FHD',
-        desc: 'عادت اللعبة… أسرع وأكثر إثارة من أي وقت مضى! هذه المرة، يضطر مازو ووسيم إلى ترك مشاكلهما جانبا والدخول في مواجهة مباشرة، يصمم كل منهما على هزيمة الآخر والفوز بالجولة التالية.',
-        seasons: [
-            {
-                seasonNumber: 5,
-                episodes: [
-                    {
-                        id: 's5-ep1',
-                        title: 'الحلقة 1',
-                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
-                        downloads: {
-                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
-                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
-                        }
-                    }
-                ]
-            }
-        ]
-    },
+
     {
         id: 'm1',
         title: 'برشامة',
@@ -597,7 +622,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderGrid('series-grid', seriesData);
     renderGrid('foreign-series-grid', foreignSeriesData);
     renderLivePage();
-    renderLatestList('latest-list', latestData);
+    renderGrid('latest-grid', latestData);
 
     const searchInput = document.getElementById('searchInput');
     if (searchInput) searchInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') handleSearch('searchInput'); });
