@@ -10,7 +10,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
@@ -151,16 +151,23 @@
                             class="fas fa-arrow-left"></i></button>
                 </div>
                 <div class="grid" id="home-foreign-series-preview"></div>
+                
+                <!-- البث المباشر -->
+                <div class="section-header" id="home-live-header">
+                    <h2 class="section-title">البث المباشر</h2>
+                    <button class="more-btn" onclick="navigate('live')">المزيد <i
+                            class="fas fa-arrow-left"></i></button>
+                </div>
+                <div class="grid" id="home-live-preview"></div>
 
             </div>
         </section>
 
 
-        <!-- Latest Additions Page (احدث الإضافات) -->
         <section id="latest" class="page-section">
             <div class="container">
                 <h2 class="section-title">احدث الإضافات</h2>
-                <div class="grid" id="latest-list">
+                <div class="list-layout" id="latest-list">
                     <!-- List items will be populated here via JavaScript -->
                 </div>
             </div>
@@ -233,7 +240,7 @@
                     السابقة</button>
                 <div class="video-wrapper">
                     <!-- Iframe Video Player -->
-                    <iframe id="video-player" src="" frameborder="0" allowfullscreen
+                    <iframe id="video-player" src="" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
                         style="width: 100%; aspect-ratio: 16/9; display: block;"></iframe>
                 </div>
                 <div class="watch-info" id="watch-info">
@@ -260,7 +267,7 @@
     </footer>
 
     <!-- JS File -->
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=29"></script>
 </body>
 
 </html>
