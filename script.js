@@ -1,6 +1,159 @@
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 's-ein-sehreya',
+        title: 'مسلسل عين سحرية',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/ein_sehreya.jpg',
+        year: '19 فبراير 2026',
+        quality: 'Full HD',
+        desc: 'عادل شاب بسيط يمتلك موهبة في تركيب كاميرات المراقبة. وتحت ضغط الظروف المادية، يوافق على زرع كاميرات بشكل سري مقابل المال، قبل أن يشهد بالصدفة جريمة قتل. محاولته إخفاء ما رآه تجرّه إلى شبكة خطيرة يقودها المحامي الفاسد زكي غانم ومافيا دوائية نافذة. ومع تهديد عائلته، يُجبر عادل على خوض رحلة محفوفة بالمخاطر لكشف الفساد.',
+        hideSeasonText: true,
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 'ep1-1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidara.to/e/J4lzP1DYmpG34',
+                        downloads: {
+                            medium: 'https://filespayouts.com/mspp5otd8y2e/%5Barabseed%5D.Ein.Sehreya.S01.E01.480p.mp4',
+                            high: 'https://filespayouts.com/r6fw4vcshl86/%5Barabseed%5D.Ein.Sehreya.S01.E01.720p.mp4'
+                        }
+                    },
+                    {
+                        id: 'ep1-2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vidara.to/e/r9mpHunZVQN7x',
+                        downloads: {
+                            medium: 'https://filespayouts.com/hsryjc135r8y/%5Barabseed%5D.Ein.Sehreya.S01.E02.480p.mp4',
+                            high: 'https://filespayouts.com/blth0hc3xd0k/%5Barabseed%5D.Ein.Sehreya.S01.E02.720p.mp4'
+                        }
+                    },
+                    {
+                        id: 'ep1-3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://vfaststream.co/e/2hm77cpuKoTY',
+                        downloads: {
+                            medium: 'https://filespayouts.com/dpb4tn6jx63e/%5Barabseed%5D.Ein.Sehreya.S01.E03.480p.mp4',
+                            high: 'https://filespayouts.com/pj5azi57nmii/%5Barabseed%5D.Ein.Sehreya.S01.E03.720p.mp4'
+                        }
+                    },
+                    {
+                        id: 'ep1-4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://vfaststream.co/e/XmgX7vDK21yU',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/94iolcjfjaow.html',
+                            high: 'https://vik1ngfile.site/f/1HAkkAjy6Y'
+                        }
+                    },
+                    {
+                        id: 'ep1-5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://vfaststream.co/e/TARgLvDBIoyA',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/bl9o50ekrmmy.html',
+                            high: 'https://vik1ngfile.site/f/MJ3J3ezReG'
+                        }
+                    },
+                    {
+                        id: 'ep1-6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://anafast.org/embed-d9rqu3ybop5c.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/oha42qrvys1c.html',
+                            high: 'https://vik1ngfile.site/f/vKvQ3XKim2'
+                        }
+                    },
+                    {
+                        id: 'ep1-7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://vfaststream.co/e/hDaUCN6t8e9r',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/48rt4c8j2joe.html',
+                            high: 'https://vik1ngfile.site/f/c6jpAuAHsv'
+                        }
+                    },
+                    {
+                        id: 'ep1-8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://vfaststream.co/e/5QVq0kXt09UD',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/0keagm8nndr0.html',
+                            high: 'https://vik1ngfile.site/f/cwbZKGmlIs'
+                        }
+                    },
+                    {
+                        id: 'ep1-9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://vfaststream.co/e/jedmRZdet7zY',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/ly5tg6le4l72.html',
+                            high: 'https://vik1ngfile.site/f/LSDlEE5mGl'
+                        }
+                    },
+                    {
+                        id: 'ep1-10',
+                        title: 'الحلقة 10',
+                        videoUrl: 'https://vfaststream.co/e/GXp8FJuucbyc',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/8vgho4acqo6v.html',
+                            high: 'https://vik1ngfile.site/f/3QjEZrFmFh'
+                        }
+                    },
+                    {
+                        id: 'ep1-11',
+                        title: 'الحلقة 11',
+                        videoUrl: 'https://vfaststream.co/e/3KiLj4M96bKn',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/2gimdtm0y67z.html',
+                            high: 'https://vik1ngfile.site/f/MxH4KnlVOZ'
+                        }
+                    },
+                    {
+                        id: 'ep1-12',
+                        title: 'الحلقة 12',
+                        videoUrl: 'https://vfaststream.co/e/qz8OFaDYUkvU',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/tujfwzb1ksk4.html',
+                            high: 'https://vik1ngfile.site/f/IejUfzpBBH'
+                        }
+                    },
+                    {
+                        id: 'ep1-13',
+                        title: 'الحلقة 13',
+                        videoUrl: 'https://vfaststream.co/e/FTcRns4dKAqh',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/2g4357451r6k.html',
+                            high: 'https://vik1ngfile.site/f/C9dzO7zmH3'
+                        }
+                    },
+                    {
+                        id: 'ep1-14',
+                        title: 'الحلقة 14',
+                        videoUrl: 'https://vfaststream.co/e/6OI6uFNxWVLW',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/setbt553zjy4.html',
+                            high: 'https://vik1ngfile.site/f/EbhlvfvDTz'
+                        }
+                    },
+                    {
+                        id: 'ep1-15',
+                        title: 'الحلقة 15',
+                        videoUrl: 'https://vfaststream.co/e/FRY1YSlDjSPX',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/25oao5ki34zk.html',
+                            high: 'https://vik1ngfile.site/f/S3DmtwgcU9'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'live-mbc3',
         title: 'قناة MBC 3',
         type: 'live',
@@ -468,8 +621,18 @@ document.addEventListener('DOMContentLoaded', () => {
         navigate(pageId, true);
     });
 
-    const initialPage = window.location.hash.replace('#', '') || 'home';
-    navigate(initialPage);
+    // On refresh, restore the page from hash and restore watch state
+    let initialPage = window.location.hash.replace('#', '') || 'home';
+    if (initialPage === 'watch') {
+        const savedItem = sessionStorage.getItem('currentWatchItem');
+        if (savedItem) {
+            watchItem(savedItem, true);
+        } else {
+            navigate('home');
+        }
+    } else {
+        navigate(initialPage);
+    }
 });
 
 function renderLivePage() {
@@ -507,13 +670,15 @@ function createCard(item) {
     const isSeries = item.type === 'series';
     const isLive = item.type === 'live';
     let badgeHTML = '';
-    if (isSeries) badgeHTML = `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+    if (isSeries) {
+        badgeHTML = item.hideSeasonText ? `<span class="badge">مسلسل | حلقات</span>` : `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+    }
     if (isLive) badgeHTML = `<span class="badge" style="background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);"><i class="fas fa-circle" style="font-size: 0.6rem; animation: pulse 1s infinite;"></i> مباشر الآن</span>`;
     return `
         <div class="card">
-            <div class="card-img" onclick="watchItem('${item.id}')">
+            <div class="card-img" onclick="watchItem('${item.id}')" ${isLive ? 'style="background: var(--card-bg);"' : ''}>
                 ${badgeHTML}
-                <img src="${item.poster}" alt="${item.title}">
+                <img src="${item.poster}" alt="${item.title}" ${isLive ? 'style="object-fit: contain; padding: 2rem;"' : ''}>
                 <div class="card-overlay"><i class="fas fa-play-circle play-icon"></i></div>
             </div>
             <div class="card-info">
@@ -525,8 +690,17 @@ function createCard(item) {
     `;
 }
 
+// Custom navigation stack for reliable back button
+const navHistory = [];
+
 function navigate(pageId, fromPopstate = false) {
-    if (!fromPopstate) history.pushState({ page: pageId }, '', '#' + pageId);
+    if (!fromPopstate) {
+        history.pushState({ page: pageId }, '', '#' + pageId);
+        // Only push to custom stack if moving to a different page
+        if (navHistory[navHistory.length - 1] !== pageId) {
+            navHistory.push(pageId);
+        }
+    }
     document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
     const targetEl = document.getElementById(pageId);
     if (targetEl) {
@@ -551,7 +725,13 @@ function navigate(pageId, fromPopstate = false) {
     document.body.style.overflow = '';
 }
 
-function navigateBack() { if (history.length > 1) history.back(); else navigate('home'); }
+function navigateBack() {
+    // Remove current page from stack
+    navHistory.pop();
+    // Go to previous page in stack, or home if stack is empty
+    const previousPage = navHistory[navHistory.length - 1] || 'home';
+    navigate(previousPage);
+}
 
 function renderGrid(containerId, data) {
     const container = document.getElementById(containerId);
@@ -561,14 +741,16 @@ function renderGrid(containerId, data) {
         const isSeries = item.type === 'series';
         const isLive = item.type === 'live';
         let badgeHTML = '';
-        if (isSeries) badgeHTML = `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+        if (isSeries) {
+            badgeHTML = item.hideSeasonText ? `<span class="badge">مسلسل | حلقات</span>` : `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+        }
         if (isLive) badgeHTML = `<span class="badge" style="background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);"><i class="fas fa-circle" style="font-size: 0.6rem; animation: pulse 1s infinite;"></i> مباشر الآن</span>`;
         const card = document.createElement('div');
         card.className = 'card';
         card.innerHTML = `
-            <div class="card-img" onclick="watchItem('${item.id}')">
+            <div class="card-img" onclick="watchItem('${item.id}')" ${isLive ? 'style="background: var(--card-bg);"' : ''}>
                 ${badgeHTML}
-                <img src="${item.poster}" alt="${item.title}">
+                <img src="${item.poster}" alt="${item.title}" ${isLive ? 'style="object-fit: contain; padding: 2rem;"' : ''}>
                 <div class="card-overlay"><i class="fas fa-play-circle play-icon"></i></div>
             </div>
             <div class="card-info">
@@ -621,21 +803,75 @@ function renderSectionPreview(gridId, headerId, data) {
     else { renderGrid(gridId, data.slice(0, 4)); }
 }
 
-function watchItem(itemId) {
+function watchItem(itemId, restoreFromSession = false) {
     const item = allContent.find(i => i.id === itemId);
     if (!item) return;
+
+    if (!restoreFromSession) {
+        sessionStorage.setItem('currentWatchItem', itemId);
+        sessionStorage.removeItem('currentSeason');
+        sessionStorage.removeItem('currentEpisode');
+        sessionStorage.removeItem('currentMovieVersion');
+    }
+
     navigate('watch');
     const watchInfo = document.getElementById('watch-info');
     let videoUrl = item.videoUrl;
+    let downloads = item.downloads;
     let extraHTML = '';
+
     if (item.type === 'series') {
-        const lastSeason = item.seasons[item.seasons.length - 1];
-        const lastEpisode = lastSeason.episodes[lastSeason.episodes.length - 1];
-        videoUrl = lastEpisode.videoUrl;
-        extraHTML = renderSeriesNav(item, lastSeason.seasonNumber, lastEpisode.id);
+        let seasonNum, episodeId;
+        if (restoreFromSession && sessionStorage.getItem('currentSeason') && sessionStorage.getItem('currentEpisode')) {
+            seasonNum = parseInt(sessionStorage.getItem('currentSeason'));
+            episodeId = sessionStorage.getItem('currentEpisode');
+        } else {
+            seasonNum = item.seasons[0].seasonNumber;
+            episodeId = item.seasons[0].episodes[0].id;
+            sessionStorage.setItem('currentSeason', seasonNum);
+            sessionStorage.setItem('currentEpisode', episodeId);
+        }
+
+        const season = item.seasons.find(s => s.seasonNumber === seasonNum);
+        const episode = season ? season.episodes.find(e => e.id === episodeId) : null;
+        
+        if (episode) {
+            videoUrl = episode.videoUrl;
+            downloads = episode.downloads;
+            extraHTML = renderSeriesNav(item, seasonNum, episodeId);
+        }
+    } else {
+        if (item.parts && item.parts.length > 0) {
+            let partsHTML = item.parts.map(p => `
+                <button class="season-btn ${p.id === item.id ? 'active' : ''}" onclick="watchItem('${p.id}')">${p.name}</button>
+            `).join('');
+            extraHTML += `
+                <div class="series-nav-container" style="margin-bottom: 20px;">
+                    <div class="seasons-scroll">${partsHTML}</div>
+                </div>
+            `;
+        }
+        if (item.versions && item.versions.length > 0) {
+            let vIndex = 0;
+            if (restoreFromSession && sessionStorage.getItem('currentMovieVersion')) {
+                vIndex = parseInt(sessionStorage.getItem('currentMovieVersion'));
+            } else {
+                sessionStorage.setItem('currentMovieVersion', 0);
+            }
+            videoUrl = item.versions[vIndex].videoUrl;
+            downloads = item.versions[vIndex].downloads;
+            let versionsHTML = item.versions.map((v, index) => `
+                <button class="episode-btn ${index === vIndex ? 'active' : ''}" onclick="playMovieVersion('${item.id}', ${index}, this)">${v.name}</button>
+            `).join('');
+            extraHTML += `
+                <div class="series-nav-container" style="margin-bottom: 20px;">
+                    <div class="episodes-grid">${versionsHTML}</div>
+                </div>
+            `;
+        }
     }
     const player = document.getElementById('video-player');
-    player.src = videoUrl;
+    if (player) player.src = videoUrl;
     watchInfo.innerHTML = `
         <h1 class="watch-title">${item.title}</h1>
         <div class="watch-badges"><span class="badge-quality">${item.quality}</span><span>${item.year}</span></div>
@@ -644,9 +880,9 @@ function watchItem(itemId) {
         ${item.type !== 'live' ? `
         <div class="download-bar">
             <h3>روابط التحميل:</h3>
-            <div class="card-actions" style="margin-top: 1rem;">
-                ${item.downloads ? `<a href="${item.downloads.medium}" target="_blank" class="btn btn-download"><i class="fas fa-download"></i> جودة متوسطة</a>
-                <a href="${item.downloads.high}" target="_blank" class="btn btn-watch"><i class="fas fa-download"></i> جودة عالية</a>` : '<p>روابط التحميل غير متوفرة حالياً.</p>'}
+            <div class="card-actions" id="download-links" style="margin-top: 1rem;">
+                ${downloads ? `<a href="${downloads.medium}" target="_blank" class="btn btn-download"><i class="fas fa-download"></i> جودة متوسطة</a>
+                <a href="${downloads.high}" target="_blank" class="btn btn-watch"><i class="fas fa-download"></i> جودة عالية</a>` : '<p>روابط التحميل غير متوفرة حالياً.</p>'}
             </div>
         </div>
         ` : ''}
@@ -668,7 +904,7 @@ function renderSeriesNav(series, currentSeasonNum, currentEpisodeId) {
                     <button class="btn-nav next" onclick="playEpisode('${series.id}', ${currentSeasonNum}, '${nextEp?.id}')" ${!nextEp ? 'disabled' : ''}>الحلقة التالية <i class="fas fa-chevron-left"></i></button>
                 </div>
             </div>
-            <div class="seasons-scroll">${seasonsHTML}</div>
+            ${!series.hideSeasonText ? `<div class="seasons-scroll">${seasonsHTML}</div>` : ''}
             <div class="episodes-grid">${episodesHTML}</div>
         </div>
     `;
@@ -683,10 +919,25 @@ function changeSeason(seriesId, seasonNum) {
 function playEpisode(seriesId, seasonNum, episodeId) {
     const series = allContent.find(i => i.id === seriesId);
     if(!series) return;
+    
+    sessionStorage.setItem('currentWatchItem', seriesId);
+    sessionStorage.setItem('currentSeason', seasonNum);
+    sessionStorage.setItem('currentEpisode', episodeId);
+    
     const season = series.seasons.find(s => s.seasonNumber === seasonNum);
     const episode = season.episodes.find(e => e.id === episodeId);
     const player = document.getElementById('video-player');
-    player.src = episode.videoUrl;
+    if (player) player.src = episode.videoUrl;
+    
+    // Update downloads bar
+    const downloadLinks = document.getElementById('download-links');
+    if (downloadLinks) {
+        downloadLinks.innerHTML = episode.downloads ? `
+            <a href="${episode.downloads.medium}" target="_blank" class="btn btn-download"><i class="fas fa-download"></i> جودة متوسطة</a>
+            <a href="${episode.downloads.high}" target="_blank" class="btn btn-watch"><i class="fas fa-download"></i> جودة عالية</a>
+        ` : '<p>روابط التحميل غير متوفرة حالياً.</p>';
+    }
+
     const navContainer = document.querySelector('.series-nav-container');
     if (navContainer) navContainer.outerHTML = renderSeriesNav(series, seasonNum, episodeId);
 }
@@ -697,4 +948,31 @@ function handleSearch(inputId) {
     navigate('search-results');
     const results = allContent.filter(item => item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query));
     renderGrid('search-grid', results);
+}
+
+function playMovieVersion(itemId, versionIndex, btn) {
+    const item = allContent.find(i => i.id === itemId);
+    if (!item || !item.versions || !item.versions[versionIndex]) return;
+    
+    sessionStorage.setItem('currentMovieVersion', versionIndex);
+    
+    const version = item.versions[versionIndex];
+    const player = document.getElementById('video-player');
+    if (player) player.src = version.videoUrl;
+    
+    const downloadLinks = document.getElementById('download-links');
+    if (downloadLinks) {
+        downloadLinks.innerHTML = version.downloads ? `
+            <a href="${version.downloads.medium}" target="_blank" class="btn btn-download"><i class="fas fa-download"></i> جودة متوسطة</a>
+            <a href="${version.downloads.high}" target="_blank" class="btn btn-watch"><i class="fas fa-download"></i> جودة عالية</a>
+        ` : '<p>روابط التحميل غير متوفرة حالياً.</p>';
+    }
+    
+    if (btn) {
+        const container = btn.closest('.episodes-grid');
+        if (container) {
+            container.querySelectorAll('.episode-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+    }
 }

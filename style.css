@@ -752,6 +752,7 @@ ul {
     cursor: pointer;
     transition: var(--transition);
     border: 1px solid transparent;
+    color: #fff;
 }
 
 .season-btn:hover, .season-btn.active {
@@ -777,6 +778,7 @@ ul {
     font-weight: 600;
     cursor: pointer;
     transition: var(--transition);
+    color: #fff;
 }
 
 .episode-btn:hover {
