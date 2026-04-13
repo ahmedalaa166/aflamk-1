@@ -90,6 +90,7 @@
                 </li>
 
                 <li><a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a></li>
+                <li id="logout-item" style="display: none;"><a href="javascript:void(0)" onclick="logout()" class="logout-link"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
             </ul>
 
             <div class="search-box">
@@ -125,6 +126,7 @@
             <a href="javascript:void(0)" onclick="navigate('series')"><i class="fas fa-tv"></i> مسلسلات عربي</a>
             <a href="javascript:void(0)" onclick="navigate('foreign-series')"><i class="fas fa-tv"></i> مسلسلات أجنبي</a>
             <a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a>
+            <a href="javascript:void(0)" onclick="logout()" id="mobile-logout-btn" style="display: none;"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
         </div>
     </div>
 
@@ -307,7 +309,7 @@
     <!-- Firebase Scripts (Modular CDN Version) -->
     <script type="module">
       import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-      import { getFirestore, doc, getDoc, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+      import { getFirestore, doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
       // Firebase Config provided by you
       const firebaseConfig = {
@@ -330,6 +332,7 @@
       window.fbGetDoc = getDoc;
       window.fbUpdateDoc = updateDoc;
       window.fbArrayUnion = arrayUnion;
+      window.fbArrayRemove = arrayRemove;
 
       // Register PWA Service Worker
       if ('serviceWorker' in navigator) {

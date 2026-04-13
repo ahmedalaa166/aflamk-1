@@ -18,8 +18,10 @@ async function checkSubscription() {
     // لو فيه كود محفوظ، اخفي الشاشة فوراً عشان ما تظهرش وتختفي
     if (savedCode) {
         overlay.style.display = 'none';
+        updateAuthUI(true);
     } else {
         overlay.style.display = 'flex';
+        updateAuthUI(false);
         return;
     }
 
@@ -56,7 +58,41 @@ async function checkSubscription() {
 
     // إذا فشل أي شرط
     overlay.style.display = 'flex';
+    updateAuthUI(false);
 }
+
+// تحديث الواجهة بناءً على حالة تسجيل الدخول
+function updateAuthUI(isLoggedIn) {
+    const logoutItem = document.getElementById('logout-item');
+    const mobileLogoutBtn = document.getElementById('mobile-logout-btn');
+    
+    if (logoutItem) logoutItem.style.display = isLoggedIn ? 'block' : 'none';
+    if (mobileLogoutBtn) mobileLogoutBtn.style.display = isLoggedIn ? 'flex' : 'none';
+}
+
+// وظيفة تسجيل الخروج (إزالة الجهاز من Firebase وتحرير مكان)
+window.logout = async function() {
+    const savedCode = localStorage.getItem('filmak_active_code');
+    const deviceId = getDeviceId();
+
+    if (confirm("هل أنت متأكد من تسجيل الخروج؟ سيتم إزالة هذا الجهاز من قائمة أجهزتك المفعلة.")) {
+        try {
+            if (savedCode) {
+                const docRef = window.fbDoc(window.db, "subscriptions", savedCode);
+                // إزالة الجهاز من القائمة في Firebase لتحرير Slot
+                await window.fbUpdateDoc(docRef, {
+                    devices: window.fbArrayRemove(deviceId)
+                });
+            }
+        } catch (error) {
+            console.error("Logout Firebase Error:", error);
+        }
+
+        // مسح البيانات محلياً وإعادة التحميل
+        localStorage.removeItem('filmak_active_code');
+        window.location.reload();
+    }
+};
 
 // وظيفة التحقق من الكود المدخل
 window.validateCode = async function() {
@@ -126,6 +162,7 @@ window.validateCode = async function() {
         // نجاح العملية
         localStorage.setItem('filmak_active_code', codeInput);
         document.getElementById('login-overlay').style.display = 'none';
+        updateAuthUI(true);
 
     } catch (error) {
         errorDiv.innerText = error.message || "حدث خطأ في النظام";
@@ -156,6 +193,7 @@ async function silentMonitor() {
                 // انتهى الوقت! اطرد العميل
                 localStorage.removeItem('filmak_active_code');
                 document.getElementById('login-overlay').style.display = 'flex';
+                updateAuthUI(false);
             } else {
                 // التأكد إن الجهاز لسه موجود في القائمة (ما اتمسحش يدوياً)
                 const deviceList = codeData.devices || [];
@@ -163,12 +201,14 @@ async function silentMonitor() {
                 if (!deviceList.includes(deviceId)) {
                     localStorage.removeItem('filmak_active_code');
                     document.getElementById('login-overlay').style.display = 'flex';
+                    updateAuthUI(false);
                 }
             }
         } else {
             // الكود اتمسح من الـ Database! اطرد العميل
             localStorage.removeItem('filmak_active_code');
             document.getElementById('login-overlay').style.display = 'flex';
+            updateAuthUI(false);
         }
     } catch (e) {
         // فشل الاتصال، لا تفعل شيء وانتظر المرة القادمة
@@ -214,6 +254,7 @@ async function isSubscriptionValid() {
     // لو منتهي أو مش موجود أو الجهاز اتمسح، نمسح الكود ونظهر شاشة الدخول
     localStorage.removeItem('filmak_active_code');
     document.getElementById('login-overlay').style.display = 'flex';
+    updateAuthUI(false);
     return false;
 }
 

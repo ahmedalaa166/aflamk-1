@@ -101,6 +101,14 @@ ul {
     width: 100%;
 }
 
+.logout-link {
+    color: var(--primary-color) !important;
+}
+
+.logout-link:hover {
+    color: #fff !important;
+}
+
 /* Dropdown Menus */
 .dropdown {
     position: relative;
@@ -922,6 +930,21 @@ footer span {
         transform: translateX(-5px);
     }
 
+    #mobile-logout-btn {
+        background: rgba(229, 9, 20, 0.1) !important;
+        border-color: rgba(229, 9, 20, 0.3) !important;
+        color: var(--primary-color) !important;
+        transform: none !important;
+        transition: none !important;
+        display: none;
+    }
+
+    #mobile-logout-btn:hover, #mobile-logout-btn:active {
+        background: var(--primary-color) !important;
+        color: #fff !important;
+        transform: none !important;
+    }
+
 
 
     .menu-overlay {
@@ -1181,22 +1204,22 @@ footer span {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     z-index: 10000;
-    display: flex;
+    display: none; /* مخفي افتراضياً لمنع الوميض عند التحميل */
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
 }
 
 .login-card {
-    background: rgba(21, 27, 43, 0.8);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 3rem;
+    background: rgba(21, 27, 43, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    padding: 3.5rem 2.5rem;
     width: 100%;
-    max-width: 480px;
+    max-width: 440px;
     text-align: center;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.8);
     animation: fadeScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -1313,7 +1336,36 @@ footer span {
 
 @media (max-width: 480px) {
     .login-card {
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .login-logo {
+        font-size: 2rem;
+    }
+
+    .login-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-card p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .login-input-group input {
+        font-size: 1rem;
+        padding: 1rem 3rem 1rem 1rem;
+    }
+    
+    .login-input-group i {
+        right: 1rem;
+        font-size: 1rem;
+    }
+
+    #login-btn {
+        padding: 1rem;
+        font-size: 1.1rem;
     }
 }
 
