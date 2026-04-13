@@ -1,3 +1,18 @@
+/* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
+const SITE_VERSION = "2026.04.13.07"; // غير الرقم ده كل ما تعمل تحديث كبير
+
+function handleAutoUpdate() {
+    const savedVersion = localStorage.getItem('filmak_site_version');
+    if (savedVersion !== SITE_VERSION) {
+        localStorage.setItem('filmak_site_version', SITE_VERSION);
+        // لو النسخة قديمة، بنعمل ريفريش إجباري
+        if (savedVersion) {
+            window.location.reload(true);
+        }
+    }
+}
+handleAutoUpdate();
+
 /* ==== نظام التفعيل والاشتراك (Firebase Version) ==== */
 
 // وظيفة لتوليد ID فريد للجهاز
@@ -260,6 +275,50 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-alleba',
+        title: 'اللعبة 5: الكلاسيكو',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/al_leba_s5.jpg',
+        year: '12 ابريل 2026',
+        quality: 'FHD',
+        desc: 'تستمر في الموسم الخامس مغامرات وسيم ومازو، حيث يعاني وسيم من ضائقة مالية ويحاول الجميع مساعدته، وعلى جانب آخر يعيش مازو في رفاهية بعد الاستحواذ على الأموال، إلى أن تفرض عليهم اللعبة تحديات جديدة تعتمد على الذكاء الاصطناعي، وتتوالى الأحداث.',
+        seasons: [
+            {
+                seasonNumber: 5,
+                episodes: [
+                    {
+                        id: 's5-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
+                        downloads: {
+                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
+                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
+                        }
+                    },
+                    {
+                        id: 's5-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vfaststream.co/e/2vb4N4lcTVXBU',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vcjrqa2kkwr4.html',
+                            high: 'https://vik1ngfile.site/f/ljTStYhpSE'
+                        }
+                    },
+                    {
+                        id: 's5-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://anafast.org/embed-3zndog1o9jo1.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/fqnosfhmxmcj.html',
+                            high: 'https://vik1ngfile.site/f/bdHhMsJGsa'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     {
         id: "cartoon-back-to-outback",
         title: "العودة للبرية | Back to the Outback",
@@ -724,41 +783,6 @@ const allContent = [
             medium: 'https://vidspeed.org/d/1tqdn5xx7x0q.html',
             high: 'https://vik1ngfile.site/f/gOHebq711p'
         }
-    },
-    {
-        id: 's-alleba',
-        title: 'اللعبة 5: الكلاسيكو',
-        type: 'series',
-        category: 'arabic-series',
-        poster: 'صور/al_leba_s5.jpg',
-        year: '12 ابريل 2026',
-        quality: 'FHD',
-        desc: 'تستمر في الموسم الخامس مغامرات وسيم ومازو، حيث يعاني وسيم من ضائقة مالية ويحاول الجميع مساعدته، وعلى جانب آخر يعيش مازو في رفاهية بعد الاستحواذ على الأموال، إلى أن تفرض عليهم اللعبة تحديات جديدة تعتمد على الذكاء الاصطناعي، وتتوالى الأحداث.',
-        seasons: [
-            {
-                seasonNumber: 5,
-                episodes: [
-                    {
-                        id: 's5-ep1',
-                        title: 'الحلقة 1',
-                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
-                        downloads: {
-                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
-                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
-                        }
-                    },
-                    {
-                        id: 's5-ep2',
-                        title: 'الحلقة 2',
-                        videoUrl: 'https://vfaststream.co/e/2vb4N4lcTVXBU',
-                        downloads: {
-                            medium: 'https://vidspeed.org/d/vcjrqa2kkwr4.html',
-                            high: 'https://vik1ngfile.site/f/ljTStYhpSE'
-                        }
-                    }
-                ]
-            }
-        ]
     },
     {
         id: 's-ein-sehreya',
@@ -1477,7 +1501,11 @@ function renderGrid(containerId, data) {
         const isLive = item.type === 'live';
         let badgeHTML = '';
         if (isSeries) {
-            badgeHTML = item.hideSeasonText ? `<span class="badge">مسلسل | حلقات</span>` : `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+            if (item.seasons && item.seasons.length > 0) {
+                badgeHTML = item.hideSeasonText ? `<span class="badge">مسلسل | حلقات</span>` : `<span class="badge">مسلسل | ${item.seasons.length} مواسم</span>`;
+            } else {
+                badgeHTML = `<span class="badge">مسلسل | حلقات</span>`;
+            }
         }
         if (isLive) badgeHTML = `<span class="badge" style="background: #22c55e; box-shadow: 0 4px 10px rgba(34, 197, 94, 0.4);"><i class="fas fa-circle" style="font-size: 0.6rem; animation: pulse 1s infinite;"></i> مباشر الآن</span>`;
         const card = document.createElement('div');
@@ -1559,7 +1587,7 @@ window.watchItem = async function(itemId, restoreFromSession = false) {
     let downloads = item.downloads;
     let extraHTML = '';
 
-    if (item.type === 'series') {
+    if (item.type === 'series' && item.seasons && item.seasons.length > 0) {
         let seasonNum, episodeId;
         if (restoreFromSession && sessionStorage.getItem('currentSeason') && sessionStorage.getItem('currentEpisode')) {
             seasonNum = parseInt(sessionStorage.getItem('currentSeason'));
