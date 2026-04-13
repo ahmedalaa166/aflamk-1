@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>افلامك | مشاهدة احدث الأفلام والمسلسلات</title>
     <!-- Google Fonts: Cairo -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 <body>
@@ -318,6 +322,16 @@
         measurementId: "G-G0HJ7SG8NJ"
       };
 
+      // Unregister old Service Workers to fix caching
+      if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              for(let registration of registrations) {
+                  registration.unregister();
+                  console.log('Service Worker Unregistered to clear cache');
+              }
+          });
+      }
+
       // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const db = getFirestore(app);
@@ -333,7 +347,7 @@
     </script>
 
     <!-- Main JS File -->
-    <script src="script.js?v=60"></script>
+    <script src="script.js?v=61"></script>
 </body>
 
 </html>
