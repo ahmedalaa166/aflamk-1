@@ -38,9 +38,13 @@ async function checkSubscription() {
             }
 
             if (expiryDate >= today) {
-                // الكود صالح
-                overlay.style.display = 'none';
-                return;
+                // التأكد إن الجهاز الحالي لسه مسموح له (موجود في القائمة)
+                const deviceList = codeData.devices || [];
+                const deviceId = getDeviceId();
+                if (deviceList.includes(deviceId)) {
+                    overlay.style.display = 'none';
+                    return;
+                }
             }
         }
     } catch (error) {
@@ -149,6 +153,14 @@ async function silentMonitor() {
                 // انتهى الوقت! اطرد العميل
                 localStorage.removeItem('filmak_active_code');
                 document.getElementById('login-overlay').style.display = 'flex';
+            } else {
+                // التأكد إن الجهاز لسه موجود في القائمة (ما اتمسحش يدوياً)
+                const deviceList = codeData.devices || [];
+                const deviceId = getDeviceId();
+                if (!deviceList.includes(deviceId)) {
+                    localStorage.removeItem('filmak_active_code');
+                    document.getElementById('login-overlay').style.display = 'flex';
+                }
             }
         } else {
             // الكود اتمسح من الـ Database! اطرد العميل
