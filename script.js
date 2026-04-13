@@ -15,7 +15,10 @@ async function checkSubscription() {
     const savedCode = localStorage.getItem('filmak_active_code');
     const overlay = document.getElementById('login-overlay');
     
-    if (!savedCode) {
+    // لو فيه كود محفوظ، اخفي الشاشة فوراً عشان ما تظهرش وتختفي
+    if (savedCode) {
+        overlay.style.display = 'none';
+    } else {
         overlay.style.display = 'flex';
         return;
     }
