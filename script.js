@@ -1,6 +1,30 @@
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 'live-rotana-comedy',
+        title: 'قناة روتانا كوميدي',
+        type: 'live',
+        category: 'live',
+        poster: 'صور/rotana_comedy.jpg',
+        year: 'بث مباشر',
+        quality: 'FHD',
+        desc: 'مشاهدة البث المباشر لقناة روتانا كوميدي، القناة المتخصصة في عرض أقوى الأفلام والبرامج الكوميدية العربية الكلاسيكية والحديثة لرسم البسمة على وجوهكم.',
+        videoUrl: 'https://tv.qanwatlive.com/2025/03/blog-post_25.html',
+        subCategory: 'movies'
+    },
+    {
+        id: 'live-rotana-drama',
+        title: 'قناة روتانا دراما',
+        type: 'live',
+        category: 'live',
+        poster: 'صور/rotana_drama.jpg',
+        year: 'بث مباشر',
+        quality: 'FHD',
+        desc: 'مشاهدة البث المباشر لقناة روتانا دراما، القناة الرائدة في عرض أقوى المسلسلات العربية والدرامية المصرية والخليجية والتركية المدبلجة على مدار الساعة.',
+        videoUrl: 'https://tv.qanwatlive.com/2025/03/blog-post_80.html',
+        subCategory: 'variety'
+    },
+    {
         id: 's-heya-kemya',
         title: 'هي كيميا؟!',
         type: 'series',
@@ -482,6 +506,18 @@ const allContent = [
         subCategory: 'variety'
     },
     {
+        id: 'live-mbc-masr',
+        title: 'قناة MBC مصر',
+        type: 'live',
+        category: 'live',
+        poster: 'صور/mbc_masr.jpg',
+        year: 'بث مباشر',
+        quality: 'FHD',
+        desc: 'مشاهدة البث المباشر لقناة MBC مصر بجودة عالية، القناة الرائدة في تقديم البرامج الترفيهية والمسلسلات والبرامج الحوارية في مصر والوطن العربي.',
+        videoUrl: 'https://play.tlfaz.com/player/#https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8',
+        subCategory: 'variety'
+    },
+    {
         id: 'live-spacetoon',
         title: 'قناة سبيستون',
         type: 'live',
@@ -528,18 +564,6 @@ const allContent = [
         desc: 'مشاهدة البث المباشر لقناة كرتون نتورك بالعربية (CN Arabic) بجودة عالية، القناة المفضلة لأحبائنا الصغار لمتابعة أحدث مسلسلات الكرتون والمغامرات.',
         videoUrl: 'https://tv.qanwatlive.com/2025/03/blog-post.html',
         subCategory: 'kids'
-    },
-    {
-        id: 'live-mbc-masr',
-        title: 'قناة MBC مصر',
-        type: 'live',
-        category: 'live',
-        poster: 'صور/mbc_masr.jpg',
-        year: 'بث مباشر',
-        quality: 'FHD',
-        desc: 'مشاهدة البث المباشر لقناة MBC مصر بجودة عالية، القناة الرائدة في تقديم البرامج الترفيهية والمسلسلات والبرامج الحوارية في مصر والوطن العربي.',
-        videoUrl: 'https://play.tlfaz.com/player/#https://shd-gcp-live.lg.mncdn.com/live/bitmovin-mbc-masr/956eac069c78a35d47245db6cdbb1575/index.m3u8',
-        subCategory: 'variety'
     },
 
     {
