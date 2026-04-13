@@ -161,7 +161,7 @@ const allContent = [
         year: '10 ابريل 2026',
         quality: 'FHD',
         desc: 'يتبع العمل قصة مدينة ساحلية تتعرض لإعصار من الفئة الخامسة، حيث يجلب ارتفاع الأمواج دمارًا وفوضى، وما هو أخطر من ذلك: أسماك قرش جائعة تهدد كل من ينجو من العاصفة.',
-        videoUrl: 'https://short.icu/B7ilIpW_m',
+        videoUrl: 'https://anafast.org/embed-kz82abluj52r.html',
         downloads: {
             medium: 'https://www.up-4ever.net/kdkoqx3dtvu7',
             high: 'https://www.up-4ever.net/2njuzovbyas8'
