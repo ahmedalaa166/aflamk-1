@@ -175,8 +175,8 @@ async function silentMonitor() {
 // تشغيل التحقق عند التحميل
 document.addEventListener('DOMContentLoaded', checkSubscription);
 
-// المراقب الصامت يشتغل كل دقيقتين في الخلفية
-setInterval(silentMonitor, 120000); 
+// المراقب الصامت يشتغل كل 30 ثانية في الخلفية
+setInterval(silentMonitor, 30000); 
 
 // وظيفة مساعدة للتحقق السريع قبل المشاهدة
 async function isSubscriptionValid() {
@@ -197,13 +197,18 @@ async function isSubscriptionValid() {
                 expiryDate = new Date(codeData.expiry);
             }
 
-            if (expiryDate >= today) return true;
+            if (expiryDate >= today) {
+                // التأكد إن الجهاز لسه موجود في القائمة
+                const deviceList = codeData.devices || [];
+                const deviceId = getDeviceId();
+                if (deviceList.includes(deviceId)) return true;
+            }
         }
     } catch (e) {
         console.error("Auth verify error");
     }
     
-    // لو منتهي أو مش موجود، نمسح الكود ونظهر شاشة الدخول
+    // لو منتهي أو مش موجود أو الجهاز اتمسح، نمسح الكود ونظهر شاشة الدخول
     localStorage.removeItem('filmak_active_code');
     document.getElementById('login-overlay').style.display = 'flex';
     return false;
@@ -211,6 +216,34 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: "cartoon-back-to-outback",
+        title: "العودة للبرية | Back to the Outback",
+        poster: "صور/back-to-the-outback.jpg",
+        year: "2021",
+        quality: "WEB-DL 1080p",
+        category: "cartoon-movies",
+        type: "movie",
+        desc: "بعد قضاء فترة طويلة في الحبس داخل منزل زواحف حيث يحدق بهم البشر طيلة الوقت، تضع مجموعة من الحيوانات الأسترالية خطة بالغة الصعوبة على أمل الهروب من حديقة الحيوانات والعودة للبراري مجددًا.",
+        versions: [
+            {
+                name: "نسخة مترجمة",
+                videoUrl: "https://m.reviewrate.net/embed-05v6t85ar8zj.html",
+                downloads: {
+                    high: "https://cdnps16.cdn.boutique/d/tqqhxonrfsrnuwfu4b6nnp7s7hqbtgtsexas6e3…twjkmj3suebsv4w2j/[arabseed].Back.to.the.Outback.2021.720p.NF.WEB-DL.mp4",
+                    medium: "https://cdn81.cdn.boutique/d/nqqhhonrfsrnuwfu4b6jl7xaxh3xgtdo6hr5r65sc…uepz3dvear7kcejd7/[arabseed].Back.to.the.Outback.2021.480p.NF.WEB-DL.mp4"
+                }
+            },
+            {
+                name: "نسخة مدبلجة",
+                videoUrl: "https://anafast.org/embed-bdkd0teoeyeo.html",
+                downloads: {
+                    high: "https://vik1ngfile.site/f/hYvra7J5LV",
+                    medium: "https://vidspeed.org/d/eslbaegbjsn9.html"
+                }
+            }
+        ]
+    },
     {
         id: 's-karitha-tabiiya',
         title: 'مسلسل كارثة طبيعية',
