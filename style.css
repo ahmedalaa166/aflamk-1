@@ -1093,3 +1093,79 @@ footer span {
         font-size: 0.85rem;
     }
 }
+
+/* ---- Autocomplete Suggestions ---- */
+.search-box {
+    position: relative;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--outline-color);
+    border-radius: 0 0 8px 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--outline-color);
+    transition: background 0.3s ease;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.suggestion-img {
+    width: 40px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.suggestion-info h4 {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    margin: 0 0 3px 0;
+}
+
+.suggestion-info p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Custom Scrollbar for Suggestions */
+.search-suggestions::-webkit-scrollbar {
+    width: 6px;
+}
+
+.search-suggestions::-webkit-scrollbar-track {
+    background: #0b101e;
+}
+
+.search-suggestions::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.search-suggestions {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #0b101e;
+}

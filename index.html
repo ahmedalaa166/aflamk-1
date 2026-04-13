@@ -57,8 +57,9 @@
             </ul>
 
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..." oninput="showSuggestions(this.value, 'desktopSuggestions')" onblur="setTimeout(() => hideSuggestions('desktopSuggestions'), 200)">
                 <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
+                <div class="search-suggestions" id="desktopSuggestions"></div>
             </div>
         </div>
     </nav>
@@ -73,9 +74,10 @@
         </div>
 
         <!-- Mobile Only Search -->
-        <div class="mobile-search-container">
-            <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل...">
+        <div class="mobile-search-container" style="position: relative;">
+            <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل..." oninput="showSuggestions(this.value, 'mobileSuggestions')" onblur="setTimeout(() => hideSuggestions('mobileSuggestions'), 200)">
             <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
+            <div class="search-suggestions" id="mobileSuggestions"></div>
         </div>
 
         <div class="mobile-sections-grid">

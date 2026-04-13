@@ -1,6 +1,188 @@
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 's-heya-kemya',
+        title: 'هي كيميا؟!',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/heya_kemya.jpg',
+        year: '18 فبراير 2026',
+        quality: 'FHD',
+        desc: 'تنهار حياة سلطان المستقرة حين تظهر فيها معادلة غير عادية تبدأ بوفاة والده. تتحول الجنازة إلى نقطة تحول كبرى حين يظهر حجاج، وهو أخوه الذي يظهر لأول مرة في حياته، ولم يسمع عنه سلطان من قبل.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 'ep1-1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vfaststream.co/e/DFleW7wsSXpO',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/grcejlipkkhd.html',
+                            high: 'https://vik1ngfile.site/f/qwoVK2nh9N'
+                        }
+                    },
+                    {
+                        id: 'ep1-2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vfaststream.co/e/TOwQzo7xxwOA',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/cvqdcezqa8lv.html',
+                            high: 'https://vik1ngfile.site/f/5dMm0Rk8f0'
+                        }
+                    },
+                    {
+                        id: 'ep1-3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://vfaststream.co/e/4BrkrfOgYKRK',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/d80k2qxjdzw9.html',
+                            high: 'https://vik1ngfile.site/f/IwBAY2W9Jn'
+                        }
+                    },
+                    {
+                        id: 'ep1-4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://vfaststream.co/e/4BrkrfOgYKRK',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/d80k2qxjdzw9.html',
+                            high: 'https://vik1ngfile.site/f/IwBAY2W9Jn'
+                        }
+                    },
+                    {
+                        id: 'ep1-5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://vfaststream.co/e/RBz4BxVXpvmO',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/r9smusvnkzni.html',
+                            high: 'https://vik1ngfile.site/f/pomjJvElql'
+                        }
+                    },
+                    {
+                        id: 'ep1-6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://vfaststream.co/e/tuT9lFlUYxKR',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/o3ok3zvbup7h.html',
+                            high: 'https://vik1ngfile.site/f/5KaiTLMOOO'
+                        }
+                    },
+                    {
+                        id: 'ep1-7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://vfaststream.co/e/hg2zAJ8aJr5u',
+                        downloads: {
+                            medium: 'https://q9rin5rc85p0.html',
+                            high: 'https://vik1ngfile.site/f/W12iTejl0V'
+                        }
+                    },
+                    {
+                        id: 'ep1-8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://vfaststream.co/e/yJSTC3zLIzZr',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/wzaqurilnf4a.html',
+                            high: 'https://vik1ngfile.site/f/WPsN8mhjhV'
+                        }
+                    },
+                    {
+                        id: 'ep1-9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://vfaststream.co/e/53z1UxWefSKV',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/aodge112oglo.html',
+                            high: 'https://vik1ngfile.site/f/6rLq4XRy5K'
+                        }
+                    },
+                    {
+                        id: 'ep1-10',
+                        title: 'الحلقة 10',
+                        videoUrl: 'https://vfaststream.co/e/GPtfvX954d0o',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/m3seyguy6sw2.html',
+                            high: 'https://vik1ngfile.site/f/MD1XevOnWQ'
+                        }
+                    },
+                    {
+                        id: 'ep1-11',
+                        title: 'الحلقة 11',
+                        videoUrl: 'https://vfaststream.co/e/IhD9z4Pbhvkm',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/wkccjxeet5pw.html',
+                            high: 'https://vik1ngfile.site/f/zFIMPW202a'
+                        }
+                    },
+                    {
+                        id: 'ep1-12',
+                        title: 'الحلقة 12',
+                        videoUrl: 'https://vfaststream.co/e/Vy5raVNa9qcA',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/jvpyhs1w3gon.html',
+                            high: 'https://vik1ngfile.site/f/GQjYc3sZNT'
+                        }
+                    },
+                    {
+                        id: 'ep1-13',
+                        title: 'الحلقة 13',
+                        videoUrl: 'https://vfaststream.co/e/Njw5TsP2yLuE',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/3aghiutlhoqm.html',
+                            high: 'https://vik1ngfile.site/f/9tm3c0Bwgx'
+                        }
+                    },
+                    {
+                        id: 'ep1-14',
+                        title: 'الحلقة 14',
+                        videoUrl: 'https://vfaststream.co/e/whujiYNmxpRA',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/y7kvkj2xjj9c.html',
+                            high: 'https://vik1ngfile.site/f/KplIK6m6Ws'
+                        }
+                    },
+                    {
+                        id: 'ep1-15',
+                        title: 'الحلقة 15',
+                        videoUrl: 'https://vfaststream.co/e/ZPz06LpTTIXj',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/8omcdh3u5ial.html',
+                            high: 'https://vik1ngfile.site/f/I9wfNWjaaL'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'm-thrash',
+        title: 'Thrash',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/thrash.jpg',
+        year: '10 ابريل 2026',
+        quality: 'FHD',
+        desc: 'يتبع العمل قصة مدينة ساحلية تتعرض لإعصار من الفئة الخامسة، حيث يجلب ارتفاع الأمواج دمارًا وفوضى، وما هو أخطر من ذلك: أسماك قرش جائعة تهدد كل من ينجو من العاصفة.',
+        videoUrl: 'https://short.icu/B7ilIpW_m',
+        downloads: {
+            medium: 'https://www.up-4ever.net/kdkoqx3dtvu7',
+            high: 'https://www.up-4ever.net/2njuzovbyas8'
+        }
+    },
+    {
+        id: 'm-sico-sico',
+        title: 'سيكو سيكو',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/sico_sico.jpg',
+        year: '30 مارس 2025',
+        quality: 'FHD',
+        desc: 'يحصل (سليم) وابن عمه (يحيى) على ميراث عمهما المتوفي، ثم يكتشفان أن الميراث عبارة عن شحنة مخدرات، فيحاولان التصرف فيها وبيعها من خلال ابتكار لعبة إلكترونية وبمساعدة مجموعة من الأشخاص، لكن تنقلب حياتهما رأسًا على عقب بعد ظهور زعيم عصابة خطير يدّعي أنه المالك الحقيقي للسلع.',
+        videoUrl: 'https://short.icu/WyaHO_Bl6',
+        downloads: {
+            medium: 'https://updown.cam/c16pkhdujcja',
+            high: 'https://updown.cam/v75plz968nwk'
+        }
+    },
+    {
         id: 'm-ahmed-wa-ahmed',
         title: 'أحمد وأحمد',
         type: 'movie',
@@ -967,11 +1149,21 @@ function playEpisode(seriesId, seasonNum, episodeId) {
     if (navContainer) navContainer.outerHTML = renderSeriesNav(series, seasonNum, episodeId);
 }
 
+function normalizeText(text) {
+    if (!text) return '';
+    return text.toString().toLowerCase()
+        .replace(/[أإآ]/g, 'ا')
+        .replace(/ة/g, 'ه')
+        .replace(/ى/g, 'ي')
+        .trim();
+}
+
 function handleSearch(inputId) {
-    const query = document.getElementById(inputId).value.toLowerCase().trim();
-    if (!query) return;
+    const queryOriginal = document.getElementById(inputId).value;
+    const query = normalizeText(queryOriginal);
+    if (!queryOriginal.trim()) return;
     navigate('search-results');
-    const results = allContent.filter(item => item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query));
+    const results = allContent.filter(item => normalizeText(item.title).includes(query));
     renderGrid('search-grid', results);
 }
 
@@ -1001,3 +1193,82 @@ function playMovieVersion(itemId, versionIndex, btn) {
         }
     }
 }
+
+// ---- Search Autocomplete Logic ----
+window.showSuggestions = function(query, containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    const queryOriginal = query;
+    query = normalizeText(query);
+    
+    if (!queryOriginal.trim()) {
+        container.style.display = 'none';
+        return;
+    }
+    
+    // Filter and Sort logic
+    const results = allContent
+        .filter(item => {
+            const nTitle = normalizeText(item.title);
+            // If query is very short (1-2 chars), it MUST start the title or start a word
+            if (query.length <= 2) {
+                return nTitle.startsWith(query) || nTitle.includes(' ' + query);
+            }
+            // For longer queries, keep the "includes" logic
+            return nTitle.includes(query);
+        })
+        .sort((a, b) => {
+            const aTitle = normalizeText(a.title);
+            const bTitle = normalizeText(b.title);
+            const aStarts = aTitle.startsWith(query);
+            const bStarts = bTitle.startsWith(query);
+            
+            if (aStarts && !bStarts) return -1;
+            if (!aStarts && bStarts) return 1;
+            
+            // Priority to word starts
+            const aWordStart = aTitle.includes(' ' + query);
+            const bWordStart = bTitle.includes(' ' + query);
+            if (aWordStart && !bWordStart) return -1;
+            if (!aWordStart && bWordStart) return 1;
+
+            return aTitle.length - bTitle.length;
+        })
+        .slice(0, 5); // top 5
+    
+    if (results.length === 0) {
+        container.innerHTML = '<div style="padding: 10px; color: var(--text-muted); text-align: center; font-size: 0.9rem;">لاتوجد نتائج...</div>';
+        container.style.display = 'block';
+        return;
+    }
+    
+    let html = '';
+    results.forEach(item => {
+        let typeLabel = '';
+        if (item.type === 'movie') typeLabel = 'فيلم';
+        else if (item.type === 'series') typeLabel = 'مسلسل';
+        else if (item.type === 'live') typeLabel = 'بث مباشر';
+        else typeLabel = 'أخرى';
+        
+        html += `
+            <div class="suggestion-item" onclick="watchItem('${item.id}'); document.getElementById('${containerId}').style.display='none';">
+                <img src="${item.poster}" alt="${item.title}" class="suggestion-img">
+                <div class="suggestion-info">
+                    <h4>${item.title}</h4>
+                    <p>${typeLabel} ${item.year ? '• ' + item.year : ''}</p>
+                </div>
+            </div>
+        `;
+    });
+    
+    container.innerHTML = html;
+    container.style.display = 'block';
+};
+
+window.hideSuggestions = function(containerId) {
+    const container = document.getElementById(containerId);
+    if (container) {
+        container.style.display = 'none';
+    }
+};
