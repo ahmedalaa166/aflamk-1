@@ -1,0 +1,22 @@
+{
+  "name": "افلامك | Filmak",
+  "short_name": "افلامك",
+  "description": "منصة مشاهدة أحدث الأفلام والمسلسلات الحصرية",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b101e",
+  "theme_color": "#e50914",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2503/2503508.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}

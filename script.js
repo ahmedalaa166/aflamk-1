@@ -95,8 +95,11 @@ window.validateCode = async function() {
         const maxAllowed = codeData.maxDevices || 6; 
         const deviceList = codeData.devices || [];
 
+        // استثناء خاص لكود الـ Admin
+        const isAdmin = (codeInput === 'admin123');
+
         if (!deviceList.includes(deviceId)) {
-            if (deviceList.length >= maxAllowed) {
+            if (!isAdmin && deviceList.length >= maxAllowed) {
                 throw new Error("لقد وصلت للحد الأقصى من الأجهزة (6 أجهزة)");
             }
             
