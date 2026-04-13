@@ -1,6 +1,222 @@
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 's-karitha-tabiiya',
+        title: 'مسلسل كارثة طبيعية',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/karitha_tabiiya.jpg',
+        year: '29 اكتوبر 2025',
+        quality: 'FHD',
+        desc: 'تدور أحداث كارثة طبيعية حول شاب من أسرة بسيطة، متزوج حديثًا، يكافح لبناء حياته من الصفر وسط تحديات وضغوط يومية. ويفاجأ بحمل زوجته في خمس توائم، وفيسعى رغم الظروف الاقتصادية القاسية لتأمين حياة كريمة لعائلته.',
+        hideSeasonText: true,
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 's-karitha-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://anafasts.com/embed-opr6ueqhvpu0.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/4mpcj8wyouy4.html',
+                            high: 'https://vik1ngfile.site/f/alv7R0fsSN'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://anafasts.com/embed-epm7th80xvt4.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/bp5txqxv2nx8.html',
+                            high: 'https://vik1ngfile.site/f/IAnjgi6ebL'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://anafast.org/embed-54e8g3643tzk.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/m95de7896iop.html',
+                            high: 'https://vik1ngfile.site/f/WKGcVZrIuG'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://anafast.org/embed-80q8qau0clug.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/jal1splq2344.html',
+                            high: 'https://vik1ngfile.site/f/1cUrPYATvI'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://anafast.org/embed-yc2idq6ppsdw.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/3qsvyfzv8fpq.html',
+                            high: 'https://vik1ngfile.site/f/NBBfyenL5r'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://anafast.org/embed-086vr2j47bu4.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/rpon0bmn9e1u.html',
+                            high: 'https://vik1ngfile.site/f/paeVQp1JUv'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://anafast.org/embed-961h87nigrss.html',
+                        downloads: {
+                            medium: 'https://anafast.org/d/961h87nigrss.html',
+                            high: 'https://vik1ngfile.site/f/hmrBEhcKd3'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://anafast.org/embed-v5i862464rmo.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/y1h3rz4c72ba.html',
+                            high: 'https://vik1ngfile.site/f/0k3FWXzqJH'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://anafast.org/embed-0ghcyfong44f.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/3v9othtafhm9.html',
+                            high: 'https://vik1ngfile.site/f/UeEBEsx5cZ'
+                        }
+                    },
+                    {
+                        id: 's-karitha-ep10',
+                        title: 'الحلقة 10 والأخيرة',
+                        videoUrl: 'https://anafast.org/embed-dso9b9g1ws1p.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/ko6rjsqw9359.html',
+                            high: 'https://vik1ngfile.site/f/iy9nZQ7eQz'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 's-batal-al-alam',
+        title: 'مسلسل بطل العالم',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/batal_al_alam.jpg',
+        year: '18 يناير 2026',
+        quality: 'FHD',
+        desc: 'بعد خسارة بطولة العالم، يتحول بطل أفريقيا في الملاكمة إلى حارس شخصي محترف يبحث عن فرصة ثانية. تتغير حياته تماماً حين يُكلَّف بحماية دنيا، ابنة رجل أعمال ماكر ترك وراءه ميراثاً مخفياً وديوناً خطيرة لمحروق، ملك عالم الرهانات. ينطلق صلاح ودنيا في مطاردات مشتعلة لكشف سر الثروة، وخلال الرحلة يستعيد البطل قوته ويجد طريقاً جديداً نحو الحب والخلاص.',
+        hideSeasonText: true,
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 's-batal-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://anafast.org/embed-fcu0f8yih2ll.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/mucvyibx9p8w.html',
+                            high: 'https://vik1ngfile.site/f/FxrF84Fn8H'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://anafast.org/embed-t2f13of9jqla.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/wvyujwjzue35.html',
+                            high: 'https://vik1ngfile.site/f/ZUKPgcsPBb'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://anafast.org/embed-3s3ss5l834fd.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/zog2p3cceojk.html',
+                            high: 'https://vik1ngfile.site/f/wXWxn9OPYw'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://anafast.org/embed-8lcxgk0n8eob.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/4rszb85qnyuk.html',
+                            high: 'https://vik1ngfile.site/f/BgijYZkyZv'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://vidspeed.org/embed-it7o2r1ygwc5.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/it7o2r1ygwc5.html',
+                            high: 'https://vik1ngfile.site/f/bCS5oL2bk6'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://anafast.org/embed-vvkx6hf7bvmb.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/6z6qyegxyv79.html',
+                            high: 'https://vik1ngfile.site/f/Se2txm2Jgi'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://anafast.org/embed-gyrxks8kbe2u.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/a5g1vku7in02.html',
+                            high: 'https://vik1ngfile.site/f/hMyWNsyJ1G'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://anafast.org/embed-w4z5opcmctza.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/zbkth2gbxqnj.html',
+                            high: 'https://vik1ngfile.site/f/uFoZfMD8vJ'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://vidspeed.org/embed-vwjvrq8t1fez.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vwjvrq8t1fez.html',
+                            high: 'https://vik1ngfile.site/f/VeKCwQyN6d'
+                        }
+                    },
+                    {
+                        id: 's-batal-ep10',
+                        title: 'الحلقة 10 والأخيرة',
+                        videoUrl: 'https://anafast.org/embed-eg8tlnupg9ql.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/fb8jld1xs3wt.html',
+                            high: 'https://vik1ngfile.site/f/iZZ4VSgyPq'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 'live-rotana-comedy',
         title: 'قناة روتانا كوميدي',
         type: 'live',
