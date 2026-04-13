@@ -1,3 +1,199 @@
+/* ==== نظام التفعيل والاشتراك (Firebase Version) ==== */
+
+// وظيفة لتوليد ID فريد للجهاز
+function getDeviceId() {
+    let deviceId = localStorage.getItem('filmak_device_id');
+    if (!deviceId) {
+        deviceId = 'dev-' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+        localStorage.setItem('filmak_device_id', deviceId);
+    }
+    return deviceId;
+}
+
+// التحقق من حالة الاشتراك عند فتح الموقع (من Firebase)
+async function checkSubscription() {
+    const savedCode = localStorage.getItem('filmak_active_code');
+    const overlay = document.getElementById('login-overlay');
+    
+    if (!savedCode) {
+        overlay.style.display = 'flex';
+        return;
+    }
+
+    try {
+        // البحث عن الكود في مجموعة "subscriptions" في Firestore
+        const docRef = window.fbDoc(window.db, "subscriptions", savedCode);
+        const docSnap = await window.fbGetDoc(docRef);
+
+        if (docSnap.exists()) {
+            const codeData = docSnap.data();
+            const today = new Date();
+            
+            // تحويل التاريخ سواء كان نص أو Timestamp من Firebase
+            let expiryDate;
+            if (codeData.expiry && typeof codeData.expiry.toDate === 'function') {
+                expiryDate = codeData.expiry.toDate();
+            } else {
+                expiryDate = new Date(codeData.expiry);
+            }
+
+            if (expiryDate >= today) {
+                // الكود صالح
+                overlay.style.display = 'none';
+                return;
+            }
+        }
+    } catch (error) {
+        console.error("Firebase Auth Error:", error);
+    }
+
+    // إذا فشل أي شرط
+    overlay.style.display = 'flex';
+}
+
+// وظيفة التحقق من الكود المدخل
+window.validateCode = async function() {
+    const codeInput = document.getElementById('activation-code').value.trim();
+    const btn = document.getElementById('login-btn');
+    const errorDiv = document.getElementById('login-error');
+    const deviceId = getDeviceId();
+
+    if (!codeInput) {
+        errorDiv.innerText = "برجاء إدخال الكود أولاً";
+        return;
+    }
+
+    errorDiv.innerText = "";
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحقق...';
+
+    try {
+        // جلب البيانات من Firebase
+        const docRef = window.fbDoc(window.db, "subscriptions", codeInput);
+        const docSnap = await window.fbGetDoc(docRef);
+
+        if (!docSnap.exists()) {
+            throw new Error("الكود غير صحيح أو غير موجود");
+        }
+
+        const codeData = docSnap.data();
+        const today = new Date();
+        
+        // تحويل التاريخ سواء كان نص أو Timestamp من Firebase
+        let expiryDate;
+        if (codeData.expiry && typeof codeData.expiry.toDate === 'function') {
+            expiryDate = codeData.expiry.toDate();
+        } else {
+            expiryDate = new Date(codeData.expiry);
+        }
+
+        if (expiryDate < today) {
+            throw new Error("عذراً، هذا الكود انتهت صلاحيته");
+        }
+
+        // التحقق من قائمة الأجهزة (الحد الأقصى هو 6 أو القيمة الموجودة في Firebase)
+        const maxAllowed = codeData.maxDevices || 6; 
+        const deviceList = codeData.devices || [];
+
+        if (!deviceList.includes(deviceId)) {
+            if (deviceList.length >= maxAllowed) {
+                throw new Error("لقد وصلت للحد الأقصى من الأجهزة (6 أجهزة)");
+            }
+            
+            // إضافة الجهاز الجديد لـ Firebase وتحديث وقت الدخول
+            await window.fbUpdateDoc(docRef, {
+                devices: window.fbArrayUnion(deviceId),
+                lastLogin: new Date().toLocaleString('ar-EG'),
+                lastDevice: navigator.userAgent.split(')')[0].split('(')[1] || "جهاز غير معروف"
+            });
+        } else {
+            // تحديث وقت الدخول فقط لو الجهاز مسجل مسبقاً
+            await window.fbUpdateDoc(docRef, {
+                lastLogin: new Date().toLocaleString('ar-EG')
+            });
+        }
+
+        // نجاح العملية
+        localStorage.setItem('filmak_active_code', codeInput);
+        document.getElementById('login-overlay').style.display = 'none';
+
+    } catch (error) {
+        errorDiv.innerText = error.message || "حدث خطأ في النظام";
+        btn.disabled = false;
+        btn.innerHTML = '<span>دخول للمنصة</span> <i class="fas fa-sign-in-alt"></i>';
+    }
+};
+
+// وظيفة المراقب الصامت (للخلفية فقط)
+async function silentMonitor() {
+    const savedCode = localStorage.getItem('filmak_active_code');
+    if (!savedCode) return;
+
+    try {
+        const docRef = window.fbDoc(window.db, "subscriptions", savedCode);
+        const docSnap = await window.fbGetDoc(docRef);
+        if (docSnap.exists()) {
+            const codeData = docSnap.data();
+            const today = new Date();
+            let expiryDate;
+            if (codeData.expiry && typeof codeData.expiry.toDate === 'function') {
+                expiryDate = codeData.expiry.toDate();
+            } else {
+                expiryDate = new Date(codeData.expiry);
+            }
+
+            if (expiryDate < today) {
+                // انتهى الوقت! اطرد العميل
+                localStorage.removeItem('filmak_active_code');
+                document.getElementById('login-overlay').style.display = 'flex';
+            }
+        } else {
+            // الكود اتمسح من الـ Database! اطرد العميل
+            localStorage.removeItem('filmak_active_code');
+            document.getElementById('login-overlay').style.display = 'flex';
+        }
+    } catch (e) {
+        // فشل الاتصال، لا تفعل شيء وانتظر المرة القادمة
+    }
+}
+
+// تشغيل التحقق عند التحميل
+document.addEventListener('DOMContentLoaded', checkSubscription);
+
+// المراقب الصامت يشتغل كل دقيقتين في الخلفية
+setInterval(silentMonitor, 120000); 
+
+// وظيفة مساعدة للتحقق السريع قبل المشاهدة
+async function isSubscriptionValid() {
+    const savedCode = localStorage.getItem('filmak_active_code');
+    if (!savedCode) return false;
+
+    try {
+        const docRef = window.fbDoc(window.db, "subscriptions", savedCode);
+        const docSnap = await window.fbGetDoc(docRef);
+        if (docSnap.exists()) {
+            const codeData = docSnap.data();
+            const today = new Date();
+            
+            let expiryDate;
+            if (codeData.expiry && typeof codeData.expiry.toDate === 'function') {
+                expiryDate = codeData.expiry.toDate();
+            } else {
+                expiryDate = new Date(codeData.expiry);
+            }
+
+            if (expiryDate >= today) return true;
+        }
+    } catch (e) {
+        console.error("Auth verify error");
+    }
+    
+    // لو منتهي أو مش موجود، نمسح الكود ونظهر شاشة الدخول
+    localStorage.removeItem('filmak_active_code');
+    document.getElementById('login-overlay').style.display = 'flex';
+    return false;
+}
+
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
@@ -1250,7 +1446,11 @@ function renderSectionPreview(gridId, headerId, data) {
     else { renderGrid(gridId, data.slice(0, 4)); }
 }
 
-function watchItem(itemId, restoreFromSession = false) {
+window.watchItem = async function(itemId, restoreFromSession = false) {
+    // التحقق من صلاحية الكود قبل فتح أي فيديو
+    const isValid = await isSubscriptionValid();
+    if (!isValid) return;
+
     const item = allContent.find(i => i.id === itemId);
     if (!item) return;
 
