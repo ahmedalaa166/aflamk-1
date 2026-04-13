@@ -11,10 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
     <link rel="stylesheet" href="style.css?v=3">
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0b101e">
-    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/2503/2503508.png">
 </head>
 
 <body>
@@ -334,14 +330,6 @@
       window.fbArrayUnion = arrayUnion;
       window.fbArrayRemove = arrayRemove;
 
-      // Register PWA Service Worker
-      if ('serviceWorker' in navigator) {
-          window.addEventListener('load', () => {
-              navigator.serviceWorker.register('./sw.js')
-                  .then(reg => console.log('Service Worker Registered'))
-                  .catch(err => console.log('Service Worker Failed', err));
-          });
-      }
     </script>
 
     <!-- Main JS File -->
