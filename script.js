@@ -222,7 +222,7 @@ const allContent = [
         poster: "صور/back-to-the-outback.jpg",
         year: "2021",
         quality: "WEB-DL 1080p",
-        category: "cartoon-movies",
+        category: "cartoon-movie",
         type: "movie",
         desc: "بعد قضاء فترة طويلة في الحبس داخل منزل زواحف حيث يحدق بهم البشر طيلة الوقت، تضع مجموعة من الحيوانات الأسترالية خطة بالغة الصعوبة على أمل الهروب من حديقة الحيوانات والعودة للبراري مجددًا.",
         versions: [
