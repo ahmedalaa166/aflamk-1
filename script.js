@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.14.20"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.14.22"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -1560,12 +1560,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('popstate', (e) => {
-        // محاولة جلب الصفحة من الـ state أو الـ hash كخطة بديلة
         const pageId = (e.state && e.state.page) ? e.state.page : (window.location.hash.replace('#', '') || 'home');
         const itemId = (e.state && e.state.itemId) ? e.state.itemId : sessionStorage.getItem('currentWatchItem');
 
         if (pageId === 'watch' && itemId) {
-            // استعادة حالة المشاهدة بالكامل
             watchItem(itemId, true);
         } else {
             navigate(pageId, true);
@@ -1653,9 +1651,12 @@ const navHistory = [];
 function navigate(pageId, fromHistory = false, stateData = {}) {
     if (!fromHistory) {
         const state = { page: pageId, ...stateData };
-        // نمنع تكرار نفس الصفحة في تاريخ المتصفح
         if (window.location.hash !== '#' + pageId || (pageId === 'watch' && stateData.itemId)) {
             history.pushState(state, '', '#' + pageId);
+        }
+        // تحديث التاريخ اليدوي لضمان السرعة
+        if (navHistory[navHistory.length - 1] !== pageId) {
+            navHistory.push(pageId);
         }
     }
     document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
@@ -1683,15 +1684,17 @@ function navigate(pageId, fromHistory = false, stateData = {}) {
 }
 
 function navigateBack() {
-    // لو فيه تاريخ نرجع خطوة، لو مفيش نرجع للرئيسية
-    if (window.history.length > 1) {
-        history.back();
-        // تأكيد إضافي بعد وقت بسيط لو المتصفح معلق في نفس الصفحة
-        setTimeout(() => {
-            if (window.location.hash.includes('watch')) {
-                navigate('home');
-            }
-        }, 300);
+    if (navHistory.length > 1) {
+        navHistory.pop(); // حذف الصفحة الحالية
+        const previousPage = navHistory[navHistory.length - 1];
+        
+        if (previousPage === 'watch') {
+            const savedItem = sessionStorage.getItem('currentWatchItem');
+            if (savedItem) watchItem(savedItem);
+            else navigate('home');
+        } else {
+            navigate(previousPage);
+        }
     } else {
         navigate('home');
     }
@@ -1772,9 +1775,11 @@ function renderSectionPreview(gridId, headerId, data) {
 }
 
 window.watchItem = async function(itemId, restoreFromSession = false) {
-    // التحقق من صلاحية الكود قبل فتح أي فيديو
-    const isValid = await isSubscriptionValid();
-    if (!isValid) return;
+    // التحقق من صلاحية الكود - بنعمله بس في المرة الأولى عشان الرجوع يكون سريع ولحظي
+    if (!restoreFromSession) {
+        const isValid = await isSubscriptionValid();
+        if (!isValid) return;
+    }
 
     const item = allContent.find(i => i.id === itemId);
     if (!item) return;
