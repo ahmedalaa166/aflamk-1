@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.13.07"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.14.20"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -275,6 +275,190 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-daredevil-born-again',
+        title: 'Daredevil: Born Again',
+        type: 'series',
+        category: 'foreign-series',
+        poster: 'صور/_315x420_0337a88243436584ff6b5c8d69b6d06a80795417641a10419f990437f7a022f4.jpg',
+        year: '24 مارس 2026',
+        quality: 'FHD',
+        desc: 'يقود (مات مردوك) مقاومة شعبية سرّية ضد العمدة (ويلسون فيسك) الذي حوّل نيويورك إلى مدينة استبدادية، فيعم من الظلال لإسقاط نظام القبضة الحديدية، وسط أزمة إيمان وصراع شخصي.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 'dd-s1-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidspeed.org/embed-qk7lzyghth3b.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/qk7lzyghth3b.html',
+                            high: 'https://callistanise.com/d/4owtyrf7bzrq'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'blob:https://wecima.ac/f5977b11-c68e-4a49-8980-5e17361b71ef',
+                        downloads: {
+                            high: 'https://callistanise.com/d/t7zu5ztpk8fb',
+                            medium: 'https://vidspeed.org/d/zoyl8ercooot.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://vidspeed.org/embed-irbj5v9g6zah.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/2tpn4ifmmh4d',
+                            medium: 'https://vidspeed.org/d/irbj5v9g6zah.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://hlswish.com/e/o5n0ezp5ul97',
+                        downloads: {
+                            high: 'https://hlswish.com/f/o5n0ezp5ul97',
+                            medium: 'https://vidspeed.org/d/2x1kejb9z5dx.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://vidspeed.org/embed-0pfwp1n78xsz.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/3x2sleo54xnp',
+                            medium: 'https://vidspeed.org/d/0pfwp1n78xsz.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://vidspeed.org/embed-rdak47hsx56t.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/j86zqcvtcgvw',
+                            medium: 'https://vidspeed.org/d/rdak47hsx56t.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://vidspeed.org/embed-ve5fi6pt8nvg.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/i2jwejr0sosx',
+                            medium: 'https://vidspeed.org/d/ve5fi6pt8nvg.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://vidspeed.org/embed-24o08koyq9gc.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/9l3ue27fpmmm',
+                            medium: 'https://vidspeed.org/d/24o08koyq9gc.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s1-ep9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://hgcloud.to/e/63powbv97tux',
+                        downloads: {
+                            high: 'https://vidspeed.org/d/29c27px91g9c.html',
+                            medium: 'https://1vid.xyz/d/07kow0t6te6p.html'
+                        }
+                    }
+                ]
+            },
+            {
+                seasonNumber: 2,
+                episodes: [
+                    {
+                        id: 'dd-s2-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidspeed.org/embed-pfzkc229j0ba.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/aqeye1931ms9',
+                            medium: 'https://vidspeed.org/d/pfzkc229j0ba.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s2-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vidspeed.org/embed-6z3xpz63cyzr.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/zyf034b36wl2',
+                            medium: 'https://vidspeed.org/d/6z3xpz63cyzr.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s2-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://vidspeed.org/embed-18rkjdakoz5s.html',
+                        downloads: {
+                            high: 'https://callistanise.com/d/fixzce9yn8ja',
+                            medium: 'https://vidspeed.org/d/18rkjdakoz5s.html'
+                        }
+                    },
+                    {
+                        id: 'dd-s2-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://mixdrop.ps/e/8l1r0r1dt6630vn',
+                        downloads: {
+                            high: 'https://mixdrop.ps/f/8l1r0r1dt6630vn?download',
+                            medium: 'https://virvid.cc/v/oat5u23nxumh'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'm-walna-fil-khayal',
+        title: 'ولنا في الخيال... حب؟',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/walna_fil_khayal.jpg',
+        year: '20 اكتوبر 2025',
+        quality: 'FHD',
+        desc: 'يوسف، أستاذ جامعي انطوائي، يحاول أن يعيش حياة هادئة ومنعزلة، لكن دخول الطالبة وردة إلى عالمه يقلب الموازين. وبينما تسعى لإصلاح علاقتها بحبيبها نوح، يجد يوسف نفسه يتورط تدريجيًا في مشاعرها وصراعاتها. ومع تداخل الأوهام بالحقائق، في قلب مثلث عاطفي معقد، تستيقظ داخله مشاعر كان يظن أنها انطفأت منذ زمن.',
+        videoUrl: 'https://anafast.org/embed-6zqlsg1pazuc.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/2NKGfAItqL',
+            medium: 'https://anafast.org/d/6zqlsg1pazuc.html'
+        }
+    },
+    {
+        id: 'm-alsada-alafadel',
+        title: 'السادة الأفاضل',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/alsada_alafadel.jpg',
+        year: '21 اكتوبر 2025',
+        quality: 'FHD',
+        desc: 'بعد وفاة الأب جلال، تنهار حياة عائلة أبو الفضل الهادئة. فيجد الابن الأكبر طارق نفسه مسؤولًا عن كل شيء، بينما يعود حجازي من القاهرة ليكتشف أن التعامل مع مرضاه أسهل بكثير من التعامل مع أسرته. تتعقد الأمور أكثر مع ظهور الرجل الغامض سمير إيطاليا، الذي يطالب العائلة بمبلغ كبير من المال. وبين ديون الأب، وتحف أثرية مشبوهة، تتحول محاولات الأخوين للإصلاح لسلسلة كوارث تزيد الوضع سوءًا.',
+        videoUrl: 'https://anafast.org/embed-3xsf0mgqn9nm.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/HEBcWtjKH9',
+            medium: 'https://vidspeed.org/d/m9mr3lfe0w57.html'
+        }
+    },
+    {
+        id: 'm-selm-althoaban',
+        title: 'السلم والثعبان',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/selm_althoaban.jpg',
+        year: '10 نوفمبر 2025',
+        quality: 'FHD',
+        desc: 'يتعرف (أحمد) على (ملك)، وسرعان ما تتحول علاقتهما من مجرد إعجاب إلى حب متبادل، فيسعى كل منهما إلى إبهار الآخر بشخصيته وتصرفاته، على أمل أن تستمر قصة حبهما إلى الأبد وتصمد أمام جميع التحديات.',
+        videoUrl: 'https://anafast.org/embed-qag57x8aur78.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/PYTHr5baEq',
+            medium: 'https://vidspeed.org/d/05wh49yacx54.html'
+        }
+    },
     {
         id: 's-alleba',
         title: 'اللعبة 5: الكلاسيكو',
@@ -1376,14 +1560,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('popstate', (e) => {
-        const pageId = (e.state && e.state.page) ? e.state.page : 'home';
-        navigate(pageId, true);
+        // محاولة جلب الصفحة من الـ state أو الـ hash كخطة بديلة
+        const pageId = (e.state && e.state.page) ? e.state.page : (window.location.hash.replace('#', '') || 'home');
+        const itemId = (e.state && e.state.itemId) ? e.state.itemId : sessionStorage.getItem('currentWatchItem');
+
+        if (pageId === 'watch' && itemId) {
+            // استعادة حالة المشاهدة بالكامل
+            watchItem(itemId, true);
+        } else {
+            navigate(pageId, true);
+        }
     });
 
     // On refresh, restore the page from hash and restore watch state
     let initialPage = window.location.hash.replace('#', '') || 'home';
+    const savedItem = sessionStorage.getItem('currentWatchItem');
+
+    // تأمين الـ State الأولية للمتصفح عشان أزرار الرجوع تشتغل صح من أول لحظة
+    if (!history.state) {
+        history.replaceState({ page: initialPage, itemId: savedItem }, '', window.location.hash || '#home');
+    }
+
     if (initialPage === 'watch') {
-        const savedItem = sessionStorage.getItem('currentWatchItem');
         if (savedItem) {
             watchItem(savedItem, true);
         } else {
@@ -1452,12 +1650,12 @@ function createCard(item) {
 // Custom navigation stack for reliable back button
 const navHistory = [];
 
-function navigate(pageId, fromPopstate = false) {
-    if (!fromPopstate) {
-        history.pushState({ page: pageId }, '', '#' + pageId);
-        // Only push to custom stack if moving to a different page
-        if (navHistory[navHistory.length - 1] !== pageId) {
-            navHistory.push(pageId);
+function navigate(pageId, fromHistory = false, stateData = {}) {
+    if (!fromHistory) {
+        const state = { page: pageId, ...stateData };
+        // نمنع تكرار نفس الصفحة في تاريخ المتصفح
+        if (window.location.hash !== '#' + pageId || (pageId === 'watch' && stateData.itemId)) {
+            history.pushState(state, '', '#' + pageId);
         }
     }
     document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
@@ -1485,11 +1683,18 @@ function navigate(pageId, fromPopstate = false) {
 }
 
 function navigateBack() {
-    // Remove current page from stack
-    navHistory.pop();
-    // Go to previous page in stack, or home if stack is empty
-    const previousPage = navHistory[navHistory.length - 1] || 'home';
-    navigate(previousPage);
+    // لو فيه تاريخ نرجع خطوة، لو مفيش نرجع للرئيسية
+    if (window.history.length > 1) {
+        history.back();
+        // تأكيد إضافي بعد وقت بسيط لو المتصفح معلق في نفس الصفحة
+        setTimeout(() => {
+            if (window.location.hash.includes('watch')) {
+                navigate('home');
+            }
+        }, 300);
+    } else {
+        navigate('home');
+    }
 }
 
 function renderGrid(containerId, data) {
@@ -1581,7 +1786,7 @@ window.watchItem = async function(itemId, restoreFromSession = false) {
         sessionStorage.removeItem('currentMovieVersion');
     }
 
-    navigate('watch');
+    navigate('watch', restoreFromSession, { itemId: itemId });
     const watchInfo = document.getElementById('watch-info');
     let videoUrl = item.videoUrl;
     let downloads = item.downloads;
