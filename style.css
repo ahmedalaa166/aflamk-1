@@ -1252,10 +1252,15 @@ footer span {
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     z-index: 10000;
-    display: none; /* مخفي افتراضياً لمنع الوميض عند التحميل */
+    display: flex; /* يظهر فوراً لمنع الوميض بظهور الموقع */
     align-items: center;
     justify-content: center;
     padding: 15px;
+}
+
+/* لمنع الوميض لو الشخص مسجل دخول أصلاً */
+.hide-login-initially #login-overlay {
+    display: none;
 }
 
 .login-card {

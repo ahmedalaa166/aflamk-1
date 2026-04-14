@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.14.23"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.14.24"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -32,9 +32,12 @@ async function checkSubscription() {
     
     // لو فيه كود محفوظ، اخفي الشاشة فوراً عشان ما تظهرش وتختفي
     if (savedCode) {
+        // نتاكد ان مفيش تعارض ونخفي برضه
+        document.documentElement.classList.add('hide-login-initially');
         overlay.style.display = 'none';
         updateAuthUI(true);
     } else {
+        document.documentElement.classList.remove('hide-login-initially');
         overlay.style.display = 'flex';
         updateAuthUI(false);
         return;
@@ -71,7 +74,8 @@ async function checkSubscription() {
         console.error("Firebase Auth Error:", error);
     }
 
-    // إذا فشل أي شرط
+    // لو وصل هنا يبقى الكود مش سليم
+    document.documentElement.classList.remove('hide-login-initially');
     overlay.style.display = 'flex';
     updateAuthUI(false);
 }
@@ -276,6 +280,59 @@ async function isSubscriptionValid() {
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 's-alleba',
+        title: 'اللعبة 5: الكلاسيكو',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/al_leba_s5.jpg',
+        year: '12 ابريل 2026',
+        quality: 'FHD',
+        desc: 'تستمر في الموسم الخامس مغامرات وسيم ومازو، حيث يعاني وسيم من ضائقة مالية ويحاول الجميع مساعدته، وعلى جانب آخر يعيش مازو في رفاهية بعد الاستحواذ على الأموال، إلى أن تفرض عليهم اللعبة تحديات جديدة تعتمد على الذكاء الاصطناعي، وتتوالى الأحداث.',
+        seasons: [
+            {
+                seasonNumber: 5,
+                episodes: [
+                    {
+                        id: 's5-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
+                        downloads: {
+                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
+                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
+                        }
+                    },
+                    {
+                        id: 's5-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://vfaststream.co/e/2vb4N4lcTVXBU',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vcjrqa2kkwr4.html',
+                            high: 'https://vik1ngfile.site/f/ljTStYhpSE'
+                        }
+                    },
+                    {
+                        id: 's5-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://anafast.org/embed-3zndog1o9jo1.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/fqnosfhmxmcj.html',
+                            high: 'https://vik1ngfile.site/f/bdHhMsJGsa'
+                        }
+                    },
+                    {
+                        id: 's5-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://anafast.org/embed-tyd7ok5o2ahr.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/5t5xk059vc6v.html',
+                            high: 'https://minochinos.com/d/qcovnismvghy'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 's-daredevil-born-again',
         title: 'Daredevil: Born Again',
         type: 'series',
@@ -459,50 +516,7 @@ const allContent = [
             medium: 'https://vidspeed.org/d/05wh49yacx54.html'
         }
     },
-    {
-        id: 's-alleba',
-        title: 'اللعبة 5: الكلاسيكو',
-        type: 'series',
-        category: 'arabic-series',
-        poster: 'صور/al_leba_s5.jpg',
-        year: '12 ابريل 2026',
-        quality: 'FHD',
-        desc: 'تستمر في الموسم الخامس مغامرات وسيم ومازو، حيث يعاني وسيم من ضائقة مالية ويحاول الجميع مساعدته، وعلى جانب آخر يعيش مازو في رفاهية بعد الاستحواذ على الأموال، إلى أن تفرض عليهم اللعبة تحديات جديدة تعتمد على الذكاء الاصطناعي، وتتوالى الأحداث.',
-        seasons: [
-            {
-                seasonNumber: 5,
-                episodes: [
-                    {
-                        id: 's5-ep1',
-                        title: 'الحلقة 1',
-                        videoUrl: 'https://vidara.to/e/150MEgMR7YinL',
-                        downloads: {
-                            medium: 'https://www.up-4ever.net/sx47c4k1wxa6',
-                            high: 'https://www.up-4ever.net/njtfjtlzbb6k'
-                        }
-                    },
-                    {
-                        id: 's5-ep2',
-                        title: 'الحلقة 2',
-                        videoUrl: 'https://vfaststream.co/e/2vb4N4lcTVXBU',
-                        downloads: {
-                            medium: 'https://vidspeed.org/d/vcjrqa2kkwr4.html',
-                            high: 'https://vik1ngfile.site/f/ljTStYhpSE'
-                        }
-                    },
-                    {
-                        id: 's5-ep3',
-                        title: 'الحلقة 3',
-                        videoUrl: 'https://anafast.org/embed-3zndog1o9jo1.html',
-                        downloads: {
-                            medium: 'https://vidspeed.org/d/fqnosfhmxmcj.html',
-                            high: 'https://vik1ngfile.site/f/bdHhMsJGsa'
-                        }
-                    }
-                ]
-            }
-        ]
-    },
+
     {
         id: "cartoon-back-to-outback",
         title: "العودة للبرية | Back to the Outback",

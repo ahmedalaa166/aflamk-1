@@ -19,6 +19,12 @@
 </head>
 
 <body>
+    <!-- Anti-flicker Script -->
+    <script>
+        if (localStorage.getItem('filmak_active_code')) {
+            document.documentElement.classList.add('hide-login-initially');
+        }
+    </script>
     <!-- Subscription Login Overlay -->
     <div id="login-overlay" class="login-overlay">
         <div class="login-card">
@@ -27,19 +33,19 @@
             </div>
             <h2>نظام اشتراك المشاهدة</h2>
             <p>برجاء إدخال كود التفعيل الخاص بك للدخول للمنصة</p>
-            
+
             <div class="login-input-group">
                 <i class="fas fa-key"></i>
                 <input type="text" id="activation-code" placeholder="أدخل كود التفعيل هنا..." autocomplete="off">
             </div>
-            
+
             <button id="login-btn" onclick="validateCode()">
                 <span>دخول للمنصة</span>
                 <i class="fas fa-sign-in-alt"></i>
             </button>
-            
+
             <div id="login-error" class="error-msg"></div>
-            
+
             <div class="login-footer">
                 <p>ليس لديك كود؟ تواصل مع الإدارة لتفعيل اشتراكك</p>
                 <div class="contact-links">
@@ -54,7 +60,8 @@
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="top-contacts">
-                <a href="https://www.facebook.com/profile.php?id=61570641803823&sk=directory_links" target="_blank" class="fb-top-link">
+                <a href="https://www.facebook.com/profile.php?id=61570641803823&sk=directory_links" target="_blank"
+                    class="fb-top-link">
                     <i class="fab fa-facebook"></i> <span>تواصل معنا عبر فيسبوك</span>
                 </a>
             </div>
@@ -79,9 +86,11 @@
 
                 <!-- Desktop nav items will follow -->
 
-                <li><a href="javascript:void(0)" class="active" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a></li>
-                <li><a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a></li>
-                
+                <li><a href="javascript:void(0)" class="active" onclick="navigate('home')"><i class="fas fa-home"></i>
+                        الرئيسية</a></li>
+                <li><a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث
+                        الإضافات</a></li>
+
                 <!-- Dropdown: Movies -->
                 <li class="dropdown">
                     <a href="javascript:void(0)"><i class="fas fa-film"></i> الأفلام <i class="fas fa-chevron-down"
@@ -103,12 +112,16 @@
                     </ul>
                 </li>
 
-                <li><a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a></li>
-                <li id="logout-item" style="display: none;"><a href="javascript:void(0)" onclick="logout()" class="logout-link"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
+                <li><a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث
+                        مباشر</a></li>
+                <li id="logout-item" style="display: none;"><a href="javascript:void(0)" onclick="logout()"
+                        class="logout-link"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
             </ul>
 
             <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..." oninput="showSuggestions(this.value, 'desktopSuggestions')" onblur="setTimeout(() => hideSuggestions('desktopSuggestions'), 200)">
+                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..."
+                    oninput="showSuggestions(this.value, 'desktopSuggestions')"
+                    onblur="setTimeout(() => hideSuggestions('desktopSuggestions'), 200)">
                 <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
                 <div class="search-suggestions" id="desktopSuggestions"></div>
             </div>
@@ -126,7 +139,9 @@
 
         <!-- Mobile Only Search -->
         <div class="mobile-search-container" style="position: relative;">
-            <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل..." oninput="showSuggestions(this.value, 'mobileSuggestions')" onblur="setTimeout(() => hideSuggestions('mobileSuggestions'), 200)">
+            <input type="text" id="mobileSearchInput" placeholder="ابحث عن فيلم أو مسلسل..."
+                oninput="showSuggestions(this.value, 'mobileSuggestions')"
+                onblur="setTimeout(() => hideSuggestions('mobileSuggestions'), 200)">
             <button onclick="handleSearch('mobileSearchInput')"><i class="fas fa-search"></i></button>
             <div class="search-suggestions" id="mobileSuggestions"></div>
         </div>
@@ -135,12 +150,16 @@
             <a href="javascript:void(0)" onclick="navigate('home')"><i class="fas fa-home"></i> الرئيسية</a>
             <a href="javascript:void(0)" onclick="navigate('latest')"><i class="fas fa-fire"></i> احدث الإضافات</a>
             <a href="javascript:void(0)" onclick="navigate('movies')"><i class="fas fa-film"></i> أفلام عربي</a>
-            <a href="javascript:void(0)" onclick="navigate('foreign-movies')"><i class="fas fa-film"></i> أفلام أجنبي</a>
-            <a href="javascript:void(0)" onclick="navigate('cartoon-movies')"><i class="fas fa-child"></i> أفلام كرتون</a>
+            <a href="javascript:void(0)" onclick="navigate('foreign-movies')"><i class="fas fa-film"></i> أفلام
+                أجنبي</a>
+            <a href="javascript:void(0)" onclick="navigate('cartoon-movies')"><i class="fas fa-child"></i> أفلام
+                كرتون</a>
             <a href="javascript:void(0)" onclick="navigate('series')"><i class="fas fa-tv"></i> مسلسلات عربي</a>
-            <a href="javascript:void(0)" onclick="navigate('foreign-series')"><i class="fas fa-tv"></i> مسلسلات أجنبي</a>
+            <a href="javascript:void(0)" onclick="navigate('foreign-series')"><i class="fas fa-tv"></i> مسلسلات
+                أجنبي</a>
             <a href="javascript:void(0)" onclick="navigate('live')"><i class="fas fa-broadcast-tower"></i> بث مباشر</a>
-            <a href="javascript:void(0)" onclick="logout()" id="mobile-logout-btn" style="display: none;"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
+            <a href="javascript:void(0)" onclick="logout()" id="mobile-logout-btn" style="display: none;"><i
+                    class="fas fa-sign-out-alt"></i> تسجيل الخروج</a>
         </div>
     </div>
 
@@ -205,7 +224,7 @@
                             class="fas fa-arrow-left"></i></button>
                 </div>
                 <div class="grid" id="home-foreign-series-preview"></div>
-                
+
                 <!-- البث المباشر -->
                 <div class="section-header" id="home-live-header">
                     <h2 class="section-title">البث المباشر</h2>
@@ -294,7 +313,8 @@
                     السابقة</button>
                 <div class="video-wrapper">
                     <!-- Iframe Video Player -->
-                    <iframe id="video-player" src="" frameborder="0" allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                    <iframe id="video-player" src="" frameborder="0"
+                        allow="autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
                         style="width: 100%; aspect-ratio: 16/9; display: block;"></iframe>
                 </div>
                 <div class="watch-info" id="watch-info">
@@ -322,41 +342,41 @@
 
     <!-- Firebase Scripts (Modular CDN Version) -->
     <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-      import { getFirestore, doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-      // Firebase Config provided by you
-      const firebaseConfig = {
-        apiKey: "AIzaSyAi3vb0pmOynFIqFgL3t9LkSlpqCXcVIK4",
-        authDomain: "filmak-app-ed34b.firebaseapp.com",
-        projectId: "filmak-app-ed34b",
-        storageBucket: "filmak-app-ed34b.firebasestorage.app",
-        messagingSenderId: "779263085850",
-        appId: "1:779263085850:web:0887102ce0e150dae9b0a3",
-        measurementId: "G-G0HJ7SG8NJ"
-      };
+        // Firebase Config provided by you
+        const firebaseConfig = {
+            apiKey: "AIzaSyAi3vb0pmOynFIqFgL3t9LkSlpqCXcVIK4",
+            authDomain: "filmak-app-ed34b.firebaseapp.com",
+            projectId: "filmak-app-ed34b",
+            storageBucket: "filmak-app-ed34b.firebasestorage.app",
+            messagingSenderId: "779263085850",
+            appId: "1:779263085850:web:0887102ce0e150dae9b0a3",
+            measurementId: "G-G0HJ7SG8NJ"
+        };
 
-      // Unregister old Service Workers to fix caching
-      if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.getRegistrations().then(function(registrations) {
-              for(let registration of registrations) {
-                  registration.unregister();
-                  console.log('Service Worker Unregistered to clear cache');
-              }
-          });
-      }
+        // Unregister old Service Workers to fix caching
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function (registrations) {
+                for (let registration of registrations) {
+                    registration.unregister();
+                    console.log('Service Worker Unregistered to clear cache');
+                }
+            });
+        }
 
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const db = getFirestore(app);
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
 
-      // Exporting tools to window for script.js
-      window.db = db;
-      window.fbDoc = doc;
-      window.fbGetDoc = getDoc;
-      window.fbUpdateDoc = updateDoc;
-      window.fbArrayUnion = arrayUnion;
-      window.fbArrayRemove = arrayRemove;
+        // Exporting tools to window for script.js
+        window.db = db;
+        window.fbDoc = doc;
+        window.fbGetDoc = getDoc;
+        window.fbUpdateDoc = updateDoc;
+        window.fbArrayUnion = arrayUnion;
+        window.fbArrayRemove = arrayRemove;
 
     </script>
 
