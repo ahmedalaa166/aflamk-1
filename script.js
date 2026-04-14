@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.14.22"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.14.23"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -300,7 +300,7 @@ const allContent = [
                     {
                         id: 'dd-s1-ep2',
                         title: 'الحلقة 2',
-                        videoUrl: 'blob:https://wecima.ac/f5977b11-c68e-4a49-8980-5e17361b71ef',
+                        videoUrl: 'https://vidspeed.org/embed-zoyl8ercooot.html',
                         downloads: {
                             high: 'https://callistanise.com/d/t7zu5ztpk8fb',
                             medium: 'https://vidspeed.org/d/zoyl8ercooot.html'
