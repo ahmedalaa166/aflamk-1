@@ -34,15 +34,51 @@ ul {
 
 /* ==== Navigation Bar ==== */
 .navbar {
-    background-color: rgba(11, 16, 30, 0.85);
+    background-color: rgba(11, 16, 30, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--outline-color);
     transition: var(--transition);
+}
+
+/* ==== Top Bar ==== */
+.top-bar {
+    background: #050810;
+    border-bottom: 1px solid var(--outline-color);
+    padding: 0.6rem 0;
+    font-size: 0.85rem;
+    z-index: 1001;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem !important;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.fb-top-link {
+    color: #1877F2;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fb-top-link:hover {
+    color: #fff;
+}
+
+.top-tags {
+    color: var(--text-muted);
+    font-weight: 600;
 }
 
 .nav-container {
@@ -67,7 +103,19 @@ ul {
 
 .nav-menu {
     display: flex;
-    gap: 2.2rem; /* Increased gap to fill the available space naturally */
+    gap: 1.8rem;
+    margin: 0 1rem;
+}
+
+@media (max-width: 1200px) {
+    .nav-menu { gap: 1rem; }
+    .search-box { width: 250px; }
+}
+
+@media (max-width: 1000px) {
+    .nav-menu { display: none; }
+    .menu-toggle { display: block; }
+    .top-tags { display: none; }
 }
 
 .nav-menu li a {
@@ -216,7 +264,7 @@ ul {
 
 /* ==== Main Layout & Sections ==== */
 #main-content {
-    margin-top: 80px;
+    margin-top: 20px;
     min-height: calc(100vh - 160px);
 }
 
