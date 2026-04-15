@@ -1543,7 +1543,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const closeSidebar = document.getElementById('close-sidebar');
+    const floatingMenu = document.getElementById('floating-menu');
+
     if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+    if (floatingMenu) floatingMenu.addEventListener('click', toggleMenu);
     if (closeSidebar) closeSidebar.addEventListener('click', toggleMenu);
     if (overlay) overlay.addEventListener('click', toggleMenu);
 
@@ -1683,7 +1686,7 @@ function navigate(pageId, fromHistory = false, stateData = {}) {
         const videoPlayer = document.getElementById('video-player');
         if (videoPlayer) videoPlayer.src = '';
     }
-    document.querySelectorAll('.nav-menu a, .logo').forEach(link => {
+    document.querySelectorAll('.nav-menu a, .mobile-sections-grid a, .logo').forEach(link => {
         link.classList.remove('active');
         const onclickAttr = link.getAttribute('onclick');
         if (onclickAttr && onclickAttr.includes(`'${pageId}'`)) link.classList.add('active');

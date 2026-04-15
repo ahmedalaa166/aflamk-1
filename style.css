@@ -114,7 +114,7 @@ ul {
 
 @media (max-width: 1000px) {
     .nav-menu { display: none; }
-    .menu-toggle { display: block; }
+    .menu-toggle { display: flex; }
     .top-tags { display: none; }
 }
 
@@ -499,6 +499,7 @@ ul {
     line-height: 1.4;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -614,6 +615,7 @@ ul {
     margin-bottom: 0.8rem;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -864,9 +866,48 @@ footer span {
     font-weight: 700;
 }
 
-/* Hide mobile-only grid menu globally by default */
+/* ==== Universal Sidebar Menu (Modified to be high-end) ==== */
 .mobile-sections-menu {
-    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 90%;
+    max-width: 350px;
+    height: 100vh;
+    background: rgba(11, 16, 30, 0.98) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 10000;
+    transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 2rem 1.5rem 5rem 1.5rem;
+    box-sizing: border-box;
+    box-shadow: -20px 0 60px rgba(0,0,0,0.8);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    color: #ffffff !important;
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-sections-menu.active {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* ==== Responsive Design ==== */
@@ -892,22 +933,8 @@ footer span {
 
     /* ---- New Side-Sliding Mobile Sidebar ---- */
     .mobile-sections-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 85%;
-        max-width: 320px;
-        height: 100vh;
-        background-color: #0b101e !important;
-        z-index: 10000;
-        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        padding: 1.5rem 1rem 5rem 1rem;
-        box-sizing: border-box;
-        box-shadow: -15px 0 50px rgba(0,0,0,0.9);
+        /* Already defined globally above, just keeping it active */
         display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-        color: #ffffff !important;
     }
 
     .mobile-sections-menu.active {
@@ -952,30 +979,39 @@ footer span {
     }
 
     .mobile-sections-grid a {
-        background: rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.03);
         color: #ffffff !important;
         font-size: 1.1rem;
         font-weight: 700;
-        padding: 0.9rem 1rem;
+        padding: 1rem 1.2rem;
         border-radius: 12px;
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        border: 1px solid rgba(255,255,255,0.08);
+        gap: 1rem;
+        border: 1px solid rgba(255,255,255,0.05);
+        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 0.2rem;
     }
 
     .mobile-sections-grid a i {
         color: var(--primary-color) !important;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         min-width: 25px;
+        transition: 0.3s;
     }
 
-    .mobile-sections-grid a:active,
-    .mobile-sections-grid a:hover {
-        background: rgba(229, 9, 20, 0.1);
-        border-color: var(--primary-color);
+    .mobile-sections-grid a:hover,
+    .mobile-sections-grid a.active {
+        background: linear-gradient(90deg, rgba(229, 9, 20, 0.2), transparent);
+        border-color: rgba(229, 9, 20, 0.5);
         color: #fff;
-        transform: translateX(-5px);
+        padding-right: 1.8rem;
+    }
+
+    .mobile-sections-grid a:hover i,
+    .mobile-sections-grid a.active i {
+        transform: scale(1.2);
+        color: #fff !important;
     }
 
     #mobile-logout-btn {
@@ -995,29 +1031,14 @@ footer span {
 
 
 
-    .menu-overlay {
-        position: fixed;
-        inset: 0;
-        background: rgba(0,0,0,0.85); /* Slightly darker to compensate for no blur */
-        z-index: 2400;
-        opacity: 0;
-        visibility: hidden;
-        transition: 0.4s;
-    }
-
-    .menu-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
 
     .menu-toggle {
-        display: block;
+        display: flex;
         z-index: 2100;
         font-size: 1.6rem;
         background: rgba(255,255,255,0.05);
         width: 45px;
         height: 45px;
-        display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 10px;
@@ -1117,13 +1138,41 @@ footer span {
         gap: 0.5rem;
     }
 
-    .watch-info {
-        padding: 1.5rem;
+    .floating-menu-btn {
+        display: flex;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: var(--primary-color);
+        color: #fff;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        z-index: 999;
+        animation: floatPulse 2s infinite ease-in-out;
     }
 
-    .watch-title {
-        font-size: 1.6rem;
+    @keyframes floatPulse {
+        0% { box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4); transform: translateY(0); }
+        50% { box-shadow: 0 15px 45px rgba(229, 9, 20, 0.7); transform: translateY(-5px); }
+        100% { box-shadow: 0 10px 30px rgba(229, 9, 20, 0.4); transform: translateY(0); }
     }
+
+    .floating-menu-btn:hover {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 15px 40px rgba(229, 9, 20, 0.6);
+    }
+
+    .floating-menu-btn:active {
+        transform: scale(0.9);
+    }
+}
+
+.floating-menu-btn {
+    display: none; /* Hidden on desktop */
 }
 
 @media (max-width: 480px) {
