@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.16.27"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.16.45"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,126 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'live-mix-hollywood',
+        title: 'قناة Mix Hollywood',
+        type: 'live',
+        category: 'live',
+        poster: 'صور/mix_hollywood.jpg',
+        year: 'بث مباشر',
+        quality: 'FHD',
+        desc: 'مشاهدة البث المباشر لقناة Mix Hollywood، القناة الرائدة في عرض أقوى أفلام هوليوود والأفلام العالمية المترجمة للعربية على مدار الساعة.',
+        subCategory: 'movies',
+        videoUrl: 'https://tv.qanwatlive.com/2025/03/blog-post_93.html'
+    },
+    {
+        id: 's-mamlakat-al-harir',
+        title: 'مسلسل مملكة الحرير',
+        status: 'completed',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/mamlakat_al_harir.jpg',
+        year: '29 يونيو 2025',
+        quality: 'FHD',
+        desc: 'ثلاثة أشقاء تفرقهم الحياة وتجمعهم معركة شرسة على العرش الملكي، حيث تتغيّر الأقدار يوم ميلاد الابن الثاني للملك (نور الدين)، عندما يقتل العم الذهبي الملك ويطارد وريثيه. يهرب الخادم الأمين (رضوان) بالأميرين (شمس الدين) و(جلال الدين)، لكنهما يفترقان. في حين يكبر (شمس الدين) كعبد بالكتيبة، بينما ينشأ (جلال الدين) بين اللصوص. وعندما يجتمعان مجددا، تنفجر الصراعات بين الولاء والخيانة في معركة على السلطة.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 's-m-harir-s1-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://updown.cam/embed-ky9vjd9yyp43.html',
+                        downloads: {
+                            medium: 'https://down.fast-down.com/download2619898',
+                            high: 'https://vik1ngfile.site/f/KkXiilQdHg'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://uqload.is/embed-uvi5tq44bm5b.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/4qh9us8s6ose.html',
+                            high: 'https://down.fast-down.com/download2619898'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://vidspeed.org/embed-j8hzlmfegx1g.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/j8hzlmfegx1g.html',
+                            high: 'https://callistanise.com/d/k0k1vvknt3qz'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://updown.cam/embed-5u5b9xsdpsjl.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/1bx9ga0tnyxd.html',
+                            high: 'https://vik1ngfile.site/f/AavkBSILzV'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://vidspeed.org/embed-6m4tz133l3yi.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/6m4tz133l3yi.html',
+                            high: 'https://hlswish.com/d/hygz0jr10fgu'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://uqload.cx/embed-0smtg41964xr.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/icsgphkkg8l1.html',
+                            high: 'https://1cloudfile.com/1td6z'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://uqload.cx/embed-d4mhnw8dfoqn.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/k2mxt93m96fz.html',
+                            high: 'https://vik1ngfile.site/f/OpMTAAsc1p'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://vidspeed.org/embed-m81qxjevzb5h.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/m81qxjevzb5h.html',
+                            high: 'https://callistanise.com/d/1l0fs2k5jf04'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://uqload.cx/embed-or4hq3wzll9k.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/6p1cb7to96wq.html',
+                            high: 'https://vik1ngfile.site/f/wlfOX47H9p'
+                        }
+                    },
+                    {
+                        id: 's-m-harir-s1-ep10',
+                        title: 'الحلقة 10',
+                        videoUrl: 'https://goodstream.one/embed-fhyrfhktf9fe.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/x81b0x85yc93.html',
+                            high: 'https://callistanise.com/d/zmkxz0okqxq7'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     {
         id: 's-daredevil-born-again',
         title: 'Daredevil: Born Again',
