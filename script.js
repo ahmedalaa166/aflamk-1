@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.16.45"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.17.06"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,141 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'c-moana-2',
+        title: 'موانا 2 - Moana 2',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/moana2.jpg',
+        year: '27 نوفمبر 2024',
+        quality: 'FHD',
+        desc: 'بعد تلقيها رسالة من أقاربها في أوقيانوسيا، تُبحر (موانا) في مغامرة ملحمية للبحار البعيدة المليئة بالمخاطر، وتواجه العديد من المواقف والعقبات التي لم تتعرض لها من قبل.',
+        parts: [
+            { id: 'c-moana', name: 'الجزء الأول' },
+            { id: 'c-moana-2', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://dingtezuni.com/v/lo09ngq5zwml',
+                downloads: {
+                    high: 'https://masukestin.com/f/vsngtjx31qld',
+                    medium: 'https://masukestin.com/f/vsngtjx31qld'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://megamax.me/iframe/HOAnSmmvJl6IX',
+                downloads: {
+                    high: 'https://koramaup.com/9dL2',
+                    medium: 'https://1cloudfile.com/1sjht'
+                }
+            }
+        ],
+        videoUrl: 'https://dingtezuni.com/v/lo09ngq5zwml',
+        downloads: {
+            high: 'https://masukestin.com/f/vsngtjx31qld',
+            medium: 'https://masukestin.com/f/vsngtjx31qld'
+        }
+    },
+    {
+        id: 'c-moana',
+        title: 'موانا - Moana',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/moana.jpg',
+        year: '7 ديسمبر 2016',
+        quality: 'FHD',
+        desc: 'دور أحداث الفيلم في بولينيسيا القديمة حول (موانا وايالكي) البحارة شديدة الحماس، والابنة الوحيدة لقائد مجموعة من الملاحين، حينما تصبح عائلتها في حاجة إلى مساعدتها، تقرر موانا الخروج في رحلة ملحمية تواجه من خلالها الأرواح العالقة والآلهة.',
+        parts: [
+            { id: 'c-moana', name: 'الجزء الأول' },
+            { id: 'c-moana-2', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://vidoba.org/embed-kprqv1o473yv.html',
+                downloads: {
+                    high: 'https://swhoi.com/d/wzs38zcrflzk',
+                    medium: 'https://vipserver.liiivideo.com/d/6pt5xemp2ez7.html'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://megamax.me/iframe/Yf5G6BcVCmTKm',
+                downloads: {
+                    high: 'https://updown.cam/xuz0wqy0ye87',
+                    medium: 'https://updown.cam/xuz0wqy0ye87'
+                }
+            }
+        ],
+        videoUrl: 'https://vidoba.org/embed-kprqv1o473yv.html',
+        downloads: {
+            high: 'https://swhoi.com/d/wzs38zcrflzk',
+            medium: 'https://vipserver.liiivideo.com/d/6pt5xemp2ez7.html'
+        }
+    },
+
+    {
+        id: 'm-the-wrecking-crew',
+        title: 'فيلم The Wrecking Crew',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/the_wrecking_crew.jpg',
+        year: '28 يناير 2026',
+        quality: 'FHD',
+        desc: 'يجتمع المحقق المتهور مع أخيه غير الشقيق، جندي البحرية، بعد مقتل والدهما في هاواي، ليخوضا معًا رحلة خطرة لكشف مؤامرة كبرى تهدد كل ما يعرفانه.',
+        videoUrl: 'https://anafast.org/embed-16ncf8njjuo5.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/Hq36HRot8m',
+            medium: 'https://vidspeed.org/d/2obn9jz8021i.html'
+        }
+    },
+    {
+        id: 'm-shelter',
+        title: 'فيلم Shelter',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/shelter.jpg',
+        year: '28 يناير 2026',
+        quality: 'FHD',
+        desc: 'ينقذ رجل منعزل في جزيرة اسكتلندية نائية فتاة من الغرق في البحر، مما يفتح سلسلة من الأحداث الخطيرة، من بينها هجوم على منزله، فيضطر لمواجهة ماضيه غير العادي.',
+        videoUrl: 'https://anafast.org/embed-dvy9rpkmcfd6.html',
+        downloads: {
+            high: 'https://minochinos.com/d/48ox0qi1pxqr',
+            medium: 'https://vidspeed.org/d/gu59jr9y2q6f.html'
+        }
+    },
+    {
+        id: 'm-peaky-blinders',
+        title: 'فيلم Peaky Blinders: The Immortal Man',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/peaky_blinders.jpg',
+        year: '6 مارس 2026',
+        quality: 'FHD',
+        desc: 'تُلقي أحداث الفيلم الضوء على قصة المسلسل الشهير (Peaky Blinders)، حيث يتتبع الفيلم (تومي شيلبي) وعصابته وهم يتنقلون بين المخاطر والفوضى في برمنغهام خلال الحرب العالمية الثانية.',
+        videoUrl: 'https://anafast.org/embed-mtald5kqwmkn.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/xffBHQOFOo',
+            medium: 'https://vidspeed.org/d/3wlxl38oelt2.html'
+        }
+    },
+    {
+        id: 'm-the-anacondas',
+        title: 'فيلم The Anacondas',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/the_anacondas.jpg',
+        year: '19 ديسمبر 2025',
+        quality: 'FHD',
+        desc: 'يكتشف مستكشفون في المكسيك آثار حضارة قديمة تعبد الأفاعي. لكن الفرحة تتحول إلى رعب عندما يوقظون أفعى أناكوندا ضخمة، حُرمت من القرابين البشرية لقرون. الآن، يجب على الفريق أن يتحد للبقاء على قيد الحياة.',
+        videoUrl: 'https://anafast.org/embed-k45940s9h5sf.html',
+        downloads: {
+            high: 'https://minochinos.com/d/xi0x90z7cgvp',
+            medium: 'https://vidspeed.org/d/o1i8ebgz4pmg.html'
+        }
+    },
     {
         id: 'live-mix-hollywood',
         title: 'قناة Mix Hollywood',
