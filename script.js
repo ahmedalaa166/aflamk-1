@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.18.02"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.18.32"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,294 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-efraj',
+        title: 'مسلسل إفراج',
+        status: 'completed',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/efraj.jpg',
+        year: '19 فبراير 2026',
+        quality: 'FHD',
+        desc: 'يغادر عباس الريس أسوار السجن بعد خمسة عشر عاماً من العزلة، لكنه يخرج بقلبٍ مثقل ويدين تلاحقهما تهمة قاسية؛ دماء زوجته التي قُتلت غدراً. عباس لا يبحث عن الانتقام فحسب، بل يدفعه الندم في رحلة شاقة للتكفير عن ذنبٍ يطارده، طمعاً في الحصول على صك غفران لا يمنحه إلا الأبرياء.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    {
+                        id: 's-efraj-s1-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://anafast.org/embed-a5lq6ymj1vuu.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/whu9im7vun2w.html',
+                            high: 'https://vik1ngfile.site/f/QuOef0Lq2Y'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep2',
+                        title: 'الحلقة 2',
+                        videoUrl: 'https://anafast.org/embed-vsix87j5f4m7.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/k3zyc02bm9xn.html',
+                            high: 'https://vik1ngfile.site/f/jOL64T8h6x'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep3',
+                        title: 'الحلقة 3',
+                        videoUrl: 'https://anafast.org/embed-lkr357nacy15.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/z1mdghramdy1.html',
+                            high: 'https://anafast.org/embed-lkr357nacy15.html'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep4',
+                        title: 'الحلقة 4',
+                        videoUrl: 'https://anafast.org/embed-uf378yhpc7i0.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/yo8gxl1psjnq.html',
+                            high: 'https://vik1ngfile.site/f/Qkpt9T6WFq'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep5',
+                        title: 'الحلقة 5',
+                        videoUrl: 'https://anafast.org/embed-kjchkd7xg5zt.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/zrvt99x4dunt.html',
+                            high: 'https://vik1ngfile.site/f/n0WV9nXCvC'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep6',
+                        title: 'الحلقة 6',
+                        videoUrl: 'https://anafast.org/embed-dv57gvoiq1oq.html',
+                        downloads: {
+                            medium: 'https://anafast.org/d/dv57gvoiq1oq.html',
+                            high: 'https://vik1ngfile.site/f/LMNZ0uB42X'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://vidspeed.org/embed-ds1cn1zac5z6.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/ds1cn1zac5z6.html',
+                            high: 'https://vik1ngfile.site/f/7dwNY4FcJp'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep8',
+                        title: 'الحلقة 8',
+                        videoUrl: 'https://vidspeed.org/embed-dz6mgn46o3ry.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/dz6mgn46o3ry.html',
+                            high: 'https://vik1ngfile.site/f/Liyz35f17R'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep9',
+                        title: 'الحلقة 9',
+                        videoUrl: 'https://vidspeed.org/embed-cs6f1rcoucvb.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/cs6f1rcoucvb.html',
+                            high: 'https://vik1ngfile.site/f/CrWuETGZV9'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep10',
+                        title: 'الحلقة 10',
+                        videoUrl: 'https://anafast.org/embed-50crc5bmxuhd.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/28jw6y55lc7i.html',
+                            high: 'https://vik1ngfile.site/f/hVKF7U2jNa'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep11',
+                        title: 'الحلقة 11',
+                        videoUrl: 'https://vidspeed.org/embed-m0h78bjxex62.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/m0h78bjxex62.html',
+                            high: 'https://vik1ngfile.site/f/XzrO3MWjUJ'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep12',
+                        title: 'الحلقة 12',
+                        videoUrl: 'https://vidspeed.org/embed-ol5dhcwt94l7.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/ol5dhcwt94l7.html',
+                            high: 'https://vik1ngfile.site/f/8WODFyMhSl'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep13',
+                        title: 'الحلقة 13',
+                        videoUrl: 'https://vidspeed.org/embed-6p0kw12wnbqp.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/6p0kw12wnbqp.html',
+                            high: 'https://vik1ngfile.site/f/8WODFyMhSl'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep14',
+                        title: 'الحلقة 14',
+                        videoUrl: 'https://vidspeed.org/embed-mn94x1d00g29.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/mn94x1d00g29.html',
+                            high: 'https://vikingfile.com/f/9LneAeREgs'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep15',
+                        title: 'الحلقة 15',
+                        videoUrl: 'https://anafast.org/embed-4oxkg5k1wqtd.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/6dw2c22d4t6c.html',
+                            high: 'https://vik1ngfile.site/f/ATYn7HMxso'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep16',
+                        title: 'الحلقة 16',
+                        videoUrl: 'https://vidspeed.org/embed-19n2l7pthxef.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/19n2l7pthxef.html',
+                            high: 'https://vik1ngfile.site/f/aQzU7b26qY'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep17',
+                        title: 'الحلقة 17',
+                        videoUrl: 'https://vidspeed.org/embed-bd9dyat5mam1.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/bd9dyat5mam1.html',
+                            high: 'https://vik1ngfile.site/f/sjkteHnTV5'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep18',
+                        title: 'الحلقة 18',
+                        videoUrl: 'https://vidspeed.org/embed-vecax56r15w7.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vecax56r15w7.html',
+                            high: 'https://vik1ngfile.site/f/eg3nkpoT1e'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep19',
+                        title: 'الحلقة 19',
+                        videoUrl: 'https://vidspeed.org/embed-u14sl6j3y0yl.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/u14sl6j3y0yl.html',
+                            high: 'https://vik1ngfile.site/f/v3bYoqfTeY'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep20',
+                        title: 'الحلقة 20',
+                        videoUrl: 'https://vidspeed.org/embed-wahzyhor8vf1.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/wahzyhor8vf1.html',
+                            high: 'https://vik1ngfile.site/f/Uu6kRjtPjg'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep21',
+                        title: 'الحلقة 21',
+                        videoUrl: 'https://anafast.org/embed-sypvbtd61hk8.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/mwf8plgilydx.html',
+                            high: 'https://vik1ngfile.site/f/0iIT7WNYKx'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep22',
+                        title: 'الحلقة 22',
+                        videoUrl: 'https://anafast.org/embed-18q5k50k4ol1.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/wm7pvr00k518.html',
+                            high: 'https://vik1ngfile.site/f/rj1qz9FrvK'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep23',
+                        title: 'الحلقة 23',
+                        videoUrl: 'https://anafast.org/embed-63wz2glqr14e.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/x456joxy5qw1.html',
+                            high: 'https://vik1ngfile.site/f/bWycyqfYBn'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep24',
+                        title: 'الحلقة 24',
+                        videoUrl: 'https://vidspeed.org/embed-ieh603ld280e.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/ieh603ld280e.html',
+                            high: 'https://vik1ngfile.site/f/CPNUEK3NoO'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep25',
+                        title: 'الحلقة 25',
+                        videoUrl: 'https://anafast.org/embed-ymqnuokltwra.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/dv9ibcnwl9h5.html',
+                            high: 'https://vik1ngfile.site/f/zJyCyz3l8C'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep26',
+                        title: 'الحلقة 26',
+                        videoUrl: 'https://anafast.org/embed-qu1k38v0crdy.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/lit1cgkltgt9.html',
+                            high: 'https://vik1ngfile.site/f/AdIi0iQVpx'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep27',
+                        title: 'الحلقة 27',
+                        videoUrl: 'https://anafast.org/embed-bfht4pmk34hr.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/l96975u0zk5y.html',
+                            high: 'https://vik1ngfile.site/f/kbhH3AwrjR'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep28',
+                        title: 'الحلقة 28',
+                        videoUrl: 'https://vidspeed.org/embed-3z95o7o8xlye.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/3z95o7o8xlye.html',
+                            high: 'https://vik1ngfile.site/f/VX3Vreqw8w'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep29',
+                        title: 'الحلقة 29',
+                        videoUrl: 'https://anafast.org/embed-7oos1a51v02w.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/io4dpcu18zvc.html',
+                            high: 'https://vik1ngfile.site/f/hE97GGT0Ge'
+                        }
+                    },
+                    {
+                        id: 's-efraj-s1-ep30',
+                        title: 'الحلقة 30',
+                        videoUrl: 'https://anafast.org/embed-xxgfuqyjzkfc.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/vznjksclir4b.html',
+                            high: 'https://vik1ngfile.site/f/NG28XxiGTQ'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
     {
         id: 'm-fantastic-four-first-steps',
         title: 'فيلم The Fantastic 4: First Steps',
