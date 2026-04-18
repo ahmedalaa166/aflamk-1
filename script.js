@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.17.06"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.18.02"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -157,8 +157,8 @@ window.validateCode = async function() {
         const maxAllowed = codeData.maxDevices || 6; 
         const deviceList = codeData.devices || [];
 
-        // استثناء خاص لكود الـ Admin
-        const isAdmin = (codeInput === 'admin123');
+        // استثناء خاص لكود الـ Admin أو أي أكواد متعملها استثناء
+        const isAdmin = (codeInput === 'admin123' || codeInput === 'aflamk7d');
 
         if (!deviceList.includes(deviceId)) {
             if (!isAdmin && deviceList.length >= maxAllowed) {
@@ -279,6 +279,21 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'm-fantastic-four-first-steps',
+        title: 'فيلم The Fantastic 4: First Steps',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/the_fantastic_4.jpg',
+        year: '23 يوليو 2025',
+        quality: 'FHD',
+        desc: 'بعد اكتسابهم قدرات خارقة، يكافح 4 رواد فضاء في سبيل إنقاذ كوكبهم، حينما يظهر شرير يسعى لتدمير كل شيء، والسبيل الوحيد لإنقاذ الأمور يكمن في ثمن لا يمكن تخيله.',
+        videoUrl: 'https://anafasts.com/embed-wu05j5osiy9f.html',
+        downloads: {
+            high: 'https://vidspeed.org/d/4uhvmrbqk19d.html',
+            medium: 'https://vidspeed.org/d/4uhvmrbqk19d.html'
+        }
+    },
     {
         id: 'c-moana-2',
         title: 'موانا 2 - Moana 2',
