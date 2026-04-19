@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.19.34"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.19.36"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -280,6 +280,32 @@ async function isSubscriptionValid() {
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 's-from',
+        title: 'مسلسل From',
+        type: 'series',
+        category: 'foreign-series',
+        poster: 'صور/from.jpg',
+        year: '19 ابريل 2026',
+        quality: 'FHD',
+        desc: 'مع احتمالية وجود عناصر سفر عبر الزمن تتعلق بـ (جولي)، وبينما يقترب الناجون من كشف الحقيقة، تتكشف العواقب المترتبة على مواجهتهم للواقع المظلم، ما يجعل رحلتهم محفوفة بالمخاطر والصدمات النفسية.',
+        seasons: [
+            {
+                seasonNumber: 4,
+                episodes: [
+                    {
+                        id: 's-from-s4-ep1',
+                        title: 'الحلقة 1',
+                        videoUrl: 'https://anafast.org/embed-8px36bsausxk.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/8qajzbohujbq.html',
+                            high: 'https://savefiles.com/d/oiutq3zmghrj_n'
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
         id: 's-alleba',
         title: 'اللعبة 5: الكلاسيكو',
         type: 'series',
@@ -344,6 +370,15 @@ const allContent = [
                         downloads: {
                             medium: 'https://m1xdrop.bz/f/pj4po77dt3j7eo',
                             high: 'https://vik1ngfile.site/f/jowznCswqF'
+                        }
+                    },
+                    {
+                        id: 's5-ep7',
+                        title: 'الحلقة 7',
+                        videoUrl: 'https://anafast.org/embed-kwotj3srkby5.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/nbi0xazhe1jl.html',
+                            high: 'https://masukestin.com/d/htuq5lc2levg'
                         }
                     }
                 ]
