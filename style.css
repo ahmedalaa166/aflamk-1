@@ -502,6 +502,11 @@ ul {
     font-weight: 700;
     z-index: 2;
     box-shadow: 0 4px 10px rgba(229,9,20,0.4);
+    pointer-events: none;
+    max-width: calc(100% - 30px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .card-info {
@@ -1226,8 +1231,29 @@ footer span {
     .badge {
         top: 8px;
         right: 8px;
-        padding: 0.2rem 0.5rem;
-        font-size: 0.75rem;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.65rem;
+        border-radius: 4px;
+        max-width: calc(100% - 16px);
+    }
+
+    .series-nav-container {
+        padding: 1rem 0.8rem;
+    }
+
+    .episodes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .episode-btn {
+        padding: 0.6rem 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .season-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 
     .btn {
