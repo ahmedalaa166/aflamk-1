@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.21.38"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.22.39"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -3166,6 +3166,15 @@ function markAsSeen(id) {
     if (notifDot) notifDot.style.display = 'none';
 }
 
+function getDeviceId() {
+    let id = localStorage.getItem('filmak_device_id');
+    if (!id) {
+        id = 'device_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now();
+        localStorage.setItem('filmak_device_id', id);
+    }
+    return id;
+}
+
 // نظام إشعارات المتصفح (Push Notifications) باستخدام Firebase
 async function requestPushPermission() {
     if (!window.messaging) {
@@ -3176,7 +3185,6 @@ async function requestPushPermission() {
     try {
         const permission = await Notification.requestPermission();
         if (permission === 'granted') {
-            // ملاحظة: الـ VAPID Key بيتم استخراجه من إعدادات Firebase Cloud Messaging
             const token = await window.fbGetToken(window.messaging, {
                 vapidKey: "BH3pRgAz94oG9c908u1ub1gjH2u46l0r1YYCoh8VwFdRZZ_Cn1ZEkTGAT8nur55RopYJswRuqeHsXrMm6POtPqA"
             });
@@ -3195,6 +3203,6 @@ async function requestPushPermission() {
         }
     } catch (error) {
         console.error("Push Error:", error);
-        alert("حدث خطأ أثناء تفعيل الإشعارات. يرجى المحاولة لاحقاً.");
+        alert("حدث خطأ أثناء تفعيل الإشعارات: " + (error.message || "يرجى المحاولة لاحقاً"));
     }
 }
