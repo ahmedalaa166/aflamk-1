@@ -150,8 +150,8 @@ ul {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 70px;
-        padding: 0 1.5rem;
+        height: 60px;
+        padding: 0 1.2rem;
     }
     .nav-menu { display: none; }
     
@@ -1683,6 +1683,8 @@ footer span {
     display: flex;
     flex-direction: column;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-y: auto; /* السماح بالتمرير داخل القائمة الجانبية */
+    -webkit-overflow-scrolling: touch; /* تمرير ناعم على أجهزة iOS */
 }
 
 .mobile-sections-menu.active {

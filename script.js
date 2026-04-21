@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.22.40"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.22.41"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -2550,7 +2550,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if(window.innerWidth <= 950) {
             const isActive = navMenuMobile.classList.toggle('active');
             if (overlay) overlay.classList.toggle('active');
-            document.body.style.overflow = isActive ? 'hidden' : '';
+            document.body.style.overflow = isActive ? 'hidden' : 'auto';
         } else {
             navMenuDesktop.classList.toggle('active');
         }
