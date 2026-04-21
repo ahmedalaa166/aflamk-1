@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.21.36"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.21.38"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -2581,12 +2581,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         const nav = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            nav.style.backgroundColor = 'rgba(11, 16, 30, 0.98)';
-            nav.style.boxShadow = '0 4px 10px rgba(0,0,0,0.5)';
+        if (window.scrollY > 20) {
+            nav.classList.add('scrolled');
         } else {
-            nav.style.backgroundColor = 'rgba(11, 16, 30, 0.85)';
-            nav.style.boxShadow = 'none';
+            nav.classList.remove('scrolled');
         }
     });
 
@@ -2619,6 +2617,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         navigate(initialPage);
     }
+    
+    // Check for new content notifications
+    setTimeout(checkNewContent, 1500);
 });
 
 function renderLivePage() {
@@ -3098,3 +3099,102 @@ window.hideSuggestions = function(containerId) {
         container.style.display = 'none';
     }
 };
+
+/* ==== نظام الإشعارات (Notification System) ==== */
+
+// التحقق من وجود إضافات جديدة
+window.checkNewContent = function() {
+    if (typeof allContent === 'undefined' || allContent.length === 0) return;
+    
+    const latestItem = allContent[0]; // أول عنصر هو الأحدث دائماً
+    const lastSeenId = localStorage.getItem('filmak_last_seen_id');
+    const notifDot = document.getElementById('notif-dot');
+
+    if (lastSeenId && lastSeenId !== latestItem.id) {
+        // فيه حاجة جديدة والمستخدم كان فاتح قبل كده
+        if (notifDot) notifDot.style.display = 'block';
+        
+        // إظهار التوست لو المستخدم فاتح الموقع
+        showNotificationToast(latestItem);
+    } else if (!lastSeenId) {
+        // أول مرة يفتح الموقع، نحفظ أحدث ID عشان المرة الجاية
+        localStorage.setItem('filmak_last_seen_id', latestItem.id);
+    }
+};
+
+function showNotificationToast(item) {
+    const toast = document.getElementById('notif-toast');
+    const poster = document.getElementById('toast-poster');
+    const message = document.getElementById('toast-message');
+    const actionBtn = document.getElementById('toast-action');
+
+    if (!toast || !item) return;
+
+    poster.src = item.poster;
+    message.innerText = `تم إضافة ${item.type === 'series' ? 'مسلسل' : 'فيلم'}: ${item.title}`;
+    
+    actionBtn.onclick = () => {
+        watchItem(item.id);
+        hideToast();
+        markAsSeen(item.id);
+    };
+
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 1000); 
+
+    // تختفي لوحدها بعد 15 ثانية
+    setTimeout(hideToast, 15000);
+}
+
+window.hideToast = function() {
+    const toast = document.getElementById('notif-toast');
+    if (toast) toast.classList.remove('show');
+};
+
+window.toggleNotifications = function() {
+    const latestItem = allContent[0];
+    markAsSeen(latestItem.id);
+    
+    // طلب إذن إشعارات المتصفح (Push Notifications)
+    requestPushPermission();
+};
+
+function markAsSeen(id) {
+    localStorage.setItem('filmak_last_seen_id', id);
+    const notifDot = document.getElementById('notif-dot');
+    if (notifDot) notifDot.style.display = 'none';
+}
+
+// نظام إشعارات المتصفح (Push Notifications) باستخدام Firebase
+async function requestPushPermission() {
+    if (!window.messaging) {
+        alert("متصفحك لا يدعم إشعارات الـ Push حالياً.");
+        return;
+    }
+
+    try {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+            // ملاحظة: الـ VAPID Key بيتم استخراجه من إعدادات Firebase Cloud Messaging
+            const token = await window.fbGetToken(window.messaging, {
+                vapidKey: "BH3pRgAz94oG9c908u1ub1gjH2u46l0r1YYCoh8VwFdRZZ_Cn1ZEkTGAT8nur55RopYJswRuqeHsXrMm6POtPqA"
+            });
+            
+            if (token) {
+                const deviceId = getDeviceId();
+                await window.fbSetDoc(window.fbDoc(window.db, "notification_tokens", deviceId), {
+                    token: token,
+                    updatedAt: new Date(),
+                    activeCode: localStorage.getItem('filmak_active_code') || 'guest'
+                });
+                alert("تم تفعيل الإشعارات بنجاح! ستصلك تنبيهات عند إضافة محتوى جديد.");
+            }
+        } else {
+            alert("لقد رفضت استقبال الإشعارات. يمكنك تفعيلها من إعدادات المتصفح.");
+        }
+    } catch (error) {
+        console.error("Push Error:", error);
+        alert("حدث خطأ أثناء تفعيل الإشعارات. يرجى المحاولة لاحقاً.");
+    }
+}

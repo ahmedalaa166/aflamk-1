@@ -15,7 +15,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
-    <link rel="stylesheet" href="style.css?v=2026.04.21.36">
+    <link rel="stylesheet" href="style.css?v=2026.04.21.38">
 </head>
 
 <body>
@@ -80,7 +80,11 @@
                     class="logo-accent">|</span></a>
 
             <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
             <ul class="nav-menu">
@@ -120,12 +124,18 @@
                         class="logout-link"><i class="fas fa-sign-out-alt"></i> خروج</a></li>
             </ul>
 
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..."
-                    oninput="showSuggestions(this.value, 'desktopSuggestions')"
-                    onblur="setTimeout(() => hideSuggestions('desktopSuggestions'), 200)">
-                <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
-                <div class="search-suggestions" id="desktopSuggestions"></div>
+            <div class="nav-actions">
+                <div class="notification-bell" id="notif-bell" onclick="toggleNotifications()">
+                    <i class="fas fa-bell"></i>
+                    <span class="dot" id="notif-dot"></span>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="ابحث عن فيلم أو مسلسل..."
+                        oninput="showSuggestions(this.value, 'desktopSuggestions')"
+                        onblur="setTimeout(() => hideSuggestions('desktopSuggestions'), 200)">
+                    <button onclick="handleSearch('searchInput')"><i class="fas fa-search"></i></button>
+                    <div class="search-suggestions" id="desktopSuggestions"></div>
+                </div>
             </div>
         </div>
     </nav>
@@ -166,10 +176,6 @@
         </div>
     </div>
 
-    <!-- Floating Menu Button (Mobile Only) -->
-    <div id="floating-menu" class="floating-menu-btn">
-        <i class="fas fa-bars"></i>
-    </div>
 
     <!-- Overlay moved outside as well -->
     <div id="sidebarOverlay" class="menu-overlay"></div>
@@ -343,15 +349,26 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2024 لـ موقع <span>افلامك |</span></p>
-    </footer>
+    <!-- Notification Toast -->
+    <div id="notif-toast" class="notification-toast">
+        <div class="toast-img">
+            <img id="toast-poster" src="" alt="">
+        </div>
+        <div class="toast-content">
+            <div class="toast-title">
+                <span>إضافة جديدة</span>
+                <i class="fas fa-times toast-close" onclick="hideToast()"></i>
+            </div>
+            <div id="toast-message" class="toast-body"></div>
+            <button id="toast-action" class="toast-btn">مشاهدة الآن</button>
+        </div>
+    </div>
 
     <!-- Firebase Scripts (Modular CDN Version) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getFirestore, doc, getDoc, updateDoc, arrayUnion, arrayRemove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getFirestore, doc, getDoc, updateDoc, arrayUnion, arrayRemove, collection, setDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getMessaging, getToken, onMessage } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-messaging.js";
 
         // Firebase Config provided by you
         const firebaseConfig = {
@@ -364,20 +381,10 @@
             measurementId: "G-G0HJ7SG8NJ"
         };
 
-        // Unregister old Service Workers to fix caching
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.getRegistrations().then(function (registrations) {
-                for (let registration of registrations) {
-                    registration.unregister();
-                    console.log('Service Worker Unregistered to clear cache');
-                }
-            });
-        }
-
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-
+        
         // Exporting tools to window for script.js
         window.db = db;
         window.fbDoc = doc;
@@ -385,11 +392,23 @@
         window.fbUpdateDoc = updateDoc;
         window.fbArrayUnion = arrayUnion;
         window.fbArrayRemove = arrayRemove;
+        window.fbCollection = collection;
+        window.fbSetDoc = setDoc;
+
+        // Messaging setup
+        try {
+            const messaging = getMessaging(app);
+            window.messaging = messaging;
+            window.fbGetToken = getToken;
+            window.fbOnMessage = onMessage;
+        } catch (e) {
+            console.log("Messaging not supported in this browser");
+        }
 
     </script>
 
     <!-- Main JS File -->
-    <script src="script.js?v=2026.04.21.36"></script>
+    <script src="script.js?v=2026.04.21.38"></script>
 </body>
 
 </html>
