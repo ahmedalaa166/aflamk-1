@@ -15,7 +15,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
-    <link rel="stylesheet" href="style.css?v=2026.04.22.41">
+    <link rel="stylesheet" href="style.css?v=2026.04.22.52">
 </head>
 
 <body>
@@ -395,30 +395,12 @@
         window.fbCollection = collection;
         window.fbSetDoc = setDoc;
 
-        // Messaging setup
-        try {
-            const messaging = getMessaging(app);
-            window.messaging = messaging;
-            window.fbGetToken = getToken;
-            window.fbOnMessage = onMessage;
-            
-            // تسجيل الـ Service Worker يدوياً لضمان التوافق
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('./firebase-messaging-sw.js?v=2026.04.22.39')
-                    .then((registration) => {
-                        console.log('Service Worker registered with scope:', registration.scope);
-                    }).catch((err) => {
-                        console.error('Service Worker registration failed:', err);
-                    });
-            }
-        } catch (e) {
-            console.log("Messaging not supported in this browser");
-        }
+
 
     </script>
 
     <!-- Main JS File -->
-    <script src="script.js?v=2026.04.22.41"></script>
+    <script src="script.js?v=2026.04.22.52"></script>
 </body>
 
 </html>
