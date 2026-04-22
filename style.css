@@ -1,7 +1,7 @@
 /* ==== Base Styles & CSS Variables ==== */
 :root {
-    --bg-color: #0b101e;
-    --card-bg: #151b2b;
+    --bg-color: #1a202c;
+    --card-bg: #2d3748;
     --primary-color: #e50914; /* Action Red */
     --hover-color: #b0070f;
     --text-main: #f8fafc;
@@ -34,7 +34,7 @@ ul {
 
 /* ==== Navigation Bar ==== */
 .navbar {
-    background-color: #050810;
+    background-color: #0f172a;
     position: sticky;
     top: 0;
     width: 100%;
@@ -44,16 +44,17 @@ ul {
 }
 
 .navbar.scrolled {
-    background-color: #050810;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background-color: #0f172a;
+    box-shadow: none;
 }
 
 /* ==== Top Bar ==== */
 .top-bar {
-    background: #020617;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-    padding: 0.5rem 0;
-    font-size: 0.8rem;
+    background: #1a202c;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 5px 0;
+    font-size: 0.92rem;
+    font-weight: 700;
     z-index: 1001;
 }
 
@@ -100,8 +101,8 @@ ul {
 }
 
 .top-tags {
-    color: var(--text-muted);
-    font-weight: 600;
+    color: #cbd5e1;
+    font-weight: 700;
 }
 
 .nav-container {
@@ -460,6 +461,29 @@ ul {
     transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.toast-logo-badge {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 45px;
+    height: 45px;
+    background: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.toast-logo-badge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .notification-toast.show {
     transform: translateX(0);
 }
@@ -622,7 +646,7 @@ ul {
 /* ==== Hero Header ==== */
 .hero {
     height: 500px;
-    background: linear-gradient(1turn, var(--bg-color) 0%, rgba(11,16,30,0.4) 100%), 
+    background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), 
                 url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -1142,13 +1166,19 @@ footer span {
     transition: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     padding: 2rem 1.5rem 8rem 1.5rem;
     box-sizing: border-box;
-    box-shadow: -20px 0 60px rgba(0,0,0,0.8);
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     color: #ffffff !important;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+    box-shadow: -20px 0 60px rgba(0,0,0,0.8);
+}
 }
 
 .mobile-sections-menu.active {
@@ -1563,7 +1593,7 @@ footer span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: rgba(15, 23, 42, 0.98);
     z-index: 10000;
     display: flex; /* يظهر فوراً لمنع الوميض بظهور الموقع */
     align-items: center;
@@ -1577,7 +1607,7 @@ footer span {
 }
 
 .login-card {
-    background: #151b2b;
+    background: var(--card-bg);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 28px;
     padding: 3.5rem 2.5rem;
@@ -1674,13 +1704,18 @@ footer span {
     transform: translateX(100%);
     transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 2rem 1.5rem;
-    box-shadow: -20px 0 60px rgba(0,0,0,0.9);
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     overflow-y: auto;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+}
+
+.mobile-nav.active {
+    transform: translateX(0);
+    box-shadow: -20px 0 60px rgba(0,0,0,0.9);
 }
 
 /* Custom Scrollbar for Mobile Menu */

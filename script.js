@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.01"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.14"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,116 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-daredevil-born-again',
+        title: 'Daredevil: Born Again',
+        type: 'series',
+        category: 'foreign-series',
+        poster: 'صور/_315x420_0337a88243436584ff6b5c8d69b6d06a80795417641a10419f990437f7a022f4.jpg',
+        year: '24 مارس 2026',
+        quality: 'FHD',
+        desc: 'يقود (مات مردوك) مقاومة شعبية سرّية ضد العمدة (ويلسون فيسك) الذي حوّل نيويورك إلى مدينة استبدادية، فيعم من الظلال لإسقاط نظام القبضة الحديدية، وسط أزمة إيمان وصراع شخصي.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    { id: 'dd-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-qk7lzyghth3b.html', downloads: { medium: 'https://vidspeed.org/d/qk7lzyghth3b.html', high: 'https://callistanise.com/d/4owtyrf7bzrq' } },
+                    { id: 'dd-s1-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-zoyl8ercooot.html', downloads: { high: 'https://callistanise.com/d/t7zu5ztpk8fb', medium: 'https://vidspeed.org/d/zoyl8ercooot.html' } },
+                    { id: 'dd-s1-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-irbj5v9g6zah.html', downloads: { high: 'https://callistanise.com/d/2tpn4ifmmh4d', medium: 'https://vidspeed.org/d/irbj5v9g6zah.html' } },
+                    { id: 'dd-s1-ep4', title: 'الحلقة 4', videoUrl: 'https://hlswish.com/e/o5n0ezp5ul97', downloads: { high: 'https://hlswish.com/f/o5n0ezp5ul97', medium: 'https://vidspeed.org/d/2x1kejb9z5dx.html' } },
+                    { id: 'dd-s1-ep5', title: 'الحلقة 5', videoUrl: 'https://vidspeed.org/embed-0pfwp1n78xsz.html', downloads: { high: 'https://callistanise.com/d/3x2sleo54xnp', medium: 'https://vidspeed.org/d/0pfwp1n78xsz.html' } },
+                    { id: 'dd-s1-ep6', title: 'الحلقة 6', videoUrl: 'https://vidspeed.org/embed-rdak47hsx56t.html', downloads: { high: 'https://callistanise.com/d/j86zqcvtcgvw', medium: 'https://vidspeed.org/d/rdak47hsx56t.html' } },
+                    { id: 'dd-s1-ep7', title: 'الحلقة 7', videoUrl: 'https://vidspeed.org/embed-ve5fi6pt8nvg.html', downloads: { high: 'https://callistanise.com/d/i2jwejr0sosx', medium: 'https://vidspeed.org/d/ve5fi6pt8nvg.html' } },
+                    { id: 'dd-s1-ep8', title: 'الحلقة 8', videoUrl: 'https://vidspeed.org/embed-24o08koyq9gc.html', downloads: { high: 'https://callistanise.com/d/9l3ue27fpmmm', medium: 'https://vidspeed.org/d/24o08koyq9gc.html' } },
+                    { id: 'dd-s1-ep9', title: 'الحلقة 9', videoUrl: 'https://hgcloud.to/e/63powbv97tux', downloads: { high: 'https://vidspeed.org/d/29c27px91g9c.html', medium: 'https://1vid.xyz/d/07kow0t6te6p.html' } }
+                ]
+            },
+            {
+                seasonNumber: 2,
+                episodes: [
+                    { id: 'dd-s2-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-pfzkc229j0ba.html', downloads: { high: 'https://callistanise.com/d/aqeye1931ms9', medium: 'https://vidspeed.org/d/pfzkc229j0ba.html' } },
+                    { id: 'dd-s2-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-6z3xpz63cyzr.html', downloads: { high: 'https://callistanise.com/d/zyf034b36wl2', medium: 'https://vidspeed.org/d/6z3xpz63cyzr.html' } },
+                    { id: 'dd-s2-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-18rkjdakoz5s.html', downloads: { high: 'https://callistanise.com/d/fixzce9yn8ja', medium: 'https://vidspeed.org/d/18rkjdakoz5s.html' } },
+                    { id: 'dd-s2-ep4', title: 'الحلقة 4', videoUrl: 'https://mixdrop.ps/e/8l1r0r1dt6630vn', downloads: { high: 'https://mixdrop.ps/f/8l1r0r1dt6630vn?download', medium: 'https://virvid.cc/v/oat5u23nxumh' } },
+                    { id: 'dd-s2-ep5', title: 'الحلقة 5', videoUrl: 'https://anafast.org/embed-egs1x8qbzh7m.html', downloads: { medium: 'https://vidspeed.org/d/ye8ax2s63eq7.html', high: 'https://minochinos.com/d/olgqyxdjjvj2' } },
+                    { id: 'dd-s2-ep6', title: 'الحلقة 6', videoUrl: 'https://anafast.org/embed-6m7aji5bnkrl.html', downloads: { medium: 'https://vidspeed.org/d/u7o6ks5m1stf.html', high: 'https://savefiles.com/d/1583syrt0p0m_n' } }
+                ]
+            }
+        ]
+    },
+    {
+        id: 's-the-boys',
+        title: 'The Boys',
+        type: 'series',
+        category: 'foreign-series',
+        poster: 'صور/the_boys.jpg',
+        year: '8 ابريل 2026',
+        quality: 'FHD',
+        desc: 'في الموسم الخامس والأخير، تعود الأحداث بمواجهة ملحمية بين الأبطال والأشرار قد تهدد بفناء العالم، ينضم فريق (جين في) إلى جانب الخير في معركة أخيرة ومميتة ضد (هوملاندر) ونظامه.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    { id: 'ep1-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/nm8h48ja7rr3', downloads: { medium: 'https://masukestin.com/f/nm8h48ja7rr3_n', high: 'https://masukestin.com/f/nm8h48ja7rr3_h' } },
+                    { id: 'ep1-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/ks38r0l0bxwf', downloads: { medium: 'https://hanerix.com/f/ks38r0l0bxwf_n', high: 'https://hanerix.com/f/ks38r0l0bxwf_h' } },
+                    { id: 'ep1-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/3wjvmqq5ecsx', downloads: { medium: 'https://hanerix.com/f/3wjvmqq5ecsx_n', high: 'https://hanerix.com/f/3wjvmqq5ecsx_h' } },
+                    { id: 'ep1-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/81dkhx6qxhvq', downloads: { medium: 'https://masukestin.com/f/81dkhx6qxhvq_n', high: 'https://masukestin.com/f/81dkhx6qxhvq_h' } },
+                    { id: 'ep1-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/1okovyu8druh', downloads: { medium: 'https://hanerix.com/f/1okovyu8druh_n', high: 'https://hanerix.com/f/1okovyu8druh_h' } },
+                    { id: 'ep1-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/qm747rfclz4n', downloads: { medium: 'https://audinifer.com/f/qm747rfclz4n_n', high: 'https://audinifer.com/f/qm747rfclz4n_h' } },
+                    { id: 'ep1-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/qs2dvti188b7', downloads: { medium: 'https://audinifer.com/f/qs2dvti188b7_n', high: 'https://audinifer.com/f/qs2dvti188b7_h' } },
+                    { id: 'ep1-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/gvzk85weaf6l', downloads: { medium: 'https://audinifer.com/f/gvzk85weaf6l_n', high: 'https://audinifer.com/f/gvzk85weaf6l_h' } }
+                ]
+            },
+            {
+                seasonNumber: 2,
+                episodes: [
+                    { id: 'ep2-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/nzbwwel30dgq', downloads: { medium: 'https://audinifer.com/f/nzbwwel30dgq_n', high: 'https://audinifer.com/f/nzbwwel30dgq_h' } },
+                    { id: 'ep2-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/cevm6kpxuyy6', downloads: { medium: 'https://playmogo.com/d/cmb4zwlkol6n', high: 'https://m1xdrop.click/f/0v1q8j79ckx4k3p' } },
+                    { id: 'ep2-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/ce2lfk6o41g8', downloads: { medium: 'https://hanerix.com/f/ce2lfk6o41g8_n', high: 'https://hanerix.com/f/ce2lfk6o41g8_h' } },
+                    { id: 'ep2-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/736nxd1qcq8v', downloads: { medium: 'https://playmogo.com/d/kvu2ttzevcd8', high: 'https://m1xdrop.click/f/knz93wqmf3dkkq7' } },
+                    { id: 'ep2-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/ln8vgeuqgmi9', downloads: { medium: 'https://vibuxer.com/f/ln8vgeuqgmi9_n', high: 'https://vibuxer.com/f/ln8vgeuqgmi9_h' } },
+                    { id: 'ep2-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/7epfwz0390xz', downloads: { medium: 'https://masukestin.com/f/7epfwz0390xz_n', high: 'https://masukestin.com/f/7epfwz0390xz_h' } },
+                    { id: 'ep2-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/c4rge3e8omxw', downloads: { medium: 'https://playmogo.com/d/lk6cs96g9uwe', high: 'https://m1xdrop.click/f/6q8z4qlvslel1g3' } },
+                    { id: 'ep2-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/iojqdh39jv2a', downloads: { medium: 'https://hanerix.com/f/iojqdh39jv2a_n', high: 'https://hanerix.com/f/iojqdh39jv2a_h' } }
+                ]
+            },
+            {
+                seasonNumber: 3,
+                episodes: [
+                    { id: 'ep3-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/fqmr08bwx3p6', downloads: { medium: 'https://masukestin.com/f/fqmr08bwx3p6_n', high: 'https://masukestin.com/f/fqmr08bwx3p6_h' } },
+                    { id: 'ep3-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/1td29p6w03fo', downloads: { medium: 'https://vibuxer.com/f/1td29p6w03fo_n', high: 'https://vibuxer.com/f/1td29p6w03fo_h' } },
+                    { id: 'ep3-3', title: 'الحلقة 3', videoUrl: 'https://minochinos.com/v/kf5gtxurm0l5', downloads: { medium: 'https://playmogo.com/d/xrsiaak247dl', high: 'https://playmogo.com/d/xrsiaak247dl' } },
+                    { id: 'ep3-4', title: 'الحلقة 4', videoUrl: 'https://dsvplay.com/e/15irb3bpqzeb', downloads: { medium: 'https://playmogo.com/d/15irb3bpqzeb', high: 'https://playmogo.com/d/15irb3bpqzeb' } },
+                    { id: 'ep3-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/h0k86no6qpa6', downloads: { medium: 'https://vibuxer.com/f/h0k86no6qpa6_n', high: 'https://vibuxer.com/f/h0k86no6qpa6_h' } },
+                    { id: 'ep3-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/cvdat54t3zob', downloads: { medium: 'https://masukestin.com/f/cvdat54t3zob_n', high: 'https://masukestin.com/f/cvdat54t3zob_h' } },
+                    { id: 'ep3-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/b15zg9cjti43', downloads: { medium: 'https://playmogo.com/d/svcl618kty4c', high: 'https://playmogo.com/d/svcl618kty4c' } },
+                    { id: 'ep3-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/oooptv6iwlk5', downloads: { medium: 'https://playmogo.com/d/bu20876l1x1b', high: 'https://m1xdrop.click/f/jdv3w6r0sdw7r0' } }
+                ]
+            },
+            {
+                seasonNumber: 4,
+                episodes: [
+                    { id: 'ep4-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/qsv3s6z3ng64', downloads: { medium: 'https://playmogo.com/d/mlzwxejiy524', high: 'https://m1xdrop.click/f/pkr1rvqehkwz84' } },
+                    { id: 'ep4-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/fqdviu2u2dqq', downloads: { medium: 'https://playmogo.com/d/mlzwxejiy524', high: 'https://m1xdrop.click/f/pkr1rvqehkwz84' } },
+                    { id: 'ep4-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/6h2swfjnl49k', downloads: { medium: 'https://playmogo.com/d/e6lrp11zd3ra', high: 'https://m1xdrop.click/f/9n9j9eklce9zdd' } },
+                    { id: 'ep4-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/c9swdu3t54w4', downloads: { medium: 'https://playmogo.com/d/xa1cbwsamvs9', high: 'https://m1xdrop.click/f/xoz8kpo7sx6e18' } },
+                    { id: 'ep4-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/kjn92mivjcnd', downloads: { medium: 'https://audinifer.com/f/kjn92mivjcnd_n', high: 'https://audinifer.com/f/kjn92mivjcnd_h' } },
+                    { id: 'ep4-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/a391eaf9ztih', downloads: { medium: 'https://vibuxer.com/f/a391eaf9ztih_n', high: 'https://vibuxer.com/f/a391eaf9ztih_h' } },
+                    { id: 'ep4-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/aor39nard4nd', downloads: { medium: 'https://vibuxer.com/f/aor39nard4nd_n', high: 'https://vibuxer.com/f/aor39nard4nd_h' } },
+                    { id: 'ep4-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/09ce4x2yc701', downloads: { medium: 'https://vibuxer.com/f/09ce4x2yc701_n', high: 'https://vibuxer.com/f/09ce4x2yc701_h' } }
+                ]
+            },
+            {
+                seasonNumber: 5,
+                episodes: [
+                    { id: 'ep5-1', title: 'الحلقة 1', videoUrl: 'https://anafast.org/embed-edbjya7tthz3.html', downloads: { medium: 'https://streamruby.com/d/hh43yh9xs0fo_n', high: 'https://streamruby.com/d/hh43yh9xs0fo_o' } },
+                    { id: 'ep5-2', title: 'الحلقة 2', videoUrl: 'https://anafast.org/embed-nl0z3t843y2k.html', downloads: { medium: 'https://streamruby.com/d/3zaahq7g26n6_n', high: 'https://streamruby.com/d/3zaahq7g26n6_o' } },
+                    { id: 'ep5-3', title: 'الحلقة 3', videoUrl: 'https://anafast.org/embed-d12qdndxffjt.html', downloads: { medium: 'https://vidspeed.org/d/0h2yqen5yaoa.html', high: 'https://minochinos.com/d/njq2dwdgu9ge' } },
+                    { id: 'ep5-4', title: 'الحلقة 4', videoUrl: 'https://anafast.org/embed-cep5molx6yjc.html', downloads: { medium: 'https://vidspeed.org/d/u3on721t00uk.html', high: 'https://savefiles.com/d/pelnbww17vlu_n' } }
+                ]
+            }
+        ]
+    },
     {
         id: 's-alleba',
         title: 'اللعبة 5: الكلاسيكو',
@@ -1255,114 +1365,8 @@ const allContent = [
             }
         ]
     },
-    {
-        id: 's-daredevil-born-again',
-        title: 'Daredevil: Born Again',
-        type: 'series',
-        category: 'foreign-series',
-        poster: 'صور/_315x420_0337a88243436584ff6b5c8d69b6d06a80795417641a10419f990437f7a022f4.jpg',
-        year: '24 مارس 2026',
-        quality: 'FHD',
-        desc: 'يقود (مات مردوك) مقاومة شعبية سرّية ضد العمدة (ويلسون فيسك) الذي حوّل نيويورك إلى مدينة استبدادية، فيعم من الظلال لإسقاط نظام القبضة الحديدية، وسط أزمة إيمان وصراع شخصي.',
-        seasons: [
-            {
-                seasonNumber: 1,
-                episodes: [
-                    { id: 'dd-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-qk7lzyghth3b.html', downloads: { medium: 'https://vidspeed.org/d/qk7lzyghth3b.html', high: 'https://callistanise.com/d/4owtyrf7bzrq' } },
-                    { id: 'dd-s1-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-zoyl8ercooot.html', downloads: { high: 'https://callistanise.com/d/t7zu5ztpk8fb', medium: 'https://vidspeed.org/d/zoyl8ercooot.html' } },
-                    { id: 'dd-s1-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-irbj5v9g6zah.html', downloads: { high: 'https://callistanise.com/d/2tpn4ifmmh4d', medium: 'https://vidspeed.org/d/irbj5v9g6zah.html' } },
-                    { id: 'dd-s1-ep4', title: 'الحلقة 4', videoUrl: 'https://hlswish.com/e/o5n0ezp5ul97', downloads: { high: 'https://hlswish.com/f/o5n0ezp5ul97', medium: 'https://vidspeed.org/d/2x1kejb9z5dx.html' } },
-                    { id: 'dd-s1-ep5', title: 'الحلقة 5', videoUrl: 'https://vidspeed.org/embed-0pfwp1n78xsz.html', downloads: { high: 'https://callistanise.com/d/3x2sleo54xnp', medium: 'https://vidspeed.org/d/0pfwp1n78xsz.html' } },
-                    { id: 'dd-s1-ep6', title: 'الحلقة 6', videoUrl: 'https://vidspeed.org/embed-rdak47hsx56t.html', downloads: { high: 'https://callistanise.com/d/j86zqcvtcgvw', medium: 'https://vidspeed.org/d/rdak47hsx56t.html' } },
-                    { id: 'dd-s1-ep7', title: 'الحلقة 7', videoUrl: 'https://vidspeed.org/embed-ve5fi6pt8nvg.html', downloads: { high: 'https://callistanise.com/d/i2jwejr0sosx', medium: 'https://vidspeed.org/d/ve5fi6pt8nvg.html' } },
-                    { id: 'dd-s1-ep8', title: 'الحلقة 8', videoUrl: 'https://vidspeed.org/embed-24o08koyq9gc.html', downloads: { high: 'https://callistanise.com/d/9l3ue27fpmmm', medium: 'https://vidspeed.org/d/24o08koyq9gc.html' } },
-                    { id: 'dd-s1-ep9', title: 'الحلقة 9', videoUrl: 'https://hgcloud.to/e/63powbv97tux', downloads: { high: 'https://vidspeed.org/d/29c27px91g9c.html', medium: 'https://1vid.xyz/d/07kow0t6te6p.html' } }
-                ]
-            },
-            {
-                seasonNumber: 2,
-                episodes: [
-                    { id: 'dd-s2-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-pfzkc229j0ba.html', downloads: { high: 'https://callistanise.com/d/aqeye1931ms9', medium: 'https://vidspeed.org/d/pfzkc229j0ba.html' } },
-                    { id: 'dd-s2-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-6z3xpz63cyzr.html', downloads: { high: 'https://callistanise.com/d/zyf034b36wl2', medium: 'https://vidspeed.org/d/6z3xpz63cyzr.html' } },
-                    { id: 'dd-s2-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-18rkjdakoz5s.html', downloads: { high: 'https://callistanise.com/d/fixzce9yn8ja', medium: 'https://vidspeed.org/d/18rkjdakoz5s.html' } },
-                    { id: 'dd-s2-ep4', title: 'الحلقة 4', videoUrl: 'https://mixdrop.ps/e/8l1r0r1dt6630vn', downloads: { high: 'https://mixdrop.ps/f/8l1r0r1dt6630vn?download', medium: 'https://virvid.cc/v/oat5u23nxumh' } },
-                    { id: 'dd-s2-ep5', title: 'الحلقة 5', videoUrl: 'https://anafast.org/embed-egs1x8qbzh7m.html', downloads: { medium: 'https://vidspeed.org/d/ye8ax2s63eq7.html', high: 'https://minochinos.com/d/olgqyxdjjvj2' } }
-                ]
-            }
-        ]
-    },
-    {
-        id: 's-the-boys',
-        title: 'The Boys',
-        type: 'series',
-        category: 'foreign-series',
-        poster: 'صور/the_boys.jpg',
-        year: '8 ابريل 2026',
-        quality: 'FHD',
-        desc: 'في الموسم الخامس والأخير، تعود الأحداث بمواجهة ملحمية بين الأبطال والأشرار قد تهدد بفناء العالم، ينضم فريق (جين في) إلى جانب الخير في معركة أخيرة ومميتة ضد (هوملاندر) ونظامه.',
-        seasons: [
-            {
-                seasonNumber: 1,
-                episodes: [
-                    { id: 'ep1-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/nm8h48ja7rr3', downloads: { medium: 'https://masukestin.com/f/nm8h48ja7rr3_n', high: 'https://masukestin.com/f/nm8h48ja7rr3_h' } },
-                    { id: 'ep1-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/ks38r0l0bxwf', downloads: { medium: 'https://hanerix.com/f/ks38r0l0bxwf_n', high: 'https://hanerix.com/f/ks38r0l0bxwf_h' } },
-                    { id: 'ep1-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/3wjvmqq5ecsx', downloads: { medium: 'https://hanerix.com/f/3wjvmqq5ecsx_n', high: 'https://hanerix.com/f/3wjvmqq5ecsx_h' } },
-                    { id: 'ep1-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/81dkhx6qxhvq', downloads: { medium: 'https://masukestin.com/f/81dkhx6qxhvq_n', high: 'https://masukestin.com/f/81dkhx6qxhvq_h' } },
-                    { id: 'ep1-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/1okovyu8druh', downloads: { medium: 'https://hanerix.com/f/1okovyu8druh_n', high: 'https://hanerix.com/f/1okovyu8druh_h' } },
-                    { id: 'ep1-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/qm747rfclz4n', downloads: { medium: 'https://audinifer.com/f/qm747rfclz4n_n', high: 'https://audinifer.com/f/qm747rfclz4n_h' } },
-                    { id: 'ep1-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/qs2dvti188b7', downloads: { medium: 'https://audinifer.com/f/qs2dvti188b7_n', high: 'https://audinifer.com/f/qs2dvti188b7_h' } },
-                    { id: 'ep1-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/gvzk85weaf6l', downloads: { medium: 'https://audinifer.com/f/gvzk85weaf6l_n', high: 'https://audinifer.com/f/gvzk85weaf6l_h' } }
-                ]
-            },
-            {
-                seasonNumber: 2,
-                episodes: [
-                    { id: 'ep2-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/nzbwwel30dgq', downloads: { medium: 'https://audinifer.com/f/nzbwwel30dgq_n', high: 'https://audinifer.com/f/nzbwwel30dgq_h' } },
-                    { id: 'ep2-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/cevm6kpxuyy6', downloads: { medium: 'https://playmogo.com/d/cmb4zwlkol6n', high: 'https://m1xdrop.click/f/0v1q8j79ckx4k3p' } },
-                    { id: 'ep2-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/ce2lfk6o41g8', downloads: { medium: 'https://hanerix.com/f/ce2lfk6o41g8_n', high: 'https://hanerix.com/f/ce2lfk6o41g8_h' } },
-                    { id: 'ep2-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/736nxd1qcq8v', downloads: { medium: 'https://playmogo.com/d/kvu2ttzevcd8', high: 'https://m1xdrop.click/f/knz93wqmf3dkkq7' } },
-                    { id: 'ep2-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/ln8vgeuqgmi9', downloads: { medium: 'https://vibuxer.com/f/ln8vgeuqgmi9_n', high: 'https://vibuxer.com/f/ln8vgeuqgmi9_h' } },
-                    { id: 'ep2-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/7epfwz0390xz', downloads: { medium: 'https://masukestin.com/f/7epfwz0390xz_n', high: 'https://masukestin.com/f/7epfwz0390xz_h' } },
-                    { id: 'ep2-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/c4rge3e8omxw', downloads: { medium: 'https://playmogo.com/d/lk6cs96g9uwe', high: 'https://m1xdrop.click/f/6q8z4qlvslel1g3' } },
-                    { id: 'ep2-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/iojqdh39jv2a', downloads: { medium: 'https://hanerix.com/f/iojqdh39jv2a_n', high: 'https://hanerix.com/f/iojqdh39jv2a_h' } }
-                ]
-            },
-            {
-                seasonNumber: 3,
-                episodes: [
-                    { id: 'ep3-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/fqmr08bwx3p6', downloads: { medium: 'https://masukestin.com/f/fqmr08bwx3p6_n', high: 'https://masukestin.com/f/fqmr08bwx3p6_h' } },
-                    { id: 'ep3-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/1td29p6w03fo', downloads: { medium: 'https://vibuxer.com/f/1td29p6w03fo_n', high: 'https://vibuxer.com/f/1td29p6w03fo_h' } },
-                    { id: 'ep3-3', title: 'الحلقة 3', videoUrl: 'https://minochinos.com/v/kf5gtxurm0l5', downloads: { medium: 'https://playmogo.com/d/xrsiaak247dl', high: 'https://playmogo.com/d/xrsiaak247dl' } },
-                    { id: 'ep3-4', title: 'الحلقة 4', videoUrl: 'https://dsvplay.com/e/15irb3bpqzeb', downloads: { medium: 'https://playmogo.com/d/15irb3bpqzeb', high: 'https://playmogo.com/d/15irb3bpqzeb' } },
-                    { id: 'ep3-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/h0k86no6qpa6', downloads: { medium: 'https://vibuxer.com/f/h0k86no6qpa6_n', high: 'https://vibuxer.com/f/h0k86no6qpa6_h' } },
-                    { id: 'ep3-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/cvdat54t3zob', downloads: { medium: 'https://masukestin.com/f/cvdat54t3zob_n', high: 'https://masukestin.com/f/cvdat54t3zob_h' } },
-                    { id: 'ep3-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/b15zg9cjti43', downloads: { medium: 'https://playmogo.com/d/svcl618kty4c', high: 'https://playmogo.com/d/svcl618kty4c' } },
-                    { id: 'ep3-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/oooptv6iwlk5', downloads: { medium: 'https://playmogo.com/d/bu20876l1x1b', high: 'https://m1xdrop.click/f/jdv3w6r0sdw7r0' } }
-                ]
-            },
-            {
-                seasonNumber: 4,
-                episodes: [
-                    { id: 'ep4-1', title: 'الحلقة 1', videoUrl: 'https://hgcloud.to/e/qsv3s6z3ng64', downloads: { medium: 'https://playmogo.com/d/mlzwxejiy524', high: 'https://m1xdrop.click/f/pkr1rvqehkwz84' } },
-                    { id: 'ep4-2', title: 'الحلقة 2', videoUrl: 'https://hgcloud.to/e/fqdviu2u2dqq', downloads: { medium: 'https://playmogo.com/d/mlzwxejiy524', high: 'https://m1xdrop.click/f/pkr1rvqehkwz84' } },
-                    { id: 'ep4-3', title: 'الحلقة 3', videoUrl: 'https://hgcloud.to/e/6h2swfjnl49k', downloads: { medium: 'https://playmogo.com/d/e6lrp11zd3ra', high: 'https://m1xdrop.click/f/9n9j9eklce9zdd' } },
-                    { id: 'ep4-4', title: 'الحلقة 4', videoUrl: 'https://hgcloud.to/e/c9swdu3t54w4', downloads: { medium: 'https://playmogo.com/d/xa1cbwsamvs9', high: 'https://m1xdrop.click/f/xoz8kpo7sx6e18' } },
-                    { id: 'ep4-5', title: 'الحلقة 5', videoUrl: 'https://hgcloud.to/e/kjn92mivjcnd', downloads: { medium: 'https://audinifer.com/f/kjn92mivjcnd_n', high: 'https://audinifer.com/f/kjn92mivjcnd_h' } },
-                    { id: 'ep4-6', title: 'الحلقة 6', videoUrl: 'https://hgcloud.to/e/a391eaf9ztih', downloads: { medium: 'https://vibuxer.com/f/a391eaf9ztih_n', high: 'https://vibuxer.com/f/a391eaf9ztih_h' } },
-                    { id: 'ep4-7', title: 'الحلقة 7', videoUrl: 'https://hgcloud.to/e/aor39nard4nd', downloads: { medium: 'https://vibuxer.com/f/aor39nard4nd_n', high: 'https://vibuxer.com/f/aor39nard4nd_h' } },
-                    { id: 'ep4-8', title: 'الحلقة 8 والأخيرة', videoUrl: 'https://hgcloud.to/e/09ce4x2yc701', downloads: { medium: 'https://vibuxer.com/f/09ce4x2yc701_n', high: 'https://vibuxer.com/f/09ce4x2yc701_h' } }
-                ]
-            },
-            {
-                seasonNumber: 5,
-                episodes: [
-                    { id: 'ep5-1', title: 'الحلقة 1', videoUrl: 'https://anafast.org/embed-edbjya7tthz3.html', downloads: { medium: 'https://streamruby.com/d/hh43yh9xs0fo_n', high: 'https://streamruby.com/d/hh43yh9xs0fo_o' } },
-                    { id: 'ep5-2', title: 'الحلقة 2', videoUrl: 'https://anafast.org/embed-nl0z3t843y2k.html', downloads: { medium: 'https://streamruby.com/d/3zaahq7g26n6_n', high: 'https://streamruby.com/d/3zaahq7g26n6_o' } },
-                    { id: 'ep5-3', title: 'الحلقة 3', videoUrl: 'https://anafast.org/embed-d12qdndxffjt.html', downloads: { medium: 'https://vidspeed.org/d/0h2yqen5yaoa.html', high: 'https://minochinos.com/d/njq2dwdgu9ge' } }
-                ]
-            }
-        ]
-    },
+
+
     {
         id: 's-el-set-monalisa',
         title: 'مسلسل الست موناليزا',
@@ -3164,12 +3168,32 @@ window.showNewContentNotification = function(payload) {
 
     if (!toast || !payload.notification) return;
 
-    poster.src = payload.notification.image || 'صور/logo.png';
+    // الحصول على معرف المحتوى من البيانات المرسلة مع الإشعار
+    const itemId = (payload.data && payload.data.itemId) ? payload.data.itemId : null;
+
+    poster.src = payload.notification.image || 'صور/logo.jpg';
     message.innerText = payload.notification.body || payload.notification.title;
     
-    actionBtn.onclick = () => {
+    // عند الضغط على زر المشاهدة
+    actionBtn.onclick = (e) => {
+        e.stopPropagation();
         hideToast();
-        navigate('latest');
+        if (itemId) {
+            watchItem(itemId);
+        } else {
+            navigate('latest');
+        }
+    };
+
+    // جعل التوست نفسه قابلاً للضغط للتوجه للمحتوى
+    toast.style.cursor = 'pointer';
+    toast.onclick = () => {
+        hideToast();
+        if (itemId) {
+            watchItem(itemId);
+        } else {
+            navigate('latest');
+        }
     };
 
     toast.classList.add('show');
