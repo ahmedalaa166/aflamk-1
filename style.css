@@ -39,7 +39,7 @@ ul {
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: none;
     transition: var(--transition);
 }
 
@@ -50,8 +50,8 @@ ul {
 
 /* ==== Top Bar ==== */
 .top-bar {
-    background: #232b3a;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: #1a202c;
+    border-bottom: none;
     padding: 5px 0;
     font-size: 0.92rem;
     font-weight: 700;
@@ -1384,31 +1384,14 @@ footer span {
     }
 
     .mobile-search-container {
-        display: flex;
-        width: 100%;
         margin-bottom: 1.2rem;
-        position: relative;
     }
 
     .mobile-search-container input {
-        width: 100%;
-        padding: 0.8rem 1rem;
-        background: rgba(255,255,255,0.05);
-        border: 1px solid var(--outline-color);
-        border-radius: 10px;
-        color: #fff;
-        font-family: inherit;
         font-size: 0.9rem;
     }
 
     .mobile-search-container button {
-        position: absolute;
-        left: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: transparent;
-        border: none;
-        color: var(--primary-color);
         font-size: 1.1rem;
     }
 
