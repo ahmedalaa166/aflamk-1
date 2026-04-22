@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.14"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.15"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -311,7 +311,7 @@ const allContent = [
                     { id: 'dd-s2-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-18rkjdakoz5s.html', downloads: { high: 'https://callistanise.com/d/fixzce9yn8ja', medium: 'https://vidspeed.org/d/18rkjdakoz5s.html' } },
                     { id: 'dd-s2-ep4', title: 'الحلقة 4', videoUrl: 'https://mixdrop.ps/e/8l1r0r1dt6630vn', downloads: { high: 'https://mixdrop.ps/f/8l1r0r1dt6630vn?download', medium: 'https://virvid.cc/v/oat5u23nxumh' } },
                     { id: 'dd-s2-ep5', title: 'الحلقة 5', videoUrl: 'https://anafast.org/embed-egs1x8qbzh7m.html', downloads: { medium: 'https://vidspeed.org/d/ye8ax2s63eq7.html', high: 'https://minochinos.com/d/olgqyxdjjvj2' } },
-                    { id: 'dd-s2-ep6', title: 'الحلقة 6', videoUrl: 'https://anafast.org/embed-6m7aji5bnkrl.html', downloads: { medium: 'https://vidspeed.org/d/u7o6ks5m1stf.html', high: 'https://savefiles.com/d/1583syrt0p0m_n' } }
+                    { id: 'dd-s2-ep6', title: 'الحلقة 6', videoUrl: 'https://vidspeed.org/embed-u7o6ks5m1stf.html', downloads: { medium: 'https://vidspeed.org/d/u7o6ks5m1stf.html', high: 'https://savefiles.com/d/1583syrt0p0m_n' } }
                 ]
             }
         ]
