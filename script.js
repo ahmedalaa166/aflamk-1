@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.22.52"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.01"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -371,6 +371,15 @@ const allContent = [
                         downloads: {
                             medium: 'https://vidspeed.org/d/35jr9ycgwy1n.html',
                             high: 'https://savefiles.com/d/lag9byzxmed2_n'
+                        }
+                    },
+                    {
+                        id: 's5-ep10',
+                        title: 'الحلقة 10',
+                        videoUrl: 'https://anafast.org/embed-9gmqmwegpa55.html',
+                        downloads: {
+                            medium: 'https://vidspeed.org/d/b3qkke5q8c1b.html',
+                            high: 'https://savefiles.com/d/16hk2u8p6o52_n'
                         }
                     }
                 ]
