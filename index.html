@@ -394,6 +394,24 @@
         window.fbArrayRemove = arrayRemove;
         window.fbCollection = collection;
         window.fbSetDoc = setDoc;
+        
+        // Push Notifications Setup
+        try {
+            const messaging = getMessaging(app);
+            window.messaging = messaging;
+            window.fbGetToken = getToken;
+            window.fbOnMessage = onMessage;
+
+            // Handle foreground messages
+            onMessage(messaging, (payload) => {
+                console.log('Message received in foreground: ', payload);
+                if (window.showNewContentNotification) {
+                    window.showNewContentNotification(payload);
+                }
+            });
+        } catch (err) {
+            console.error("Firebase Messaging initialization failed:", err);
+        }
 
 
 

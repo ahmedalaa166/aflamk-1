@@ -3156,6 +3156,26 @@ function showNotificationToast(item) {
     setTimeout(hideToast, 15000);
 }
 
+window.showNewContentNotification = function(payload) {
+    const toast = document.getElementById('notif-toast');
+    const poster = document.getElementById('toast-poster');
+    const message = document.getElementById('toast-message');
+    const actionBtn = document.getElementById('toast-action');
+
+    if (!toast || !payload.notification) return;
+
+    poster.src = payload.notification.image || 'صور/logo.png';
+    message.innerText = payload.notification.body || payload.notification.title;
+    
+    actionBtn.onclick = () => {
+        hideToast();
+        navigate('latest');
+    };
+
+    toast.classList.add('show');
+    setTimeout(hideToast, 15000);
+};
+
 window.hideToast = function() {
     const toast = document.getElementById('notif-toast');
     if (toast) toast.classList.remove('show');
