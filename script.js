@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.49"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.48"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -280,23 +280,23 @@ async function isSubscriptionValid() {
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
-        id: 'live-mix-bel-araby',
-        title: 'mix بالعربي',
+        id: 'live-mix-belarabi',
+        title: 'قناة Mix بالعربي',
         type: 'live',
         category: 'live',
-        subCategory: 'movies',
-        poster: 'صور/mix_bel_araby.png',
+        poster: 'صور/mix_belarabi.png',
         year: 'بث مباشر',
-        quality: 'HD',
-        desc: 'بث مباشر لقناة ميكس بالعربي - أفلام ومسلسلات عربية على مدار الساعة.',
-        videoUrl: 'https://new.aflam4you.net/embed.php?vid=2310'
+        quality: 'FHD',
+        desc: 'مشاهدة البث المباشر لقناة Mix بالعربي بجودة عالية، القناة المفضلة لمتابعة أحدث الأفلام والمسلسلات العربية والدراما الحصرية على مدار الساعة.',
+        videoUrl: 'https://new.aflam4you.net/embed.php?vid=2310',
+        subCategory: 'movies'
     },
     {
-        id: 'm-bath-mobasher',
+        id: 'm5',
         title: 'بث مباشر',
         type: 'movie',
-        category: 'arabic-movies',
-        poster: 'صور/bath_mobasher.jpg',
+        category: 'arabic-movie',
+        poster: 'صور/bath_mubasher.jpg',
         year: '31 اغسطس 2017',
         quality: 'FHD',
         desc: 'فارس ضابط موقوف عن العمل، يتورط فى أحداث تتزايد طوال الليلة التي تقع فيها أحداث الفيلم، وتتزايد الورطة بظهور شخص يصور الأحداث التي يتورط فيها البطل مباشرة، وبثها على السوشيال ميديا والقنوات، وتنجح في تحقيق نسبة مشاهدة عالية جدًا.',
