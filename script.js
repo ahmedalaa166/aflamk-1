@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.48"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.51"; // تحديث لتعديل كود movies plus بالمسافة
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -157,12 +157,12 @@ window.validateCode = async function() {
         const maxAllowed = codeData.maxDevices || 6; 
         const deviceList = codeData.devices || [];
 
-        // استثناء خاص لكود الـ Admin أو أي أكواد متعملها استثناء
-        const isAdmin = (codeInput === 'admin123' || codeInput === 'aflamk7d');
+        // استثناء للأكواد غير محدودة الأجهزة (Movies Plus والأكواد السابقة)
+        const isUnlimited = (codeInput === 'admin123' || codeInput === 'aflamk7d' || codeInput === 'movies plus');
 
         if (!deviceList.includes(deviceId)) {
-            if (!isAdmin && deviceList.length >= maxAllowed) {
-                throw new Error("لقد وصلت للحد الأقصى من الأجهزة (6 أجهزة)");
+            if (!isUnlimited && deviceList.length >= maxAllowed) {
+                throw new Error(`لقد وصلت للحد الأقصى من الأجهزة (${maxAllowed} أجهزة)`);
             }
             
             // إضافة الجهاز الجديد لـ Firebase وتحديث وقت الدخول
