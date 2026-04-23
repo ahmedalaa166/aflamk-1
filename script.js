@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.24"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.42"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,38 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-narges',
+        title: 'حكاية نرجس',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/narges.jpg',
+        year: '5 مارس 2026',
+        quality: 'FHD',
+        desc: 'تحت وطأة النظرة المجتمعية القاسية، تنزلق نرجس في منحدر من الأكاذيب والجرائم؛ في محاولة يائسة لتشييد أسرة وهمية تمنحها الاستقرار، لتجد نفسها في مواجهة مصيرٍ مأساوي لم تكن تتوقعه.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    { id: 'narges-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-ovbph3fvfzc7.html', downloads: { medium: 'https://vidspeed.org/d/ovbph3fvfzc7.html', high: 'https://vik1ngfile.site/f/MqAOkMsttN' } },
+                    { id: 'narges-s1-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-puljslqjga38.html', downloads: { medium: 'https://vidspeed.org/d/puljslqjga38.html', high: 'https://vik1ngfile.site/f/NMCAA5K4k6' } },
+                    { id: 'narges-s1-ep3', title: 'الحلقة 3', videoUrl: 'https://vidspeed.org/embed-42ixe0ufizva.html', downloads: { medium: 'https://vidspeed.org/d/42ixe0ufizva.html', high: 'https://vik1ngfile.site/f/LpsgxqJndH' } },
+                    { id: 'narges-s1-ep4', title: 'الحلقة 4', videoUrl: 'https://vidspeed.org/embed-0b3iosw1j35c.html', downloads: { medium: 'https://vidspeed.org/d/0b3iosw1j35c.html', high: 'https://vik1ngfile.site/f/wYqWRAEcKy' } },
+                    { id: 'narges-s1-ep5', title: 'الحلقة 5', videoUrl: 'https://vidspeed.org/embed-p2vc4z765dpv.html', downloads: { medium: 'https://vidspeed.org/d/p2vc4z765dpv.html', high: 'https://vik1ngfile.site/f/5AgplLEPCJ' } },
+                    { id: 'narges-s1-ep6', title: 'الحلقة 6', videoUrl: 'https://vidspeed.org/embed-bx2h00kux67q.html', downloads: { medium: 'https://vidspeed.org/d/bx2h00kux67q.html', high: 'https://vik1ngfile.site/f/X7EILn2lyw' } },
+                    { id: 'narges-s1-ep7', title: 'الحلقة 7', videoUrl: 'https://vidspeed.org/embed-3psmbto4utn0.html', downloads: { medium: 'https://vidspeed.org/d/3psmbto4utn0.html', high: 'https://vik1ngfile.site/f/bSbQ3OOQVT' } },
+                    { id: 'narges-s1-ep8', title: 'الحلقة 8', videoUrl: 'https://vidspeed.org/embed-mgv8oovkh3nt.html', downloads: { medium: 'https://vidspeed.org/d/mgv8oovkh3nt.html', high: 'https://vik1ngfile.site/f/gc4wxtOBDG' } },
+                    { id: 'narges-s1-ep9', title: 'الحلقة 9', videoUrl: 'https://vidspeed.org/embed-z0z5zfz4r3g4.html', downloads: { medium: 'https://vidspeed.org/d/z0z5zfz4r3g4.html', high: 'https://vik1ngfile.site/f/KYwDlH79tt' } },
+                    { id: 'narges-s1-ep10', title: 'الحلقة 10', videoUrl: 'https://vidspeed.org/embed-of19so8nfr6f.html', downloads: { medium: 'https://vidspeed.org/d/of19so8nfr6f.html', high: 'https://vik1ngfile.site/f/Xx1OGsOBPE' } },
+                    { id: 'narges-s1-ep11', title: 'الحلقة 11', videoUrl: 'https://vidspeed.org/embed-bgw85bc8n9gr.html', downloads: { medium: 'https://vidspeed.org/d/bgw85bc8n9gr.html', high: 'https://vik1ngfile.site/f/RePKcDFnUT' } },
+                    { id: 'narges-s1-ep12', title: 'الحلقة 12', videoUrl: 'https://vidspeed.org/embed-s3vd33cb1p7g.html', downloads: { medium: 'https://vidspeed.org/d/s3vd33cb1p7g.html', high: 'https://vik1ngfile.site/f/Sv8bwAQ3Eb' } },
+                    { id: 'narges-s1-ep13', title: 'الحلقة 13', videoUrl: 'https://vidspeed.org/embed-1nlkskynif7j.html', downloads: { medium: 'https://vidspeed.org/d/1nlkskynif7j.html', high: 'https://vik1ngfile.site/f/hr1lbQ0IzV' } },
+                    { id: 'narges-s1-ep14', title: 'الحلقة 14', videoUrl: 'https://vidspeed.org/embed-wd20ycjz4w8r.html', downloads: { medium: 'https://vidspeed.org/d/wd20ycjz4w8r.html', high: 'https://vik1ngfile.site/f/yrMHz9XX9U' } },
+                    { id: 'narges-s1-ep15', title: 'الحلقة 15 والأخيرة', videoUrl: 'https://vidspeed.org/embed-rh28yu36izft.html', downloads: { medium: 'https://vidspeed.org/d/wd20ycjz4w8r.html', high: 'https://vik1ngfile.site/f/yrMHz9XX9U' } }
+                ]
+            }
+        ]
+    },
     {
         id: 's-daredevil-born-again',
         title: 'Daredevil: Born Again',
@@ -2844,7 +2876,7 @@ function renderSectionPreview(gridId, headerId, data) {
     else { renderGrid(gridId, data.slice(0, 4)); }
 }
 
-window.watchItem = async function(itemId, restoreFromSession = false) {
+window.watchItem = async function(itemId, restoreFromSession = false, goToLatest = false) {
     // التحقق من صلاحية الكود - بنعمله بس في المرة الأولى عشان الرجوع يكون سريع ولحظي
     if (!restoreFromSession) {
         const isValid = await isSubscriptionValid();
@@ -2869,7 +2901,13 @@ window.watchItem = async function(itemId, restoreFromSession = false) {
 
     if (item.type === 'series' && item.seasons && item.seasons.length > 0) {
         let seasonNum, episodeId;
-        if (restoreFromSession && sessionStorage.getItem('currentSeason') && sessionStorage.getItem('currentEpisode')) {
+        if (goToLatest) {
+            const lastSeason = item.seasons[item.seasons.length - 1];
+            seasonNum = lastSeason.seasonNumber;
+            episodeId = lastSeason.episodes[lastSeason.episodes.length - 1].id;
+            sessionStorage.setItem('currentSeason', seasonNum);
+            sessionStorage.setItem('currentEpisode', episodeId);
+        } else if (restoreFromSession && sessionStorage.getItem('currentSeason') && sessionStorage.getItem('currentEpisode')) {
             seasonNum = parseInt(sessionStorage.getItem('currentSeason'));
             episodeId = sessionStorage.getItem('currentEpisode');
         } else {
@@ -3120,22 +3158,42 @@ window.checkNewContent = function() {
     if (typeof allContent === 'undefined' || allContent.length === 0) return;
     
     const latestItem = allContent[0]; // أول عنصر هو الأحدث دائماً
+    let currentUpdateId = latestItem.id;
+    let latestEpisodeTitle = "";
+    let isNewEpisode = false;
+
+    if (latestItem.type === 'series' && latestItem.seasons && latestItem.seasons.length > 0) {
+        const lastSeason = latestItem.seasons[latestItem.seasons.length - 1];
+        if (lastSeason.episodes && lastSeason.episodes.length > 0) {
+            const lastEpisode = lastSeason.episodes[lastSeason.episodes.length - 1];
+            currentUpdateId = latestItem.id + "_" + lastEpisode.id;
+            latestEpisodeTitle = lastEpisode.title;
+        }
+    }
+
     const lastSeenId = localStorage.getItem('filmak_last_seen_id');
     const notifDot = document.getElementById('notif-dot');
 
-    if (lastSeenId && lastSeenId !== latestItem.id) {
+    if (lastSeenId && lastSeenId !== currentUpdateId) {
         // فيه حاجة جديدة والمستخدم كان فاتح قبل كده
         if (notifDot) notifDot.style.display = 'block';
         
+        if (latestItem.type === 'series') {
+            // لو كان الـ ID القديم بيبدأ بنفس ID المسلسل، يبقى دي حلقة جديدة اتضافت
+            if (lastSeenId.startsWith(latestItem.id)) {
+                isNewEpisode = true;
+            }
+        }
+        
         // إظهار التوست لو المستخدم فاتح الموقع
-        showNotificationToast(latestItem);
+        showNotificationToast(latestItem, isNewEpisode, latestEpisodeTitle, currentUpdateId);
     } else if (!lastSeenId) {
         // أول مرة يفتح الموقع، نحفظ أحدث ID عشان المرة الجاية
-        localStorage.setItem('filmak_last_seen_id', latestItem.id);
+        localStorage.setItem('filmak_last_seen_id', currentUpdateId);
     }
 };
 
-function showNotificationToast(item) {
+function showNotificationToast(item, isNewEpisode = false, episodeTitle = "", currentUpdateId = null) {
     const toast = document.getElementById('notif-toast');
     const poster = document.getElementById('toast-poster');
     const message = document.getElementById('toast-message');
@@ -3144,12 +3202,29 @@ function showNotificationToast(item) {
     if (!toast || !item) return;
 
     poster.src = item.poster;
-    message.innerText = `تم إضافة ${item.type === 'series' ? 'مسلسل' : 'فيلم'}: ${item.title}`;
+    
+    if (item.type === 'series') {
+        if (isNewEpisode) {
+            message.innerText = `تم إضافة ${episodeTitle} من مسلسل: ${item.title}`;
+        } else {
+            message.innerText = `تم إضافة مسلسل جديد: ${item.title}`;
+        }
+    } else if (item.type === 'movie') {
+        message.innerText = `تم إضافة فيلم جديد: ${item.title}`;
+    } else if (item.type === 'live') {
+        message.innerText = `تم إضافة بث مباشر: ${item.title}`;
+    } else {
+        message.innerText = `تم إضافة محتوى جديد: ${item.title}`;
+    }
     
     actionBtn.onclick = () => {
-        watchItem(item.id);
+        watchItem(item.id, false, true);
         hideToast();
-        markAsSeen(item.id);
+        if (currentUpdateId) {
+            markAsSeen(currentUpdateId);
+        } else {
+            markAsSeen(item.id);
+        }
     };
 
     setTimeout(() => {
@@ -3179,7 +3254,7 @@ window.showNewContentNotification = function(payload) {
         e.stopPropagation();
         hideToast();
         if (itemId) {
-            watchItem(itemId);
+            watchItem(itemId, false, true);
         } else {
             navigate('latest');
         }
@@ -3190,7 +3265,7 @@ window.showNewContentNotification = function(payload) {
     toast.onclick = () => {
         hideToast();
         if (itemId) {
-            watchItem(itemId);
+            watchItem(itemId, false, true);
         } else {
             navigate('latest');
         }
@@ -3206,8 +3281,18 @@ window.hideToast = function() {
 };
 
 window.toggleNotifications = function() {
-    const latestItem = allContent[0];
-    markAsSeen(latestItem.id);
+    if (allContent && allContent.length > 0) {
+        const latestItem = allContent[0];
+        let currentUpdateId = latestItem.id;
+        if (latestItem.type === 'series' && latestItem.seasons && latestItem.seasons.length > 0) {
+            const lastSeason = latestItem.seasons[latestItem.seasons.length - 1];
+            if (lastSeason.episodes && lastSeason.episodes.length > 0) {
+                const lastEpisode = lastSeason.episodes[lastSeason.episodes.length - 1];
+                currentUpdateId = latestItem.id + "_" + lastEpisode.id;
+            }
+        }
+        markAsSeen(currentUpdateId);
+    }
     
     // طلب إذن إشعارات المتصفح (Push Notifications)
     requestPushPermission();

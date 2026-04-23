@@ -15,7 +15,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS File -->
-    <link rel="stylesheet" href="style.css?v=2026.04.23.24">
+    <link rel="stylesheet" href="style.css?v=2026.04.23.42">
 </head>
 
 <body>
@@ -387,7 +387,7 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
-        
+
         // Exporting tools to window for script.js
         window.db = db;
         window.fbDoc = doc;
@@ -397,7 +397,7 @@
         window.fbArrayRemove = arrayRemove;
         window.fbCollection = collection;
         window.fbSetDoc = setDoc;
-        
+
         // Push Notifications Setup
         try {
             const messaging = getMessaging(app);
@@ -421,7 +421,7 @@
     </script>
 
     <!-- Main JS File -->
-    <script src="script.js?v=2026.04.23.24"></script>
+    <script src="script.js?v=2026.04.23.42"></script>
 </body>
 
 </html>
