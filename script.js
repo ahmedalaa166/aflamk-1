@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.43"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.49"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -280,6 +280,33 @@ async function isSubscriptionValid() {
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 'live-mix-bel-araby',
+        title: 'mix بالعربي',
+        type: 'live',
+        category: 'live',
+        subCategory: 'movies',
+        poster: 'صور/mix_bel_araby.png',
+        year: 'بث مباشر',
+        quality: 'HD',
+        desc: 'بث مباشر لقناة ميكس بالعربي - أفلام ومسلسلات عربية على مدار الساعة.',
+        videoUrl: 'https://new.aflam4you.net/embed.php?vid=2310'
+    },
+    {
+        id: 'm-bath-mobasher',
+        title: 'بث مباشر',
+        type: 'movie',
+        category: 'arabic-movies',
+        poster: 'صور/bath_mobasher.jpg',
+        year: '31 اغسطس 2017',
+        quality: 'FHD',
+        desc: 'فارس ضابط موقوف عن العمل، يتورط فى أحداث تتزايد طوال الليلة التي تقع فيها أحداث الفيلم، وتتزايد الورطة بظهور شخص يصور الأحداث التي يتورط فيها البطل مباشرة، وبثها على السوشيال ميديا والقنوات، وتنجح في تحقيق نسبة مشاهدة عالية جدًا.',
+        videoUrl: 'https://vidspeed.org/embed-cub2hivvp8up.html',
+        downloads: {
+            medium: 'https://vidspeed.org/d/cub2hivvp8up.html',
+            high: 'https://vik1ngfile.site/f/xU3wVaokqX'
+        }
+    },
+    {
         id: 's-narges',
         title: 'حكاية نرجس',
         type: 'series',
@@ -288,6 +315,7 @@ const allContent = [
         year: '5 مارس 2026',
         quality: 'FHD',
         desc: 'تحت وطأة النظرة المجتمعية القاسية، تنزلق نرجس في منحدر من الأكاذيب والجرائم؛ في محاولة يائسة لتشييد أسرة وهمية تمنحها الاستقرار، لتجد نفسها في مواجهة مصيرٍ مأساوي لم تكن تتوقعه.',
+        status: 'completed',
         seasons: [
             {
                 seasonNumber: 1,
@@ -2634,36 +2662,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     window.addEventListener('popstate', (e) => {
-        const pageId = (e.state && e.state.page) ? e.state.page : (window.location.hash.replace('#', '') || 'home');
-        const itemId = (e.state && e.state.itemId) ? e.state.itemId : sessionStorage.getItem('currentWatchItem');
-
-        if (pageId === 'watch' && itemId) {
-            watchItem(itemId, true);
+        const state = e.state;
+        if (state && state.page) {
+            if (state.page === 'watch') {
+                if (state.itemId) {
+                    watchItem(state.itemId, true);
+                } else {
+                    navigate('home', true);
+                }
+            } else {
+                navigate(state.page, true);
+            }
         } else {
-            navigate(pageId, true);
+            const pageId = window.location.hash.replace('#', '') || 'home';
+            if (pageId === 'watch') {
+                const savedItem = sessionStorage.getItem('currentWatchItem');
+                if (savedItem) watchItem(savedItem, true);
+                else navigate('home', true);
+            } else {
+                navigate(pageId, true);
+            }
         }
     });
 
-    // On refresh, restore the page from hash and restore watch state
+    // عند التحميل الأول للموقع
     let initialPage = window.location.hash.replace('#', '') || 'home';
     const savedItem = sessionStorage.getItem('currentWatchItem');
 
-    // تأمين الـ State الأولية للمتصفح عشان أزرار الرجوع تشتغل صح من أول لحظة
+    // تأمين الـ State الأولية للمتصفح
     if (!history.state) {
-        history.replaceState({ page: initialPage, itemId: savedItem }, '', window.location.hash || '#home');
+        history.replaceState({ page: initialPage, itemId: (initialPage === 'watch' ? savedItem : null) }, '', window.location.hash || '#home');
     }
 
-    if (initialPage === 'watch') {
-        if (savedItem) {
-            watchItem(savedItem, true);
-        } else {
-            navigate('home');
-        }
+    if (initialPage === 'watch' && savedItem) {
+        watchItem(savedItem, true);
     } else {
-        navigate(initialPage);
+        navigate(initialPage, true);
     }
     
-    // Check for new content notifications
     setTimeout(checkNewContent, 1500);
 });
 
@@ -2730,58 +2766,73 @@ function createCard(item) {
     `;
 }
 
-// Custom navigation stack for reliable back button
-const navHistory = [];
+const navHistory = []; // لتتبع الأقسام الرئيسية فقط
 
 function navigate(pageId, fromHistory = false, stateData = {}) {
     if (!fromHistory) {
         const state = { page: pageId, ...stateData };
-        if (window.location.hash !== '#' + pageId || (pageId === 'watch' && stateData.itemId)) {
+        const currentState = history.state;
+        
+        const isSamePage = currentState && currentState.page === pageId;
+        const isSameItem = currentState && currentState.itemId === stateData.itemId;
+        
+        if (!isSamePage || (pageId === 'watch' && !isSameItem)) {
             history.pushState(state, '', '#' + pageId);
         }
-        // تحديث التاريخ اليدوي لضمان السرعة
-        if (navHistory[navHistory.length - 1] !== pageId) {
+
+        // حفظ الأقسام الرئيسية (عشان زر الرجوع يرجع لآخر قسم كان فيه المستخدم)
+        if (pageId !== 'watch' && navHistory[navHistory.length - 1] !== pageId) {
             navHistory.push(pageId);
         }
     }
+
+    // تأمين: لا تظهر صفحة المشاهدة أبداً بدون وجود محتوى
+    if (pageId === 'watch' && !stateData.itemId && !sessionStorage.getItem('currentWatchItem')) {
+        pageId = 'home';
+    }
+
     document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
     const targetEl = document.getElementById(pageId);
     if (targetEl) {
         targetEl.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
     if (pageId !== 'watch') {
         const videoPlayer = document.getElementById('video-player');
         if (videoPlayer) videoPlayer.src = '';
     }
+
     document.querySelectorAll('.nav-menu a, .mobile-sections-grid a, .logo').forEach(link => {
         link.classList.remove('active');
         const onclickAttr = link.getAttribute('onclick');
         if (onclickAttr && onclickAttr.includes(`'${pageId}'`)) link.classList.add('active');
     });
+
     const navMenuMobile = document.getElementById('mobileSectionsMenu');
-    const navMenuDesktop = document.querySelector('.nav-menu');
     const overlay = document.querySelector('.menu-overlay');
     if (navMenuMobile) navMenuMobile.classList.remove('active');
-    if (navMenuDesktop) navMenuDesktop.classList.remove('active');
     if (overlay) overlay.classList.remove('active');
     document.body.style.overflow = '';
 }
 
 function navigateBack() {
-    if (navHistory.length > 1) {
-        navHistory.pop(); // حذف الصفحة الحالية
-        const previousPage = navHistory[navHistory.length - 1];
-        
-        if (previousPage === 'watch') {
-            const savedItem = sessionStorage.getItem('currentWatchItem');
-            if (savedItem) watchItem(savedItem);
-            else navigate('home');
+    const currentHash = window.location.hash.replace('#', '');
+    if (currentHash === 'watch') {
+        // لو في صفحة مشاهدة، نرجع لآخر قسم رئيسي (زي المسلسلات أو الأفلام)
+        if (navHistory.length > 0) {
+            const lastSection = navHistory.pop();
+            navigate(lastSection);
         } else {
-            navigate(previousPage);
+            navigate('home');
         }
     } else {
-        navigate('home');
+        // لو في قسم رئيسي، نستخدم رجوع المتصفح العادي
+        if (window.history.length > 1) {
+            window.history.back();
+        } else {
+            navigate('home');
+        }
     }
 }
 
