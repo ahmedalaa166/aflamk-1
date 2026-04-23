@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.42"; // غير الرقم ده كل ما تعمل تحديث كبير
+const SITE_VERSION = "2026.04.23.43"; // غير الرقم ده كل ما تعمل تحديث كبير
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -3218,7 +3218,7 @@ function showNotificationToast(item, isNewEpisode = false, episodeTitle = "", cu
     }
     
     actionBtn.onclick = () => {
-        watchItem(item.id, false, true);
+        watchItem(item.id, false, isNewEpisode);
         hideToast();
         if (currentUpdateId) {
             markAsSeen(currentUpdateId);
@@ -3247,14 +3247,18 @@ window.showNewContentNotification = function(payload) {
     const itemId = (payload.data && payload.data.itemId) ? payload.data.itemId : null;
 
     poster.src = payload.notification.image || 'صور/logo.jpg';
+    const notifText = (payload.notification.body || payload.notification.title || "").toLowerCase();
     message.innerText = payload.notification.body || payload.notification.title;
+    
+    // تحديد ما إذا كان الإشعار عن حلقة جديدة أم مسلسل جديد
+    const isEpisodeNotif = notifText.includes('حلقة') || notifText.includes('الحلقة');
     
     // عند الضغط على زر المشاهدة
     actionBtn.onclick = (e) => {
         e.stopPropagation();
         hideToast();
         if (itemId) {
-            watchItem(itemId, false, true);
+            watchItem(itemId, false, isEpisodeNotif);
         } else {
             navigate('latest');
         }
@@ -3265,7 +3269,7 @@ window.showNewContentNotification = function(payload) {
     toast.onclick = () => {
         hideToast();
         if (itemId) {
-            watchItem(itemId, false, true);
+            watchItem(itemId, false, isEpisodeNotif);
         } else {
             navigate('latest');
         }
