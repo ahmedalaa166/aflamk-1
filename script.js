@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.24.10"; // إضافة مسلسل الفرنساوي الحلقة 2
+const SITE_VERSION = "2026.04.25.06"; // إضافة أزرار التنقل بين الأجزاء لفيلم أفاتار
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,96 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'm-avatar-3-2025',
+        title: 'أفاتار: النار والرماد - Avatar: Fire and Ash',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/avatar3.jpg',
+        year: '17 ديسمبر 2025',
+        quality: 'FHD',
+        desc: 'تواجه عائلة جيك ونيتيري الحزن بعد وفاة نيتيام، وتلتقي بقبيلة نافي جديدة وعدائية تُدعى (شعب الرماد)، بقيادة المحاربة النارية فارانج، بينما يتصاعد الصراع على كوكب باندورا وتظهر قضايا أخلاقية جديدة في قلب الأحداث.',
+        parts: [
+            { id: 'm-avatar-2022', name: 'الجزء الأول' },
+            { id: 'm-avatar-2-2022', name: 'الجزء الثاني' },
+            { id: 'm-avatar-3-2025', name: 'الجزء الثالث' }
+        ],
+        videoUrl: 'https://vidspeed.org/embed-d358h6stfc26.html',
+        downloads: {
+            high: 'https://www.up-4ever.net/ookdmgl2n4lu',
+            medium: 'https://www.up-4ever.net/77uzf2pyht1v'
+        }
+    },
+    {
+        id: 'm-avatar-2-2022',
+        title: 'أفاتار: طريق المياه - Avatar: The Way of Water',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/avatar2.jpg',
+        year: '21 سبتمبر 2022',
+        quality: 'FHD',
+        desc: 'بعد سنوات من أحداث الجزء الأول، يعيش جيك سولي مع عائلته الجديدة التي تشكلت على كوكب باندورا. وسرعان ما يواجه كوكب باندورا تهديدًا جديدًا، مما يضطر جيك للعمل مع نيتيري وجيش نافي لحماية كوكبهم، ولكن هذه المرة من خلال اللجوء إلى قبائل المياه.',
+        parts: [
+            { id: 'm-avatar-2022', name: 'الجزء الأول' },
+            { id: 'm-avatar-2-2022', name: 'الجزء الثاني' },
+            { id: 'm-avatar-3-2025', name: 'الجزء الثالث' }
+        ],
+        videoUrl: 'https://anafasts.com/embed-pjrt120u7cw8.html',
+        downloads: {
+            high: 'https://www.up-4ever.net/2fwobsq8jevk',
+            medium: 'https://www.up-4ever.net/9udwijo3pu5z'
+        }
+    },
+    {
+        id: 'm-avatar-2022',
+        title: 'أفاتار - Avatar',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/avatar.jpg',
+        year: '21 سبتمبر 2022',
+        quality: 'FHD',
+        desc: 'عندما يكتشف البشر (القمر الفريد باندورا) الذي يحتوي على معدن فائق الأهمية من الناحية الاقتصادية، يقومون بتنفيذ خطة محكمة لغزوه على الفور. لكن على هذا القمر تعيش كائنات زرقاء البشرة تٌدعى (نافي) يتمتعون بحب جارف لكوكبهم وطبيعته المدهشة، ويتصلون معه جسديًا ونفسيًا.. لذا عندما يبدأ هؤلاء في الدفاع عن كوكبهم، ينضم إليهم بعض البشر ليواجهوا قادة الغزو في معركة طاحنة ستحدد مصير باندورا والبشر إلى الأبد.',
+        parts: [
+            { id: 'm-avatar-2022', name: 'الجزء الأول' },
+            { id: 'm-avatar-2-2022', name: 'الجزء الثاني' },
+            { id: 'm-avatar-3-2025', name: 'الجزء الثالث' }
+        ],
+        videoUrl: 'https://anafasts.com/embed-fwfxd1p82gy0.html',
+        downloads: {
+            high: 'https://www.up-4ever.net/ookdmgl2n4lu',
+            medium: 'https://www.up-4ever.net/77uzf2pyht1v'
+        }
+    },
+    {
+        id: 'm-darwish-2025',
+        title: 'درويش',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/darwish.jpg',
+        year: '13 اغسطس 2025',
+        quality: 'FHD',
+        desc: 'تدور الأحداث في فترة الأربعينيات حول رجل محتال ذو شخصية جذابة، يعيش حياة مليئة بالتحديات والمخاطر، ثم يتحول عن طريق الصدفة إلى بطل شعبي، وتنقلب بعدها حياته رأسًا على عقب.',
+        videoUrl: 'https://vidspeed.org/embed-al0d7db4jtx1.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/k7emkE5x3f',
+            medium: 'https://vidspeed.org/d/al0d7db4jtx1.html'
+        }
+    },
+    {
+        id: 'm-darwela-2024',
+        title: 'درويلة',
+        type: 'movie',
+        category: 'arabic-movie',
+        poster: 'صور/darwela.jpg',
+        year: '7 فبراير 2024',
+        quality: 'FHD',
+        desc: 'في إطار من التشويق والإثارة، تدور الأحداث حول حياة الشاب (شهاب) الذي يعود للحرية بعد إطلاق سراحه من السجن، فيعود لنادٍ غريب من نوعه يُدعى (درويلة) يتخلله عصابات ومغنو الراب، ويتحتم عليه مواجهة المدعو (شمشون) في نزال قتالي.',
+        videoUrl: 'https://anafasts.com/embed-ed4qq9bgaaxy.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/K4Syqx5zTh',
+            medium: 'https://vidspeed.org/d/ngocl1gxgy0p.html'
+        }
+    },
     {
         id: 's-al-fransawi',
         title: 'الفرنساوي',
