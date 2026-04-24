@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.23.51"; // تحديث لتعديل كود movies plus بالمسافة
+const SITE_VERSION = "2026.04.24.09"; // إضافة مسلسل الفرنساوي الحلقة 1
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,204 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 's-al-fransawi',
+        title: 'الفرنساوي',
+        type: 'series',
+        category: 'arabic-series',
+        poster: 'صور/al_fransawi.jpg',
+        year: '24 ابريل 2026',
+        quality: 'FHD',
+        desc: 'تدور أحداث المسلسل حول خالد مشير، المحامي الذكي والداهية الذي لا يؤمن بالعدالة المطلقة قدر إيمانه بقوة النص القانوني. يُعرف في الوسط القانوني بقدرته الفائقة على قلب الموازين، ليس بالبحث عن الحقيقة، ولكن عبر استغلال ثغرات القانون وتطويعها لصالح موكليه.',
+        seasons: [
+            {
+                seasonNumber: 1,
+                episodes: [
+                    { id: 'al-fransawi-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-rrm62yracu3m.html', downloads: { medium: 'https://vidspeed.org/d/rrm62yracu3m.html', high: 'https://savefiles.com/d/8w9la16xrq1x_n' } }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'm-mufasa-the-lion-king-2024',
+        title: 'موفاسا: الأسد الملك - Mufasa: The Lion King',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/mufasa_the_lion_king.jpg',
+        year: '18 ديسمبر 2024',
+        quality: 'FHD',
+        desc: 'بعد تتويج (سيمبا) ملكًا على مملكة الغابة، يعود العمل إلى الماضي حينما كان والده (موفاسا) طفلًا ضائعًا، وقصته مع الأسد (تاكا)، ورحلة صعوده من الطفولة إلى قيادته الناجحة للمملكة.',
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://m.reviewrate.net/embed-1nroz9u46582.html',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/gk9eksutmark',
+                    medium: 'https://wwa.liiivideo.com/d/gk9eksutmark'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://www.uqload.is/embed-jyvti8o1us74.html',
+                downloads: {
+                    high: 'https://www.mediafire.com/file_premium/t1uipislx595ec5/Mufasa_The_Lion_King_%25282024%2529_Full_Arabic.Egybt.%255B720p%255D_%255BWEBRip%255D_%255B5.1%255D_%255BYTS.MX%255D.ahmadalsheikhly.com.mp4/file',
+                    medium: 'https://www.mediafire.com/file_premium/t1uipislx595ec5/Mufasa_The_Lion_King_%25282024%2529_Full_Arabic.Egybt.%255B720p%255D_%255BWEBRip%255D_%255B5.1%255D_%255BYTS.MX%255D.ahmadalsheikhly.com.mp4/file'
+                }
+            }
+        ],
+        videoUrl: 'https://m.reviewrate.net/embed-1nroz9u46582.html',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/gk9eksutmark',
+            medium: 'https://wwa.liiivideo.com/d/gk9eksutmark'
+        }
+    },
+    {
+        id: 'm-the-lion-king-2019',
+        title: 'الأسد الملك - The Lion King (2019)',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_lion_king_2019.jpg',
+        year: '17 يوليو 2019',
+        quality: 'FHD',
+        desc: 'يخوض الشبل سيمبا رحلة طويلة مع العالم والذات بعد موت والده موفاسا غدرًا على يد سكار شقيقه الطامع في السلطة في سبيل بسط نفوذه على صخرة العزة، ويعيش هائمًا على وجهه إلى أن تلوح في اﻷفق رياح تغيير الماضي اﻷليم.',
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-2019/',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/wnf2oa07k91o',
+                    medium: 'https://wwa.liiivideo.com/d/wnf2oa07k91o'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://www.uqload.is/embed-f2uqszgjc12q.html',
+                downloads: {
+                    high: 'https://uqload.is/f2uqszgjc12q.html',
+                    medium: 'https://uqload.is/f2uqszgjc12q.html'
+                }
+            }
+        ],
+        videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-2019/',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/wnf2oa07k91o',
+            medium: 'https://wwa.liiivideo.com/d/wnf2oa07k91o'
+        }
+    },
+    {
+        id: 'c-the-lion-king-1.5-2004',
+        title: 'الأسد الملك 1.5 - The Lion King 1½',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_lion_king_1.5_2004.jpg',
+        year: '1 مارس 2005',
+        quality: 'FHD',
+        desc: 'تدور أحداث الفيلم حول فترة اختفاء (سيمبا) وسيطرة (سكار) على مقاليد المملكة، حيث تدور القصة القديمة من خلال منظور أصدقاء (سيمبا) وهم (تيمون) و(بومبا)، ويكتشفا أسرار جديدة.',
+        parts: [
+            { id: 'c-the-lion-king-1994', name: 'الجزء الأول' },
+            { id: 'c-the-lion-king-2-1998', name: 'الجزء الثاني' },
+            { id: 'c-the-lion-king-1.5-2004', name: 'الجزء الثالث' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://vidspeeds.com/embed-ehgqs7dkhrhf.html',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/gsze8fkswipl',
+                    medium: 'https://wwa.liiivideo.com/d/gsze8fkswipl'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://uqload.is/embed-otzdzzuujv1c.html',
+                downloads: {
+                    high: 'https://playmogo.com/download/6lhw8el5febmj85b51130q7k/n/250478686-156-205-1777051037-407f455dba7ae08a6209be1d74d82885',
+                    medium: 'https://playmogo.com/download/6lhw8el5febmj85b51130q7k/n/250478686-156-205-1777051037-407f455dba7ae08a6209be1d74d82885'
+                }
+            }
+        ],
+        videoUrl: 'https://vidspeeds.com/embed-ehgqs7dkhrhf.html',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/gsze8fkswipl',
+            medium: 'https://wwa.liiivideo.com/d/gsze8fkswipl'
+        }
+    },
+    {
+        id: 'c-the-lion-king-2-1998',
+        title: 'الأسد الملك 2: عهد سمبا - The Lion King II',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_lion_king_2_1998.jpg',
+        year: '27 اكتوبر 1998',
+        quality: 'FHD',
+        desc: 'بعد سنوات من نجاح (سيمبا) في استعادة عرشه، وتنصيبه ملكًا على الغابة، يجد (سيمبا) نفسه مجددًا في اختبار جديد، حينما تنشأ علاقة صداقة جديدة بين ابنته (كيارا) مع (كوفو).',
+        parts: [
+            { id: 'c-the-lion-king-1994', name: 'الجزء الأول' },
+            { id: 'c-the-lion-king-2-1998', name: 'الجزء الثاني' },
+            { id: 'c-the-lion-king-1.5-2004', name: 'الجزء الثالث' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-ii-simbas-pride-1998/',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/xddoncx849gt',
+                    medium: 'https://wwa.liiivideo.com/d/xddoncx849gt'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://uqload.is/embed-es8o2wpdh8xe.html',
+                downloads: {
+                    high: 'https://playmogo.com/download/3l9nhrducxu505aup3op6wmf/n/250477910-156-205-1777050735-96eb7801462e5c41ae853ba56aaa20e1',
+                    medium: 'https://playmogo.com/download/3l9nhrducxu505aup3op6wmf/n/250477910-156-205-1777050735-96eb7801462e5c41ae853ba56aaa20e1'
+                }
+            }
+        ],
+        videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-ii-simbas-pride-1998/',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/xddoncx849gt',
+            medium: 'https://wwa.liiivideo.com/d/xddoncx849gt'
+        }
+    },
+    {
+        id: 'c-the-lion-king-1994',
+        title: 'الأسد الملك - The Lion King',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_lion_king_1994.jpg',
+        year: '1 فبراير 2023',
+        quality: 'FHD',
+        desc: 'سمبا ولي العهد المنتظر بعد موفاسا، يخطط عمه ﻹبعاده عن العرش، محاولًا نفيه عقب وفاة والده الملك، فيتعرف سمبا على تيمون وبومبا اللذان يحاولان مساعدته في استعادة عرشه والتغلب على عمه الشرس وأتباعه من الضباع.',
+        parts: [
+            { id: 'c-the-lion-king-1994', name: 'الجزء الأول' },
+            { id: 'c-the-lion-king-2-1998', name: 'الجزء الثاني' },
+            { id: 'c-the-lion-king-1.5-2004', name: 'الجزء الثالث' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-1994/',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/17n4bnxma2ke',
+                    medium: 'https://wwa.liiivideo.com/d/17n4bnxma2ke'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://vidmoly.net/embed-7h8axjc4atxf.html',
+                downloads: {
+                    high: 'https://playmogo.com/download/tqec3yzawk1u0pybge545nxm/n/250474106-156-205-1777050390-874c6c534d0e0d100e796a196bb7edf3',
+                    medium: 'https://playmogo.com/download/tqec3yzawk1u0pybge545nxm/n/250474106-156-205-1777050390-874c6c534d0e0d100e796a196bb7edf3'
+                }
+            }
+        ],
+        videoUrl: 'https://filmey.cc/albaplayer/the-lion-king-1994/',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/17n4bnxma2ke',
+            medium: 'https://wwa.liiivideo.com/d/17n4bnxma2ke'
+        }
+    },
     {
         id: 'live-mix-belarabi',
         title: 'قناة Mix بالعربي',
