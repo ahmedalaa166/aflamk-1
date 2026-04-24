@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.24.09"; // إضافة مسلسل الفرنساوي الحلقة 1
+const SITE_VERSION = "2026.04.24.10"; // إضافة مسلسل الفرنساوي الحلقة 2
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -292,7 +292,8 @@ const allContent = [
             {
                 seasonNumber: 1,
                 episodes: [
-                    { id: 'al-fransawi-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-rrm62yracu3m.html', downloads: { medium: 'https://vidspeed.org/d/rrm62yracu3m.html', high: 'https://savefiles.com/d/8w9la16xrq1x_n' } }
+                    { id: 'al-fransawi-s1-ep1', title: 'الحلقة 1', videoUrl: 'https://vidspeed.org/embed-rrm62yracu3m.html', downloads: { medium: 'https://vidspeed.org/d/rrm62yracu3m.html', high: 'https://savefiles.com/d/8w9la16xrq1x_n' } },
+                    { id: 'al-fransawi-s1-ep2', title: 'الحلقة 2', videoUrl: 'https://vidspeed.org/embed-dgtlp17ml3ug.html', downloads: { medium: 'https://vidspeed.org/d/dgtlp17ml3ug.html', high: 'https://savefiles.com/d/1hdhf2bd9ied_n' } }
                 ]
             }
         ]
