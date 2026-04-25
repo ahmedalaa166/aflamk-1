@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.25.06"; // إضافة أزرار التنقل بين الأجزاء لفيلم أفاتار
+const SITE_VERSION = "2026.04.25.11"; // إضافة فيلم Spider-Man: Across the Spider-Verse وربط الأجزاء
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -280,6 +280,95 @@ async function isSubscriptionValid() {
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
     {
+        id: 'm-spiderman-across-the-spider-verse-2023',
+        title: 'سبايدر مان: عبر عالم العنكبوت - Spider-Man: Across the Spider-Verse',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/spiderman_across_the_spider_verse.jpg',
+        year: '2 يونيو 2023',
+        quality: 'FHD',
+        desc: 'ينطلق مايلز موراليس عبر الأكوان المتعددة رفقة جوين ستايسي وشخصيات تُشبهه من عوالم أخرى، ولكن حينما يتلقى مايلز تهديدات جديدة، يصبح عليه إثبات مكانته عبر عالم العنكبوت.',
+        parts: [
+            { id: 'm-spiderman-into-the-spider-verse-2018', name: 'الجزء الأول' },
+            { id: 'm-spiderman-across-the-spider-verse-2023', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://hgcloud.to/e/7i5rufp3ca1v',
+                downloads: {
+                    high: 'https://wwa.liiivideo.com/d/5w0wtcs2sd2p',
+                    medium: 'https://wwa.liiivideo.com/d/5w0wtcs2sd2p'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://hgcloud.to/e/vkr4srgim3j2',
+                downloads: {
+                    high: 'https://vibuxer.com/f/vkr4srgim3j2',
+                    medium: 'https://m1xdrop.click/f/l60g3dq9cjvglo?download'
+                }
+            }
+        ],
+        videoUrl: 'https://hgcloud.to/e/7i5rufp3ca1v',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/5w0wtcs2sd2p',
+            medium: 'https://wwa.liiivideo.com/d/5w0wtcs2sd2p'
+        }
+    },
+    {
+        id: 'm-giant-2026',
+        title: 'Giant - العملاق',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/giant.jpg',
+        year: '11 يناير 2026',
+        quality: 'FHD',
+        desc: 'تدور الأحداث حول الملاكم البريطاني اليمني (نسيم حميد) ورحلته من بداياته المتواضعة إلى أن أصبح بطلاً للعالم، بمساعدة مدربه الذي لعب دورًا حاسمًا في نجاحه.',
+        videoUrl: 'https://egyramadan.rpmvid.com/#fdv6jl',
+        downloads: {
+            high: 'https://minochinos.com/download/5kxv3up4xjbq',
+            medium: 'https://www.up-4ever.net/dg1he09s7qy3'
+        }
+    },
+    {
+        id: 'm-spiderman-into-the-spider-verse-2018',
+        title: 'سبايدر مان: في عالم العنكبوت - Spider-Man: Into the Spider-Verse',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/spiderman_into_the_spider_verse.jpg',
+        year: '13 ديسمبر 2018',
+        quality: 'FHD',
+        desc: 'تتناول قصة الفيلم حياة المراهق (مايلز مورالز) داخل مدينة (بروكلين)، مستعرضًا الإمكانيات والقدرات اللامحدودة في عالم الرجل العنكبوت، حيث يمكن لأكثر من شخص أن يرتدي قناعًا ويفعل ما يحلو له، سواء على جانب الخير أو جانب الشر.',
+        parts: [
+            { id: 'm-spiderman-into-the-spider-verse-2018', name: 'الجزء الأول' },
+            { id: 'm-spiderman-across-the-spider-verse-2023', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://vidspeeds.com/embed-l8hy45ro9j0m.html',
+                downloads: {
+                    high: 'https://vik1ngfile.site/f/Ar33Pkimlf',
+                    medium: 'https://vidspeed.org/l8hy45ro9j0m.html'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://hgcloud.to/e/qxwnfw19shjw',
+                downloads: {
+                    high: 'https://audinifer.com/f/qxwnfw19shjw',
+                    medium: 'https://audinifer.com/f/qxwnfw19shjw'
+                }
+            }
+        ],
+        videoUrl: 'https://vidspeeds.com/embed-l8hy45ro9j0m.html',
+        downloads: {
+            high: 'https://vik1ngfile.site/f/Ar33Pkimlf',
+            medium: 'https://vidspeed.org/l8hy45ro9j0m.html'
+        }
+    },
+    {
         id: 'm-avatar-3-2025',
         title: 'أفاتار: النار والرماد - Avatar: Fire and Ash',
         type: 'movie',
@@ -408,10 +497,10 @@ const allContent = [
             },
             {
                 name: 'مدبلج',
-                videoUrl: 'https://www.uqload.is/embed-jyvti8o1us74.html',
+                videoUrl: 'https://hgcloud.to/e/nf066emwfgv6',
                 downloads: {
-                    high: 'https://www.mediafire.com/file_premium/t1uipislx595ec5/Mufasa_The_Lion_King_%25282024%2529_Full_Arabic.Egybt.%255B720p%255D_%255BWEBRip%255D_%255B5.1%255D_%255BYTS.MX%255D.ahmadalsheikhly.com.mp4/file',
-                    medium: 'https://www.mediafire.com/file_premium/t1uipislx595ec5/Mufasa_The_Lion_King_%25282024%2529_Full_Arabic.Egybt.%255B720p%255D_%255BWEBRip%255D_%255B5.1%255D_%255BYTS.MX%255D.ahmadalsheikhly.com.mp4/file'
+                    high: 'https://hanerix.com/f/nf066emwfgv6',
+                    medium: 'https://hanerix.com/f/nf066emwfgv6'
                 }
             }
         ],
