@@ -813,7 +813,6 @@ const allContent = [
             medium: 'https://vidspeed.org/d76za70mwm73.html'
         }
     },
-    },
     {
         id: 'm-spiderman-across-the-spider-verse-2023',
         title: 'سبايدر مان: عبر عالم العنكبوت - Spider-Man: Across the Spider-Verse',
