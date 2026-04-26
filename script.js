@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.26.04"; // إضافة مسلسل From الموسم الرابع الحلقة 2
+const SITE_VERSION = "2026.04.26.05"; // إضافة فيلم I See You 2019
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,21 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'm-i-see-you-2019',
+        title: 'أنا أراك - I See You',
+        type: 'movie',
+        category: 'foreign-movie',
+        poster: 'صور/i_see_you.jpg',
+        year: '12 ديسمبر 2019',
+        quality: 'FHD',
+        desc: 'في قالب من الرعب، تقع أحداث غريبة وتحوم ببلدة صغيرة حيث تعمل محققة على البحث عن دلائل تخص فتى مختفي.',
+        videoUrl: 'https://egybestvid.com/embed-yb6zejurkw0p.html',
+        downloads: {
+            high: 'https://wwa.liiivideo.com/d/a52azl6zrz2n',
+            medium: 'https://wwa.liiivideo.com/d/a52azl6zrz2n'
+        }
+    },
     {
         id: 's-from',
         title: 'مسلسل From',
