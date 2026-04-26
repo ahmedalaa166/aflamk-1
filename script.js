@@ -1,5 +1,5 @@
 /* ==== نظام تحديث الموقع وتجاوز الكاش (Auto-Update System) ==== */
-const SITE_VERSION = "2026.04.26.01"; // إضافة الحلقة 11 من مسلسل اللعبة 5
+const SITE_VERSION = "2026.04.26.03"; // إضافة فيلم أبطال خارقون 2 (The Incredibles 2)
 
 function handleAutoUpdate() {
     const savedVersion = localStorage.getItem('filmak_site_version');
@@ -279,6 +279,80 @@ async function isSubscriptionValid() {
 
 // Master Data Collection - Latest Additions should be at the TOP of this array
 const allContent = [
+    {
+        id: 'm-the-incredibles-2-2018',
+        title: 'أبطال خارقون 2 - The Incredibles 2',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_incredibles_2.jpg',
+        year: '13 يونيو 2018',
+        quality: 'FHD',
+        desc: 'في هذا الجزء يضطر (بوب بار) للبقاء في المنزل لكي يهتم ويرعى ابنه الصغير (جاك جاك)، عندما تكون (هيلين) في مهمة بالخارج لإنقاذ العالم.',
+        parts: [
+            { id: 'm-the-incredibles-2004', name: 'الجزء الأول' },
+            { id: 'm-the-incredibles-2-2018', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://hgcloud.to/e/vvjktdodfd36',
+                downloads: {
+                    high: 'https://m1xdrop.click/f/9wqvde7rtdv08v?download',
+                    medium: 'https://m1xdrop.click/f/9wqvde7rtdv08v?download'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://hgcloud.to/e/pk11eepw4hs4',
+                downloads: {
+                    high: 'https://m1xdrop.click/f/k0mp670pig0gxj?download',
+                    medium: 'https://m1xdrop.click/f/k0mp670pig0gxj?download'
+                }
+            }
+        ],
+        videoUrl: 'https://hgcloud.to/e/vvjktdodfd36',
+        downloads: {
+            high: 'https://m1xdrop.click/f/9wqvde7rtdv08v?download',
+            medium: 'https://m1xdrop.click/f/9wqvde7rtdv08v?download'
+        }
+    },
+    {
+        id: 'm-the-incredibles-2004',
+        title: 'أبطال خارقون - The Incredibles',
+        type: 'movie',
+        category: 'cartoon-movie',
+        poster: 'صور/the_incredibles.jpg',
+        year: '5 يناير 2005',
+        quality: 'FHD',
+        desc: 'يعتبر (بوب بار) المعروف أيضًا باسم مستر (إنكريدبل) وزوجته (هيلين) المعروفة باسم (إيلاستي جيرل) من أعظم وأشهر محاربي الجريمة ضمن زمرة الأبطال الخارقين. يقوم الثنائي دومًا بإنقاذ الحيوات ومحاربة الشر يوميًا، ولكن بمرور السنين يكون عليهما أن يتخفيا وراء شخصيات عادية وعيش حياة طبيعية قدر المستطاع بصحبة أولادهم الصغار، يرغب بوب في العودة إلى حياة الأبطال الخارقين، ولكن تلك الرغبة تقوده إلى طريق شائك، ويكون على الأسرة الصغيرة أن تتحد من أجل مواجهة الخطر المحدق.',
+        parts: [
+            { id: 'm-the-incredibles-2004', name: 'الجزء الأول' },
+            { id: 'm-the-incredibles-2-2018', name: 'الجزء الثاني' }
+        ],
+        versions: [
+            {
+                name: 'مترجم',
+                videoUrl: 'https://hgcloud.to/e/06lkul161oww',
+                downloads: {
+                    high: 'https://m1xdrop.click/f/z1zkvv6dued4ld?download',
+                    medium: 'https://vidspeed.org/d76za70mwm73.html'
+                }
+            },
+            {
+                name: 'مدبلج',
+                videoUrl: 'https://hgcloud.to/e/ey2lc0hhhgi3',
+                downloads: {
+                    high: 'https://vibuxer.com/f/ey2lc0hhhgi3',
+                    medium: 'https://vibuxer.com/f/ey2lc0hhhgi3'
+                }
+            }
+        ],
+        videoUrl: 'https://hgcloud.to/e/06lkul161oww',
+        downloads: {
+            high: 'https://m1xdrop.click/f/z1zkvv6dued4ld?download',
+            medium: 'https://vidspeed.org/d76za70mwm73.html'
+        }
+    },
     {
         id: 's-alleba',
         title: 'اللعبة 5: الكلاسيكو',
